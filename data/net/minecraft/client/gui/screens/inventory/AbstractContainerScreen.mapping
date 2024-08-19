@@ -25,11 +25,16 @@ CLASS net/minecraft/client/gui/screens/inventory/AbstractContainerScreen
 		ARG 1 menu
 		ARG 2 playerInventory
 		ARG 3 title
+	METHOD addItemSlotMouseAction (Lnet/minecraft/client/gui/ItemSlotMouseAction;)V
+		ARG 1 itemSlotMouseAction
 	METHOD checkHotbarKeyPressed (II)Z
 		ARG 1 keyCode
 		ARG 2 scanCode
 	METHOD checkHotbarMouseClicked (I)V
 		ARG 1 keyCode
+	METHOD checkItemSlotActionKeyPressed (II)Z
+		ARG 1 keysym
+		ARG 2 scancode
 	METHOD findSlot (DD)Lnet/minecraft/world/inventory/Slot;
 		ARG 1 mouseX
 		ARG 3 mouseY
@@ -101,6 +106,11 @@ CLASS net/minecraft/client/gui/screens/inventory/AbstractContainerScreen
 		ARG 1 guiGraphics
 		ARG 2 x
 		ARG 3 y
+	METHOD resetHoveredSlot (DD)V
+		ARG 1 mouseX
+		ARG 3 mouseY
+	METHOD showTooltipWithItemInHand (Lnet/minecraft/world/item/ItemStack;)Z
+		ARG 1 stack
 	METHOD slotClicked (Lnet/minecraft/world/inventory/Slot;IILnet/minecraft/world/inventory/ClickType;)V
 		COMMENT Called when the mouse is clicked over a slot or outside the gui.
 		ARG 1 slot

@@ -4,6 +4,12 @@ CLASS net/minecraft/world/item/component/BundleContents
 	METHOD <init> (Ljava/util/List;Lorg/apache/commons/lang3/math/Fraction;)V
 		ARG 1 items
 		ARG 2 weight
+	METHOD <init> (Ljava/util/List;Lorg/apache/commons/lang3/math/Fraction;I)V
+		ARG 1 items
+		ARG 2 weight
+		ARG 3 selectedItem
+	METHOD canItemBeInBundle (Lnet/minecraft/world/item/ItemStack;)Z
+		ARG 0 stack
 	METHOD computeContentWeight (Ljava/util/List;)Lorg/apache/commons/lang3/math/Fraction;
 		ARG 0 content
 	METHOD equals (Ljava/lang/Object;)Z
@@ -19,6 +25,8 @@ CLASS net/minecraft/world/item/component/BundleContents
 			ARG 1 stack
 		METHOD getMaxAmountToAdd (Lnet/minecraft/world/item/ItemStack;)I
 			ARG 1 stack
+		METHOD setSelectedItem (I)V
+			ARG 1 selectedItem
 		METHOD tryInsert (Lnet/minecraft/world/item/ItemStack;)I
 			ARG 1 stack
 		METHOD tryTransfer (Lnet/minecraft/world/inventory/Slot;Lnet/minecraft/world/entity/player/Player;)I

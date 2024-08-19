@@ -101,6 +101,9 @@ CLASS net/minecraft/client/gui/Gui
 	METHOD renderChat (Lnet/minecraft/client/gui/GuiGraphics;Lnet/minecraft/client/DeltaTracker;)V
 		ARG 1 guiGraphics
 		ARG 2 deltaTracker
+	METHOD renderConfusionOverlay (Lnet/minecraft/client/gui/GuiGraphics;F)V
+		ARG 1 guiGraphics
+		ARG 2 intensity
 	METHOD renderCrosshair (Lnet/minecraft/client/gui/GuiGraphics;Lnet/minecraft/client/DeltaTracker;)V
 		ARG 1 guiGraphics
 		ARG 2 deltaTracker

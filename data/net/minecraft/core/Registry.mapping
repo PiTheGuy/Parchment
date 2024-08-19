@@ -45,6 +45,8 @@ CLASS net/minecraft/core/Registry
 		COMMENT @return all keys in this registry
 	METHOD keys (Lcom/mojang/serialization/DynamicOps;)Ljava/util/stream/Stream;
 		ARG 1 ops
+	METHOD prepareTagReload (Lnet/minecraft/tags/TagLoader$LoadResult;)Lnet/minecraft/core/Registry$PendingTags;
+		ARG 1 loadResult
 	METHOD register (Lnet/minecraft/core/Registry;Ljava/lang/String;Ljava/lang/Object;)Ljava/lang/Object;
 		ARG 0 registry
 		ARG 1 name

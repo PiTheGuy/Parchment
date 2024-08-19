@@ -138,6 +138,10 @@ CLASS net/minecraft/world/item/Item
 		ARG 2 level
 		ARG 3 livingEntity
 		ARG 4 timeCharged
+	METHOD use (Lnet/minecraft/world/level/Level;Lnet/minecraft/world/entity/player/Player;Lnet/minecraft/world/InteractionHand;)Lnet/minecraft/world/InteractionResult;
+		ARG 1 level
+		ARG 2 player
+		ARG 3 hand
 	METHOD use (Lnet/minecraft/world/level/Level;Lnet/minecraft/world/entity/player/Player;Lnet/minecraft/world/InteractionHand;)Lnet/minecraft/world/InteractionResultHolder;
 		COMMENT Called to trigger the item's "innate" right click behavior. To handle when this item is used on a Block, see {@link net.minecraft.world.item.Item#useOn(net.minecraft.world.item.context.UseOnContext)}.
 		ARG 1 level
@@ -161,12 +165,18 @@ CLASS net/minecraft/world/item/Item
 			ARG 1 craftingRemainingItem
 		METHOD durability (I)Lnet/minecraft/world/item/Item$Properties;
 			ARG 1 maxDamage
+		METHOD enchantable (I)Lnet/minecraft/world/item/Item$Properties;
+			ARG 1 enchantmentValue
 		METHOD food (Lnet/minecraft/world/food/FoodProperties;)Lnet/minecraft/world/item/Item$Properties;
 			ARG 1 food
 		METHOD jukeboxPlayable (Lnet/minecraft/resources/ResourceKey;)Lnet/minecraft/world/item/Item$Properties;
 			ARG 1 song
 		METHOD rarity (Lnet/minecraft/world/item/Rarity;)Lnet/minecraft/world/item/Item$Properties;
 			ARG 1 rarity
+		METHOD repairable (Lnet/minecraft/tags/TagKey;)Lnet/minecraft/world/item/Item$Properties;
+			ARG 1 repairItems
+		METHOD repairable (Lnet/minecraft/world/item/Item;)Lnet/minecraft/world/item/Item$Properties;
+			ARG 1 repairItem
 		METHOD requiredFeatures ([Lnet/minecraft/world/flag/FeatureFlag;)Lnet/minecraft/world/item/Item$Properties;
 			ARG 1 requiredFeatures
 		METHOD stacksTo (I)Lnet/minecraft/world/item/Item$Properties;

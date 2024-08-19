@@ -165,6 +165,10 @@ CLASS net/minecraft/world/level/block/Block
 		ARG 2 offset
 		ARG 3 face
 		ARG 4 pos
+	METHOD shouldRenderFace (Lnet/minecraft/world/level/block/state/BlockState;Lnet/minecraft/world/level/block/state/BlockState;Lnet/minecraft/core/Direction;)Z
+		ARG 0 currentFace
+		ARG 1 neighboringFace
+		ARG 2 face
 	METHOD spawnDestroyParticles (Lnet/minecraft/world/level/Level;Lnet/minecraft/world/entity/player/Player;Lnet/minecraft/core/BlockPos;Lnet/minecraft/world/level/block/state/BlockState;)V
 		ARG 1 level
 		ARG 2 player
@@ -187,6 +191,9 @@ CLASS net/minecraft/world/level/block/Block
 		COMMENT This method is responsible for doing any modification on the motion of the entity that should result from the landing.
 		ARG 1 level
 		ARG 2 entity
+	METHOD updateEntityMovementAfterFallOn (Lnet/minecraft/world/level/BlockGetter;Lnet/minecraft/world/entity/Entity;)V
+		ARG 1 level
+		ARG 2 entity
 	METHOD updateFromNeighbourShapes (Lnet/minecraft/world/level/block/state/BlockState;Lnet/minecraft/world/level/LevelAccessor;Lnet/minecraft/core/BlockPos;)Lnet/minecraft/world/level/block/state/BlockState;
 		COMMENT With the provided block state, performs neighbor checks for all neighboring blocks to get an "adjusted" blockstate for placement in the world, if the current state is not valid.
 		ARG 0 currentState
@@ -206,6 +213,10 @@ CLASS net/minecraft/world/level/block/Block
 		ARG 3 pos
 		ARG 4 flags
 		ARG 5 recursionLeft
+	METHOD wasExploded (Lnet/minecraft/server/level/ServerLevel;Lnet/minecraft/core/BlockPos;Lnet/minecraft/world/level/Explosion;)V
+		ARG 1 level
+		ARG 2 pos
+		ARG 3 explosion
 	METHOD wasExploded (Lnet/minecraft/world/level/Level;Lnet/minecraft/core/BlockPos;Lnet/minecraft/world/level/Explosion;)V
 		COMMENT Called when this Block is destroyed by an Explosion
 		ARG 1 level
@@ -224,5 +235,8 @@ CLASS net/minecraft/world/level/block/Block
 			ARG 1 first
 			ARG 2 second
 			ARG 3 direction
+		METHOD equals (Ljava/lang/Object;)Z
+			ARG 1 other
+	CLASS ShapePairKey
 		METHOD equals (Ljava/lang/Object;)Z
 			ARG 1 other

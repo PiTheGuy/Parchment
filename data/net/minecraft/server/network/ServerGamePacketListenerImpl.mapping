@@ -100,6 +100,8 @@ CLASS net/minecraft/server/network/ServerGamePacketListenerImpl
 	METHOD handlePlayerInput (Lnet/minecraft/network/protocol/game/ServerboundPlayerInputPacket;)V
 		COMMENT Processes player movement input. Includes walking, strafing, jumping, and sneaking. Excludes riding and toggling flying/sprinting.
 		ARG 1 packet
+	METHOD handlePlayerKnownMovement (Lnet/minecraft/world/phys/Vec3;)V
+		ARG 1 movement
 	METHOD handleRecipeBookSeenRecipePacket (Lnet/minecraft/network/protocol/game/ServerboundRecipeBookSeenRecipePacket;)V
 		ARG 1 packet
 	METHOD handleRenameItem (Lnet/minecraft/network/protocol/game/ServerboundRenameItemPacket;)V

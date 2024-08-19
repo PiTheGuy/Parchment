@@ -3,6 +3,10 @@ CLASS net/minecraft/world/level/storage/DimensionDataStorage
 		ARG 1 dataFolder
 		ARG 2 fixerUpper
 		ARG 3 registries
+	METHOD <init> (Ljava/nio/file/Path;Lcom/mojang/datafixers/DataFixer;Lnet/minecraft/core/HolderLookup$Provider;)V
+		ARG 1 dataFolder
+		ARG 2 fixerUpper
+		ARG 3 registries
 	METHOD computeIfAbsent (Lnet/minecraft/world/level/saveddata/SavedData$Factory;Ljava/lang/String;)Lnet/minecraft/world/level/saveddata/SavedData;
 		ARG 1 factory
 		ARG 2 name
@@ -11,6 +15,8 @@ CLASS net/minecraft/world/level/storage/DimensionDataStorage
 		ARG 2 name
 	METHOD getDataFile (Ljava/lang/String;)Ljava/io/File;
 		ARG 1 name
+	METHOD getDataFile (Ljava/lang/String;)Ljava/nio/file/Path;
+		ARG 1 filename
 	METHOD isGzip (Ljava/io/PushbackInputStream;)Z
 		ARG 1 inputStream
 	METHOD lambda$save$0 (Ljava/lang/String;Lnet/minecraft/world/level/saveddata/SavedData;)V

@@ -58,6 +58,10 @@ CLASS net/minecraft/server/level/ServerPlayer
 		ARG 1 player
 	METHOD createCommonSpawnInfo (Lnet/minecraft/server/level/ServerLevel;)Lnet/minecraft/network/protocol/game/CommonPlayerSpawnInfo;
 		ARG 1 level
+	METHOD createItemStackToDrop (Lnet/minecraft/world/item/ItemStack;ZZ)Lnet/minecraft/world/entity/item/ItemEntity;
+		ARG 1 droppedItem
+		ARG 2 dropAround
+		ARG 3 includeThrowerName
 	METHOD crit (Lnet/minecraft/world/entity/Entity;)V
 		COMMENT Called when the entity is dealt a critical hit.
 		ARG 1 entityHit
@@ -146,6 +150,9 @@ CLASS net/minecraft/server/level/ServerPlayer
 		ARG 5 z
 	METHOD nextContainerCounter ()V
 		COMMENT Gets the next window id to use.
+	METHOD noCollisionNoLiquid (Lnet/minecraft/server/level/ServerLevel;Lnet/minecraft/world/phys/AABB;)Z
+		ARG 1 level
+		ARG 2 collisionBox
 	METHOD onEffectRemoved (Lnet/minecraft/world/effect/MobEffectInstance;)V
 		ARG 1 effect
 	METHOD onEnchantmentPerformed (Lnet/minecraft/world/item/ItemStack;I)V
@@ -255,6 +262,14 @@ CLASS net/minecraft/server/level/ServerPlayer
 		ARG 6 z
 		ARG 8 yaw
 		ARG 9 pitch
+	METHOD teleportTo (Lnet/minecraft/server/level/ServerLevel;DDDFFZ)V
+		ARG 1 level
+		ARG 2 x
+		ARG 4 y
+		ARG 6 z
+		ARG 8 yaw
+		ARG 9 pitch
+		ARG 10 setCamera
 	METHOD tick ()V
 		COMMENT Called to update the entity's position/logic.
 	METHOD triggerDimensionChangeTriggers (Lnet/minecraft/server/level/ServerLevel;)V

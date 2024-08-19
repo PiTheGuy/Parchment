@@ -5,12 +5,35 @@ CLASS net/minecraft/client/renderer/PostPass
 		ARG 3 inTarget
 		ARG 4 outTarget
 		ARG 5 useLinearFilter
+	METHOD <init> (Lnet/minecraft/server/packs/resources/ResourceProvider;Ljava/lang/String;Lnet/minecraft/resources/ResourceLocation;)V
+		ARG 1 resourceProvider
+		ARG 2 name
+		ARG 3 outputTargetId
 	METHOD addAuxAsset (Ljava/lang/String;Ljava/util/function/IntSupplier;II)V
 		ARG 1 auxName
 		ARG 2 auxFramebuffer
 		ARG 3 width
 		ARG 4 height
+	METHOD addInput (Lnet/minecraft/client/renderer/PostPass$Input;)V
+		ARG 1 input
+	METHOD addToFrame (Lcom/mojang/blaze3d/framegraph/FrameGraphBuilder;Ljava/util/Map;Lorg/joml/Matrix4f;F)V
+		ARG 1 frameGraphBuilder
+		ARG 2 targets
+		ARG 3 matrix
+		ARG 4 time
 	METHOD process (F)V
 		ARG 1 partialTicks
 	METHOD setOrthoMatrix (Lorg/joml/Matrix4f;)V
 		ARG 1 shaderOrthoMatrix
+	CLASS Input
+		METHOD addToPass (Lcom/mojang/blaze3d/framegraph/FramePass;Ljava/util/Map;)V
+			ARG 1 pass
+			ARG 2 targets
+		METHOD bindTo (Lnet/minecraft/client/renderer/EffectInstance;Ljava/util/Map;)V
+			ARG 1 effect
+			ARG 2 targets
+		METHOD cleanup (Ljava/util/Map;)V
+			ARG 1 targets
+	CLASS TargetInput
+		METHOD getHandle (Ljava/util/Map;)Lcom/mojang/blaze3d/resource/ResourceHandle;
+			ARG 1 targets

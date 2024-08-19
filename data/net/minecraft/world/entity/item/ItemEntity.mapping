@@ -25,6 +25,9 @@ CLASS net/minecraft/world/entity/item/ItemEntity
 		COMMENT Gets the item that this entity represents.
 	METHOD getSpin (F)F
 		ARG 1 partialTicks
+	METHOD getSpin (FF)F
+		ARG 0 age
+		ARG 1 bobOffset
 	METHOD hurt (Lnet/minecraft/world/damagesource/DamageSource;F)Z
 		COMMENT Called when the entity is attacked.
 		ARG 1 source

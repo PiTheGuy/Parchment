@@ -13,6 +13,8 @@ CLASS net/minecraft/world/entity/vehicle/AbstractMinecart
 		ARG 4 powered
 	METHOD addAdditionalSaveData (Lnet/minecraft/nbt/CompoundTag;)V
 		ARG 1 compound
+	METHOD applyNaturalSlowdown (Lnet/minecraft/world/phys/Vec3;)Lnet/minecraft/world/phys/Vec3;
+		ARG 1 speed
 	METHOD canCollideWith (Lnet/minecraft/world/entity/Entity;)Z
 		ARG 1 entity
 	METHOD comeOffTrack ()V
@@ -44,6 +46,8 @@ CLASS net/minecraft/world/entity/vehicle/AbstractMinecart
 		ARG 3 y
 		ARG 5 z
 		ARG 7 offset
+	METHOD getRedstoneDirection (Lnet/minecraft/core/BlockPos;)Lnet/minecraft/world/phys/Vec3;
+		ARG 1 pos
 	METHOD isPickable ()Z
 		COMMENT Returns {@code true} if other Entities should be prevented from moving through this Entity.
 	METHOD isPushable ()Z
@@ -59,12 +63,19 @@ CLASS net/minecraft/world/entity/vehicle/AbstractMinecart
 		ARG 1 x
 		ARG 3 y
 		ARG 5 z
+	METHOD makeStepAlongTrack (Lnet/minecraft/core/BlockPos;Lnet/minecraft/world/level/block/state/properties/RailShape;D)D
+		ARG 1 pos
+		ARG 2 railShape
+		ARG 3 speed
 	METHOD moveAlongTrack (Lnet/minecraft/core/BlockPos;Lnet/minecraft/world/level/block/state/BlockState;)V
 		ARG 1 pos
 		ARG 2 state
 	METHOD push (Lnet/minecraft/world/entity/Entity;)V
 		COMMENT Applies a velocity to the entities, to push them away from each other.
 		ARG 1 entity
+	METHOD pushOrPickUpEntities (Lnet/minecraft/world/phys/AABB;D)Z
+		ARG 1 box
+		ARG 2 minSpeed
 	METHOD readAdditionalSaveData (Lnet/minecraft/nbt/CompoundTag;)V
 		COMMENT (abstract) Protected helper method to read subclass entity data from NBT.
 		ARG 1 compound
@@ -74,5 +85,16 @@ CLASS net/minecraft/world/entity/vehicle/AbstractMinecart
 		ARG 1 displayState
 	METHOD setDisplayOffset (I)V
 		ARG 1 displayOffset
+	METHOD setFlipped (Z)V
+		ARG 1 flipped
+	METHOD setOnRails (Z)V
+		ARG 1 onRails
+	METHOD setPassengerMoveIntent (Lnet/minecraft/world/phys/Vec3;)V
+		ARG 1 passengerMoveIntent
+	METHOD setPassengerMoveIntentFromInput (Lnet/minecraft/world/entity/LivingEntity;Lnet/minecraft/world/phys/Vec3;)V
+		ARG 1 passenger
+		ARG 2 moveIntent
 	METHOD tick ()V
 		COMMENT Called to update the entity's position/logic.
+	METHOD useExperimentalMovement (Lnet/minecraft/world/level/Level;)Z
+		ARG 0 level

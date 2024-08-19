@@ -10,6 +10,18 @@ CLASS net/minecraft/client/multiplayer/ClientLevel
 		ARG 8 levelRenderer
 		ARG 9 isDebug
 		ARG 10 biomeZoomSeed
+	METHOD <init> (Lnet/minecraft/client/multiplayer/ClientPacketListener;Lnet/minecraft/client/multiplayer/ClientLevel$ClientLevelData;Lnet/minecraft/resources/ResourceKey;Lnet/minecraft/core/Holder;IILjava/util/function/Supplier;Lnet/minecraft/client/renderer/LevelRenderer;ZJI)V
+		ARG 1 connection
+		ARG 2 levelData
+		ARG 3 dimension
+		ARG 4 dimensionTypeRegistration
+		ARG 5 viewDistance
+		ARG 6 serverSimulationDistance
+		ARG 7 profiler
+		ARG 8 levelRenderer
+		ARG 9 isDebug
+		ARG 10 biomeZoomSeed
+		ARG 12 seaLevel
 	METHOD addAlwaysVisibleParticle (Lnet/minecraft/core/particles/ParticleOptions;DDDDDD)V
 		ARG 1 particleData
 		ARG 2 x
@@ -77,6 +89,8 @@ CLASS net/minecraft/client/multiplayer/ClientLevel
 		ARG 2 colorResolver
 	METHOD getChunkSource ()Lnet/minecraft/client/multiplayer/ClientChunkCache;
 		COMMENT Gets the world's chunk provider
+	METHOD getCloudColor (F)I
+		ARG 1 partialTick
 	METHOD getCloudColor (F)Lnet/minecraft/world/phys/Vec3;
 		ARG 1 partialTick
 	METHOD getEntity (I)Lnet/minecraft/world/entity/Entity;
@@ -84,6 +98,9 @@ CLASS net/minecraft/client/multiplayer/ClientLevel
 		ARG 1 id
 	METHOD getLevelData ()Lnet/minecraft/client/multiplayer/ClientLevel$ClientLevelData;
 		COMMENT Returns the world's WorldInfo object
+	METHOD getSkyColor (Lnet/minecraft/world/phys/Vec3;F)I
+		ARG 1 cameraPosition
+		ARG 2 partialTick
 	METHOD getSkyColor (Lnet/minecraft/world/phys/Vec3;F)Lnet/minecraft/world/phys/Vec3;
 		ARG 1 pos
 		ARG 2 partialTick
@@ -100,6 +117,8 @@ CLASS net/minecraft/client/multiplayer/ClientLevel
 	METHOD hasChunk (II)Z
 		ARG 1 chunkX
 		ARG 2 chunkZ
+	METHOD isTickingEntity (Lnet/minecraft/world/entity/Entity;)Z
+		ARG 1 entity
 	METHOD lambda$clearTintCaches$7 (Lnet/minecraft/world/level/ColorResolver;Lnet/minecraft/client/color/block/BlockTintCache;)V
 		ARG 0 resolver
 		ARG 1 cache
@@ -180,6 +199,13 @@ CLASS net/minecraft/client/multiplayer/ClientLevel
 		ARG 1 sectionX
 		ARG 2 sectionY
 		ARG 3 sectionZ
+	METHOD setSectionRangeDirty (IIIIII)V
+		ARG 1 minY
+		ARG 2 minX
+		ARG 3 minZ
+		ARG 4 maxY
+		ARG 5 maxX
+		ARG 6 maxZ
 	METHOD setServerSimulationDistance (I)V
 		ARG 1 serverSimulationDistance
 	METHOD setServerVerifiedBlockState (Lnet/minecraft/core/BlockPos;Lnet/minecraft/world/level/block/state/BlockState;I)V
@@ -224,6 +250,11 @@ CLASS net/minecraft/client/multiplayer/ClientLevel
 			ARG 1 difficulty
 			ARG 2 hardcore
 			ARG 3 isFlat
+		METHOD <init> (Lnet/minecraft/world/flag/FeatureFlagSet;Lnet/minecraft/world/Difficulty;ZZ)V
+			ARG 1 enabledFeatures
+			ARG 2 difficulty
+			ARG 3 hardcore
+			ARG 4 isFlat
 		METHOD getDayTime ()J
 			COMMENT Get current world time
 		METHOD getGameRules ()Lnet/minecraft/world/level/GameRules;

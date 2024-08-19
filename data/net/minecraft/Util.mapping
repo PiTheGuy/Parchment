@@ -1,7 +1,51 @@
 CLASS net/minecraft/Util
 	METHOD allOf (Ljava/util/List;)Ljava/util/function/Predicate;
 		ARG 0 predicates
+	METHOD allOf (Ljava/util/function/Predicate;)Ljava/util/function/Predicate;
+		ARG 0 predicate
+	METHOD allOf (Ljava/util/function/Predicate;Ljava/util/function/Predicate;)Ljava/util/function/Predicate;
+		ARG 0 predicate1
+		ARG 1 predicate2
+	METHOD allOf (Ljava/util/function/Predicate;Ljava/util/function/Predicate;Ljava/util/function/Predicate;)Ljava/util/function/Predicate;
+		ARG 0 predicate1
+		ARG 1 predicate2
+		ARG 2 predicate3
+	METHOD allOf (Ljava/util/function/Predicate;Ljava/util/function/Predicate;Ljava/util/function/Predicate;Ljava/util/function/Predicate;)Ljava/util/function/Predicate;
+		ARG 0 predicate1
+		ARG 1 predicate2
+		ARG 2 predicate3
+		ARG 3 predicate4
+	METHOD allOf (Ljava/util/function/Predicate;Ljava/util/function/Predicate;Ljava/util/function/Predicate;Ljava/util/function/Predicate;Ljava/util/function/Predicate;)Ljava/util/function/Predicate;
+		ARG 0 predicate1
+		ARG 1 predicate2
+		ARG 2 predicate3
+		ARG 3 predicate4
+		ARG 4 predicate5
+	METHOD allOf ([Ljava/util/function/Predicate;)Ljava/util/function/Predicate;
+		ARG 0 predicates
 	METHOD anyOf (Ljava/util/List;)Ljava/util/function/Predicate;
+		ARG 0 predicates
+	METHOD anyOf (Ljava/util/function/Predicate;)Ljava/util/function/Predicate;
+		ARG 0 predicate
+	METHOD anyOf (Ljava/util/function/Predicate;Ljava/util/function/Predicate;)Ljava/util/function/Predicate;
+		ARG 0 predicate1
+		ARG 1 predicate2
+	METHOD anyOf (Ljava/util/function/Predicate;Ljava/util/function/Predicate;Ljava/util/function/Predicate;)Ljava/util/function/Predicate;
+		ARG 0 predicate1
+		ARG 1 predicate2
+		ARG 2 predicate3
+	METHOD anyOf (Ljava/util/function/Predicate;Ljava/util/function/Predicate;Ljava/util/function/Predicate;Ljava/util/function/Predicate;)Ljava/util/function/Predicate;
+		ARG 0 predicate1
+		ARG 1 predicate2
+		ARG 2 predicate3
+		ARG 3 predicate4
+	METHOD anyOf (Ljava/util/function/Predicate;Ljava/util/function/Predicate;Ljava/util/function/Predicate;Ljava/util/function/Predicate;Ljava/util/function/Predicate;)Ljava/util/function/Predicate;
+		ARG 0 predicate1
+		ARG 1 predicate2
+		ARG 2 predicate3
+		ARG 3 predicate4
+		ARG 4 predicate5
+	METHOD anyOf ([Ljava/util/function/Predicate;)Ljava/util/function/Predicate;
 		ARG 0 predicates
 	METHOD blockUntilDone (Ljava/util/function/Function;)Ljava/util/concurrent/CompletableFuture;
 		ARG 0 task
@@ -154,6 +198,7 @@ CLASS net/minecraft/Util
 		ARG 0 current
 		ARG 1 latest
 		ARG 2 oldBackup
+		ARG 3 restore
 	METHOD sanitizeName (Ljava/lang/String;Lnet/minecraft/CharPredicate;)Ljava/lang/String;
 		ARG 0 fileName
 		ARG 1 characterValidator
@@ -197,9 +242,6 @@ CLASS net/minecraft/Util
 		ARG 0 typed
 		ARG 1 type
 		ARG 2 operator
-	CLASS 2
-		METHOD onTermination (Ljava/lang/Throwable;)V
-			ARG 1 throwOnTermination
 	CLASS 10
 		METHOD apply (Ljava/lang/Object;)Ljava/lang/Object;
 			ARG 1 key
@@ -207,6 +249,9 @@ CLASS net/minecraft/Util
 		METHOD apply (Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 			ARG 1 key1
 			ARG 2 key2
+	CLASS 2
+		METHOD onTermination (Ljava/lang/Throwable;)V
+			ARG 1 throwOnTermination
 	CLASS OS
 		METHOD <init> (Ljava/lang/String;ILjava/lang/String;)V
 			ARG 3 telemetryName

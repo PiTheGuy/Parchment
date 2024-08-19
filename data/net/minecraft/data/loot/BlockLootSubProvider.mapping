@@ -100,6 +100,7 @@ CLASS net/minecraft/data/loot/BlockLootSubProvider
 		ARG 2 builder
 	METHOD createShearsOnlyDrop (Lnet/minecraft/world/level/ItemLike;)Lnet/minecraft/world/level/storage/loot/LootTable$Builder;
 		ARG 0 item
+		ARG 1 item
 	METHOD createShulkerBoxDrop (Lnet/minecraft/world/level/block/Block;)Lnet/minecraft/world/level/storage/loot/LootTable$Builder;
 		ARG 1 block
 	METHOD createSilkTouchDispatchTable (Lnet/minecraft/world/level/block/Block;Lnet/minecraft/world/level/storage/loot/entries/LootPoolEntryContainer$Builder;)Lnet/minecraft/world/level/storage/loot/LootTable$Builder;

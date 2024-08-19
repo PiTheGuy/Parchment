@@ -34,3 +34,5 @@ CLASS net/minecraft/world/level/pathfinder/PathFinder
 		ARG 1 point
 		ARG 2 targetPos
 		ARG 3 reachesTarget
+	METHOD setMaxVisitedNodes (I)V
+		ARG 1 maxVisitedNodes

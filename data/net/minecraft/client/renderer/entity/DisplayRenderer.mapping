@@ -1,4 +1,8 @@
 CLASS net/minecraft/client/renderer/entity/DisplayRenderer
+	METHOD calculateOrientation (Lnet/minecraft/world/entity/Display$RenderState;Lnet/minecraft/client/renderer/entity/state/DisplayEntityRenderState;Lorg/joml/Quaternionf;)Lorg/joml/Quaternionf;
+		ARG 1 renderState
+		ARG 2 entityRenderState
+		ARG 3 quaternion
 	METHOD calculateOrientation (Lnet/minecraft/world/entity/Display$RenderState;Lnet/minecraft/world/entity/Display;FLorg/joml/Quaternionf;)Lorg/joml/Quaternionf;
 		ARG 1 renderState
 		ARG 2 entity
@@ -23,6 +27,12 @@ CLASS net/minecraft/client/renderer/entity/DisplayRenderer
 		ARG 4 poseStack
 		ARG 5 buffer
 		ARG 6 packedLight
+	METHOD renderInner (Lnet/minecraft/client/renderer/entity/state/DisplayEntityRenderState;Lcom/mojang/blaze3d/vertex/PoseStack;Lnet/minecraft/client/renderer/MultiBufferSource;IF)V
+		ARG 1 renderState
+		ARG 2 poseStack
+		ARG 3 bufferSource
+		ARG 4 packedLight
+		ARG 5 interpolationProgress
 	METHOD renderInner (Lnet/minecraft/world/entity/Display;Ljava/lang/Object;Lcom/mojang/blaze3d/vertex/PoseStack;Lnet/minecraft/client/renderer/MultiBufferSource;IF)V
 		ARG 1 textDisplay
 		ARG 2 renderState

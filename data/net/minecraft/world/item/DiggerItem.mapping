@@ -3,6 +3,12 @@ CLASS net/minecraft/world/item/DiggerItem
 		ARG 1 tier
 		ARG 2 blocks
 		ARG 3 properties
+	METHOD <init> (Lnet/minecraft/world/item/ToolMaterial;Lnet/minecraft/tags/TagKey;FFLnet/minecraft/world/item/Item$Properties;)V
+		ARG 1 material
+		ARG 2 mineableBlocks
+		ARG 3 attackDamage
+		ARG 4 attackSpeed
+		ARG 5 properties
 	METHOD createAttributes (Lnet/minecraft/world/item/Tier;FF)Lnet/minecraft/world/item/component/ItemAttributeModifiers;
 		ARG 0 tier
 		ARG 1 attackDamage

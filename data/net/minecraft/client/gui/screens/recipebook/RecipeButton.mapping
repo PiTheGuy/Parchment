@@ -1,6 +1,12 @@
 CLASS net/minecraft/client/gui/screens/recipebook/RecipeButton
+	METHOD <init> (Lnet/minecraft/client/gui/screens/recipebook/SlotSelectTime;)V
+		ARG 1 slotSelectTime
 	METHOD init (Lnet/minecraft/client/gui/screens/recipebook/RecipeCollection;Lnet/minecraft/client/gui/screens/recipebook/RecipeBookPage;)V
 		ARG 1 collection
 		ARG 2 recipeBookPage
+	METHOD init (Lnet/minecraft/client/gui/screens/recipebook/RecipeCollection;ZLnet/minecraft/client/gui/screens/recipebook/RecipeBookPage;)V
+		ARG 1 collection
+		ARG 2 isFiltering
+		ARG 3 page
 	METHOD isValidClickButton (I)Z
 		ARG 1 button

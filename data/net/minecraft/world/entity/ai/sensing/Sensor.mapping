@@ -15,6 +15,14 @@ CLASS net/minecraft/world/entity/ai/sensing/Sensor
 		COMMENT @return if the entity is remembered as a target and then tests the condition
 		ARG 0 livingEntity
 		ARG 1 target
+	METHOD rememberPositives (ILjava/util/function/Predicate;)Ljava/util/function/Predicate;
+		ARG 0 ticks
+		ARG 1 isAttackable
 	METHOD tick (Lnet/minecraft/server/level/ServerLevel;Lnet/minecraft/world/entity/LivingEntity;)V
 		ARG 1 level
 		ARG 2 entity
+	METHOD updateTargetingConditionRanges (Lnet/minecraft/world/entity/LivingEntity;)V
+		ARG 1 entity
+	METHOD wasEntityAttackableLastNTicks (Lnet/minecraft/world/entity/LivingEntity;I)Ljava/util/function/Predicate;
+		ARG 0 entity
+		ARG 1 ticks

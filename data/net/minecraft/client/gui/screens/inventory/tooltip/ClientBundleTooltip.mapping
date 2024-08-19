@@ -6,6 +6,53 @@ CLASS net/minecraft/client/gui/screens/inventory/tooltip/ClientBundleTooltip
 		ARG 2 x
 		ARG 3 y
 		ARG 4 texture
+	METHOD drawEmptyBundleDescriptionText (IILnet/minecraft/client/gui/Font;Lnet/minecraft/client/gui/GuiGraphics;)V
+		ARG 0 x
+		ARG 1 y
+		ARG 2 font
+		ARG 3 guiGraphics
+	METHOD drawProgressbar (IILnet/minecraft/client/gui/Font;Lnet/minecraft/client/gui/GuiGraphics;)V
+		ARG 1 x
+		ARG 2 y
+		ARG 3 font
+		ARG 4 guiGraphics
+	METHOD drawSelectedItemTooltip (Lnet/minecraft/client/gui/Font;Lnet/minecraft/client/gui/GuiGraphics;II)V
+		ARG 1 font
+		ARG 2 guiGraphics
+		ARG 3 x
+		ARG 4 y
+	METHOD getAmountOfHiddenItems (Ljava/util/List;)I
+		ARG 1 shownItems
+	METHOD getEmptyBundleBackgroundHeight (Lnet/minecraft/client/gui/Font;)I
+		ARG 0 font
+	METHOD getEmptyBundleDescriptionTextHeight (Lnet/minecraft/client/gui/Font;)I
+		ARG 0 font
+	METHOD getShownItems (I)Ljava/util/List;
+		ARG 1 itemsToShow
+	METHOD renderBundleWithItemsTooltip (Lnet/minecraft/client/gui/Font;IILnet/minecraft/client/gui/GuiGraphics;)V
+		ARG 1 font
+		ARG 2 x
+		ARG 3 y
+		ARG 4 guiGraphics
+	METHOD renderCount (IIILnet/minecraft/client/gui/Font;Lnet/minecraft/client/gui/GuiGraphics;)V
+		ARG 0 slotX
+		ARG 1 slotY
+		ARG 2 count
+		ARG 3 font
+		ARG 4 guiGraphics
+	METHOD renderEmptyBundleTooltip (Lnet/minecraft/client/gui/Font;IILnet/minecraft/client/gui/GuiGraphics;)V
+		ARG 1 font
+		ARG 2 x
+		ARG 3 y
+		ARG 4 guiGraphics
+	METHOD renderSlot (IIILjava/util/List;ILnet/minecraft/client/gui/Font;Lnet/minecraft/client/gui/GuiGraphics;)V
+		ARG 1 slotIndex
+		ARG 2 x
+		ARG 3 y
+		ARG 4 shownItems
+		ARG 5 seed
+		ARG 6 font
+		ARG 7 guiGraphics
 	METHOD renderSlot (IIIZLnet/minecraft/client/gui/GuiGraphics;Lnet/minecraft/client/gui/Font;)V
 		ARG 1 x
 		ARG 2 y
@@ -13,6 +60,18 @@ CLASS net/minecraft/client/gui/screens/inventory/tooltip/ClientBundleTooltip
 		ARG 4 isBundleFull
 		ARG 5 guiGraphics
 		ARG 6 font
+	METHOD renderSlotHighlight (ILnet/minecraft/client/gui/GuiGraphics;II)V
+		ARG 1 slotIndex
+		ARG 2 guiGraphics
+		ARG 3 x
+		ARG 4 y
+	METHOD shouldRenderItemSlot (Ljava/util/List;I)Z
+		ARG 0 shownItems
+		ARG 1 slotIndex
+	METHOD shouldRenderSurplusText (ZII)Z
+		ARG 0 hasEnoughItems
+		ARG 1 cellX
+		ARG 2 cellY
 	CLASS Texture
 		METHOD <init> (Ljava/lang/String;ILnet/minecraft/resources/ResourceLocation;II)V
 			ARG 3 sprite

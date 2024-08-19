@@ -2,6 +2,8 @@ CLASS net/minecraft/client/renderer/entity/EndCrystalRenderer
 	METHOD getTextureLocation (Lnet/minecraft/world/entity/boss/enderdragon/EndCrystal;)Lnet/minecraft/resources/ResourceLocation;
 		COMMENT Returns the location of an entity's texture.
 		ARG 1 entity
+	METHOD getY (F)F
+		ARG 0 ageInTicks
 	METHOD getY (Lnet/minecraft/world/entity/boss/enderdragon/EndCrystal;F)F
 		ARG 0 endCrystal
 		ARG 1 partialTick

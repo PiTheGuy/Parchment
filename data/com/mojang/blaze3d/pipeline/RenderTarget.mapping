@@ -24,10 +24,16 @@ CLASS com/mojang/blaze3d/pipeline/RenderTarget
 		ARG 1 clearError
 	METHOD copyDepthFrom (Lcom/mojang/blaze3d/pipeline/RenderTarget;)V
 		ARG 1 otherTarget
+	METHOD createBuffers (II)V
+		ARG 1 width
+		ARG 2 height
 	METHOD createBuffers (IIZ)V
 		ARG 1 width
 		ARG 2 height
 		ARG 3 clearError
+	METHOD resize (II)V
+		ARG 1 width
+		ARG 2 height
 	METHOD resize (IIZ)V
 		ARG 1 width
 		ARG 2 height

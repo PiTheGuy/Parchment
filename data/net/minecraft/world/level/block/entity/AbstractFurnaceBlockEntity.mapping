@@ -44,6 +44,9 @@ CLASS net/minecraft/world/level/block/entity/AbstractFurnaceBlockEntity
 		ARG 1 helper
 	METHOD getBurnDuration (Lnet/minecraft/world/item/ItemStack;)I
 		ARG 1 fuel
+	METHOD getBurnDuration (Lnet/minecraft/world/level/block/entity/FuelValues;Lnet/minecraft/world/item/ItemStack;)I
+		ARG 1 fuelValues
+		ARG 2 stack
 	METHOD getRecipesToAwardAndPopExperience (Lnet/minecraft/server/level/ServerLevel;Lnet/minecraft/world/phys/Vec3;)Ljava/util/List;
 		ARG 1 level
 		ARG 2 popVec

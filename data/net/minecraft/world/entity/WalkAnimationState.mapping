@@ -8,3 +8,7 @@ CLASS net/minecraft/world/entity/WalkAnimationState
 	METHOD update (FF)V
 		ARG 1 newSpeed
 		ARG 2 partialTick
+	METHOD update (FFF)V
+		ARG 1 movementSpeed
+		ARG 2 multiplier
+		ARG 3 positionScale

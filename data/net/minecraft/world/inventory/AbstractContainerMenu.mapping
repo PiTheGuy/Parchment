@@ -6,11 +6,23 @@ CLASS net/minecraft/world/inventory/AbstractContainerMenu
 		ARG 1 intValue
 	METHOD addDataSlots (Lnet/minecraft/world/inventory/ContainerData;)V
 		ARG 1 array
+	METHOD addInventoryExtendedSlots (Lnet/minecraft/world/Container;II)V
+		ARG 1 container
+		ARG 2 x
+		ARG 3 y
+	METHOD addInventoryHotbarSlots (Lnet/minecraft/world/Container;II)V
+		ARG 1 container
+		ARG 2 x
+		ARG 3 y
 	METHOD addSlot (Lnet/minecraft/world/inventory/Slot;)Lnet/minecraft/world/inventory/Slot;
 		COMMENT Adds an item slot to this container
 		ARG 1 slot
 	METHOD addSlotListener (Lnet/minecraft/world/inventory/ContainerListener;)V
 		ARG 1 listener
+	METHOD addStandardInventorySlots (Lnet/minecraft/world/Container;II)V
+		ARG 1 container
+		ARG 2 x
+		ARG 3 y
 	METHOD broadcastChanges ()V
 		COMMENT Looks for changes made in the container, sends them to every listener.
 	METHOD canDragTo (Lnet/minecraft/world/inventory/Slot;)Z
@@ -125,6 +137,9 @@ CLASS net/minecraft/world/inventory/AbstractContainerMenu
 	METHOD setRemoteSlotNoCopy (ILnet/minecraft/world/item/ItemStack;)V
 		ARG 1 slot
 		ARG 2 stack
+	METHOD setSelectedBundleItemIndex (II)V
+		ARG 1 slotIndex
+		ARG 2 bundleItemIndex
 	METHOD setSynchronizer (Lnet/minecraft/world/inventory/ContainerSynchronizer;)V
 		ARG 1 synchronizer
 	METHOD slotsChanged (Lnet/minecraft/world/Container;)V

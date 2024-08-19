@@ -5,6 +5,12 @@ CLASS net/minecraft/client/animation/KeyframeAnimations
 		ARG 2 accumulatedTime
 		ARG 4 scale
 		ARG 5 animationVecCache
+	METHOD animate (Lnet/minecraft/client/model/Model;Lnet/minecraft/client/animation/AnimationDefinition;JFLorg/joml/Vector3f;)V
+		ARG 0 model
+		ARG 1 definition
+		ARG 2 accumulatedTime
+		ARG 4 scale
+		ARG 5 vector
 	METHOD degreeVec (FFF)Lorg/joml/Vector3f;
 		ARG 0 xDegrees
 		ARG 1 yDegrees

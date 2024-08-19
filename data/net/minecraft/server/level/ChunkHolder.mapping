@@ -18,6 +18,8 @@ CLASS net/minecraft/server/level/ChunkHolder
 		ARG 1 dependency
 	METHOD blockChanged (Lnet/minecraft/core/BlockPos;)V
 		ARG 1 pos
+	METHOD blockChanged (Lnet/minecraft/core/BlockPos;)Z
+		ARG 1 pos
 	METHOD broadcast (Ljava/util/List;Lnet/minecraft/network/protocol/Packet;)V
 		ARG 1 players
 		ARG 2 packet
@@ -45,6 +47,9 @@ CLASS net/minecraft/server/level/ChunkHolder
 	METHOD sectionLightChanged (Lnet/minecraft/world/level/LightLayer;I)V
 		ARG 1 type
 		ARG 2 sectionY
+	METHOD sectionLightChanged (Lnet/minecraft/world/level/LightLayer;I)Z
+		ARG 1 lightLayer
+		ARG 2 y
 	METHOD setQueueLevel (I)V
 		ARG 1 queueLevel
 	METHOD setTicketLevel (I)V
@@ -52,14 +57,14 @@ CLASS net/minecraft/server/level/ChunkHolder
 	METHOD updateFutures (Lnet/minecraft/server/level/ChunkMap;Ljava/util/concurrent/Executor;)V
 		ARG 1 chunkMap
 		ARG 2 executor
-	CLASS PlayerProvider
-		METHOD getPlayers (Lnet/minecraft/world/level/ChunkPos;Z)Ljava/util/List;
-			COMMENT Returns the players tracking the given chunk.
-			ARG 1 pos
-			ARG 2 boundaryOnly
 	CLASS LevelChangeListener
 		METHOD onLevelChange (Lnet/minecraft/world/level/ChunkPos;Ljava/util/function/IntSupplier;ILjava/util/function/IntConsumer;)V
 			ARG 1 chunkPos
 			ARG 2 queueLevelGetter
 			ARG 3 ticketLevel
 			ARG 4 queueLevelSetter
+	CLASS PlayerProvider
+		METHOD getPlayers (Lnet/minecraft/world/level/ChunkPos;Z)Ljava/util/List;
+			COMMENT Returns the players tracking the given chunk.
+			ARG 1 pos
+			ARG 2 boundaryOnly

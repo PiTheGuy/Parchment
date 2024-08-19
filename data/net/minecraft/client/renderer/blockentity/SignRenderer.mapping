@@ -1,9 +1,15 @@
 CLASS net/minecraft/client/renderer/blockentity/SignRenderer
 	METHOD <init> (Lnet/minecraft/client/renderer/blockentity/BlockEntityRendererProvider$Context;)V
 		ARG 1 context
+	METHOD createSignLayer (Z)Lnet/minecraft/client/model/geom/builders/LayerDefinition;
+		ARG 0 standingSign
 	METHOD createSignModel (Lnet/minecraft/client/model/geom/EntityModelSet;Lnet/minecraft/world/level/block/state/properties/WoodType;)Lnet/minecraft/client/renderer/blockentity/SignRenderer$SignModel;
 		ARG 0 entityModelSet
 		ARG 1 woodType
+	METHOD createSignModel (Lnet/minecraft/client/model/geom/EntityModelSet;Lnet/minecraft/world/level/block/state/properties/WoodType;Z)Lnet/minecraft/client/model/Model;
+		ARG 0 modelSet
+		ARG 1 woodType
+		ARG 2 standingSign
 	METHOD getDarkColor (Lnet/minecraft/world/level/block/entity/SignText;)I
 		ARG 0 signText
 	METHOD getSignMaterial (Lnet/minecraft/world/level/block/state/properties/WoodType;)Lnet/minecraft/client/resources/model/Material;

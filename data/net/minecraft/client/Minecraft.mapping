@@ -150,6 +150,9 @@ CLASS net/minecraft/client/Minecraft
 		ARG 2 gameLoadCookie
 	METHOD runTick (Z)V
 		ARG 1 renderLevel
+	METHOD saveReport (Ljava/io/File;Lnet/minecraft/CrashReport;)I
+		ARG 0 file
+		ARG 1 crashReport
 	METHOD setCameraEntity (Lnet/minecraft/world/entity/Entity;)V
 		ARG 1 viewingEntity
 	METHOD setLastInputType (Lnet/minecraft/client/InputType;)V

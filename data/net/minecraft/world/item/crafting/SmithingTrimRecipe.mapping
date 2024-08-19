@@ -1,4 +1,8 @@
 CLASS net/minecraft/world/item/crafting/SmithingTrimRecipe
+	METHOD <init> (Ljava/util/Optional;Ljava/util/Optional;Ljava/util/Optional;)V
+		ARG 1 template
+		ARG 2 base
+		ARG 3 addition
 	METHOD <init> (Lnet/minecraft/world/item/crafting/Ingredient;Lnet/minecraft/world/item/crafting/Ingredient;Lnet/minecraft/world/item/crafting/Ingredient;)V
 		ARG 1 template
 		ARG 2 base
@@ -6,6 +10,20 @@ CLASS net/minecraft/world/item/crafting/SmithingTrimRecipe
 	CLASS Serializer
 		METHOD fromNetwork (Lnet/minecraft/network/RegistryFriendlyByteBuf;)Lnet/minecraft/world/item/crafting/SmithingTrimRecipe;
 			ARG 0 buffer
+		METHOD lambda$static$0 (Lnet/minecraft/world/item/crafting/SmithingTrimRecipe;)Ljava/util/Optional;
+			ARG 0 recipe
+		METHOD lambda$static$1 (Lnet/minecraft/world/item/crafting/SmithingTrimRecipe;)Ljava/util/Optional;
+			ARG 0 recipe
+		METHOD lambda$static$2 (Lnet/minecraft/world/item/crafting/SmithingTrimRecipe;)Ljava/util/Optional;
+			ARG 0 recipe
+		METHOD lambda$static$3 (Lcom/mojang/serialization/codecs/RecordCodecBuilder$Instance;)Lcom/mojang/datafixers/kinds/App;
+			ARG 0 instance
+		METHOD lambda$static$4 (Lnet/minecraft/world/item/crafting/SmithingTrimRecipe;)Ljava/util/Optional;
+			ARG 0 recipe
+		METHOD lambda$static$5 (Lnet/minecraft/world/item/crafting/SmithingTrimRecipe;)Ljava/util/Optional;
+			ARG 0 recipe
+		METHOD lambda$static$6 (Lnet/minecraft/world/item/crafting/SmithingTrimRecipe;)Ljava/util/Optional;
+			ARG 0 recipe
 		METHOD toNetwork (Lnet/minecraft/network/RegistryFriendlyByteBuf;Lnet/minecraft/world/item/crafting/SmithingTrimRecipe;)V
 			ARG 0 buffer
 			ARG 1 recipe

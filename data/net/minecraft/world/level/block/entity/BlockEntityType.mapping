@@ -1,4 +1,7 @@
 CLASS net/minecraft/world/level/block/entity/BlockEntityType
+	METHOD <init> (Lnet/minecraft/world/level/block/entity/BlockEntityType$BlockEntitySupplier;Ljava/util/Set;)V
+		ARG 1 factory
+		ARG 2 validBlocks
 	METHOD <init> (Lnet/minecraft/world/level/block/entity/BlockEntityType$BlockEntitySupplier;Ljava/util/Set;Lcom/mojang/datafixers/types/Type;)V
 		ARG 1 factory
 		ARG 2 validBlocks
@@ -13,9 +16,17 @@ CLASS net/minecraft/world/level/block/entity/BlockEntityType
 		ARG 0 blockEntityType
 	METHOD isValid (Lnet/minecraft/world/level/block/state/BlockState;)Z
 		ARG 1 state
+	METHOD register (Ljava/lang/String;Lnet/minecraft/world/level/block/entity/BlockEntityType$BlockEntitySupplier;[Lnet/minecraft/world/level/block/Block;)Lnet/minecraft/world/level/block/entity/BlockEntityType;
+		ARG 0 name
+		ARG 1 factory
+		ARG 2 validBlocks
 	METHOD register (Ljava/lang/String;Lnet/minecraft/world/level/block/entity/BlockEntityType$Builder;)Lnet/minecraft/world/level/block/entity/BlockEntityType;
 		ARG 0 key
 		ARG 1 builder
+	CLASS BlockEntitySupplier
+		METHOD create (Lnet/minecraft/core/BlockPos;Lnet/minecraft/world/level/block/state/BlockState;)Lnet/minecraft/world/level/block/entity/BlockEntity;
+			ARG 1 pos
+			ARG 2 state
 	CLASS Builder
 		METHOD <init> (Lnet/minecraft/world/level/block/entity/BlockEntityType$BlockEntitySupplier;Ljava/util/Set;)V
 			ARG 1 factory
@@ -25,7 +36,3 @@ CLASS net/minecraft/world/level/block/entity/BlockEntityType
 		METHOD of (Lnet/minecraft/world/level/block/entity/BlockEntityType$BlockEntitySupplier;[Lnet/minecraft/world/level/block/Block;)Lnet/minecraft/world/level/block/entity/BlockEntityType$Builder;
 			ARG 0 factory
 			ARG 1 validBlocks
-	CLASS BlockEntitySupplier
-		METHOD create (Lnet/minecraft/core/BlockPos;Lnet/minecraft/world/level/block/state/BlockState;)Lnet/minecraft/world/level/block/entity/BlockEntity;
-			ARG 1 pos
-			ARG 2 state

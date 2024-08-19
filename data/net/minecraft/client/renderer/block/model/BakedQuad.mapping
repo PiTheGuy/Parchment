@@ -7,3 +7,10 @@ CLASS net/minecraft/client/renderer/block/model/BakedQuad
 		ARG 3 direction
 		ARG 4 sprite
 		ARG 5 shade
+	METHOD <init> ([IILnet/minecraft/core/Direction;Lnet/minecraft/client/renderer/texture/TextureAtlasSprite;ZI)V
+		ARG 1 verticies
+		ARG 2 tintIndex
+		ARG 3 direction
+		ARG 4 sprite
+		ARG 5 shade
+		ARG 6 lightEmission

@@ -7,6 +7,10 @@ CLASS net/minecraft/client/model/VexModel
 	METHOD setArmsCharging (Lnet/minecraft/world/item/ItemStack;Lnet/minecraft/world/item/ItemStack;F)V
 		ARG 1 rightHandItem
 		ARG 2 leftHandItem
+	METHOD setArmsCharging (ZZF)V
+		ARG 1 rightArm
+		ARG 2 leftArm
+		ARG 3 chargeAmount
 	METHOD setupAnim (Lnet/minecraft/world/entity/monster/Vex;FFFFF)V
 		COMMENT Sets this entity's model rotation angles
 		ARG 1 entity

@@ -58,6 +58,8 @@ CLASS net/minecraft/world/level/Explosion
 		ARG 1 source
 	METHOD getDirectSourceEntity ()Lnet/minecraft/world/entity/Entity;
 		COMMENT Returns either the entity that placed the explosive block, the entity that caused the explosion or null.
+	METHOD getIndirectSourceEntity (Lnet/minecraft/world/entity/Entity;)Lnet/minecraft/world/entity/LivingEntity;
+		ARG 0 source
 	METHOD getIndirectSourceEntityInternal (Lnet/minecraft/world/entity/Entity;)Lnet/minecraft/world/entity/LivingEntity;
 		ARG 0 source
 	METHOD getSeenPercent (Lnet/minecraft/world/phys/Vec3;Lnet/minecraft/world/entity/Entity;)F
@@ -65,3 +67,6 @@ CLASS net/minecraft/world/level/Explosion
 		ARG 1 entity
 	METHOD makeDamageCalculator (Lnet/minecraft/world/entity/Entity;)Lnet/minecraft/world/level/ExplosionDamageCalculator;
 		ARG 1 entity
+	CLASS BlockInteraction
+		METHOD <init> (Ljava/lang/String;IZ)V
+			ARG 3 shouldAffectBlocklikeEntities

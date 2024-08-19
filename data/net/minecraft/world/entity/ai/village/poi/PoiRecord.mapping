@@ -18,3 +18,8 @@ CLASS net/minecraft/world/entity/ai/village/poi/PoiRecord
 		ARG 0 getter
 	METHOD lambda$codec$3 (Ljava/lang/Runnable;Lcom/mojang/serialization/codecs/RecordCodecBuilder$Instance;)Lcom/mojang/datafixers/kinds/App;
 		ARG 1 instance
+	CLASS Packed
+		METHOD lambda$static$0 (Lcom/mojang/serialization/codecs/RecordCodecBuilder$Instance;)Lcom/mojang/datafixers/kinds/App;
+			ARG 0 instance
+		METHOD unpack (Ljava/lang/Runnable;)Lnet/minecraft/world/entity/ai/village/poi/PoiRecord;
+			ARG 1 setDirty

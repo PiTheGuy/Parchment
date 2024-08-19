@@ -26,6 +26,8 @@ CLASS net/minecraft/world/level/chunk/ProtoChunk
 		ARG 0 pos
 	METHOD setBelowZeroRetrogen (Lnet/minecraft/world/level/levelgen/BelowZeroRetrogen;)V
 		ARG 1 belowZeroRetrogen
+	METHOD setCarvingMask (Lnet/minecraft/world/level/chunk/CarvingMask;)V
+		ARG 1 carvingMask
 	METHOD setCarvingMask (Lnet/minecraft/world/level/levelgen/GenerationStep$Carving;Lnet/minecraft/world/level/chunk/CarvingMask;)V
 		ARG 1 step
 		ARG 2 carvingMask

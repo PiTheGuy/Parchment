@@ -34,6 +34,8 @@ CLASS com/mojang/blaze3d/systems/RenderSystem
 		ARG 1 destFactor
 		ARG 2 sourceFactorAlpha
 		ARG 3 destFactorAlpha
+	METHOD clear (I)V
+		ARG 0 mask
 	METHOD clear (IZ)V
 		ARG 0 mask
 		ARG 1 checkError
@@ -181,6 +183,8 @@ CLASS com/mojang/blaze3d/systems/RenderSystem
 		ARG 1 green
 		ARG 2 blue
 		ARG 3 alpha
+	METHOD setShaderFog (Lnet/minecraft/client/renderer/FogParameters;)V
+		ARG 0 shaderFog
 	METHOD setShaderFogColor (FFF)V
 		ARG 0 red
 		ARG 1 green

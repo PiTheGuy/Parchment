@@ -17,5 +17,10 @@ CLASS net/minecraft/data/loot/EntityLootSubProvider
 		ARG 0 entityType
 	METHOD createSheepTable (Lnet/minecraft/world/level/ItemLike;)Lnet/minecraft/world/level/storage/loot/LootTable$Builder;
 		ARG 0 woolItem
+	METHOD killedByFrog (Lnet/minecraft/core/HolderGetter;)Lnet/minecraft/world/level/storage/loot/predicates/LootItemCondition$Builder;
+		ARG 1 entityTypeRegistry
+	METHOD killedByFrogVariant (Lnet/minecraft/core/HolderGetter;Lnet/minecraft/resources/ResourceKey;)Lnet/minecraft/world/level/storage/loot/predicates/LootItemCondition$Builder;
+		ARG 1 entityTypeRegistry
+		ARG 2 frogVariant
 	METHOD killedByFrogVariant (Lnet/minecraft/resources/ResourceKey;)Lnet/minecraft/world/level/storage/loot/predicates/LootItemCondition$Builder;
 		ARG 1 frogVariant

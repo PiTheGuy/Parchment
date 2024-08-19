@@ -29,6 +29,9 @@ CLASS com/mojang/blaze3d/platform/Window
 		ARG 1 window
 		ARG 3 framebufferWidth
 		ARG 4 framebufferHeight
+	METHOD onIconify (JZ)V
+		ARG 1 window
+		ARG 3 iconified
 	METHOD onMove (JII)V
 		ARG 1 window
 		ARG 3 x
@@ -54,6 +57,8 @@ CLASS com/mojang/blaze3d/platform/Window
 		ARG 1 title
 	METHOD setWidth (I)V
 		ARG 1 framebufferWidth
+	METHOD setWindowCloseCallback (Ljava/lang/Runnable;)V
+		ARG 1 windowCloseCallback
 	METHOD setWindowed (II)V
 		ARG 1 windowedWidth
 		ARG 2 windowedHeight

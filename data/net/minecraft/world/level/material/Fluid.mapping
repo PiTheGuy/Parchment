@@ -45,6 +45,11 @@ CLASS net/minecraft/world/level/material/Fluid
 		ARG 4 random
 	METHOD registerDefaultState (Lnet/minecraft/world/level/material/FluidState;)V
 		ARG 1 state
+	METHOD tick (Lnet/minecraft/world/level/Level;Lnet/minecraft/core/BlockPos;Lnet/minecraft/world/level/block/state/BlockState;Lnet/minecraft/world/level/material/FluidState;)V
+		ARG 1 level
+		ARG 2 pos
+		ARG 3 blockState
+		ARG 4 fluidState
 	METHOD tick (Lnet/minecraft/world/level/Level;Lnet/minecraft/core/BlockPos;Lnet/minecraft/world/level/material/FluidState;)V
 		ARG 1 level
 		ARG 2 pos

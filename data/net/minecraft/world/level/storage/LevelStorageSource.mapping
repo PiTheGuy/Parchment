@@ -14,6 +14,11 @@ CLASS net/minecraft/world/level/storage/LevelStorageSource
 		ARG 0 dataFilePath
 	METHOD getFileModificationTime (Lnet/minecraft/world/level/storage/LevelStorageSource$LevelDirectory;)J
 		ARG 0 levelDirectory
+	METHOD getLevelDataAndDimensions (Lcom/mojang/serialization/Dynamic;Lnet/minecraft/world/level/WorldDataConfiguration;Lnet/minecraft/core/Registry;Lnet/minecraft/core/HolderLookup$Provider;)Lnet/minecraft/world/level/storage/LevelDataAndDimensions;
+		ARG 0 levelData
+		ARG 1 dataConfiguration
+		ARG 2 levelStemRegistry
+		ARG 3 registries
 	METHOD getLevelDataAndDimensions (Lcom/mojang/serialization/Dynamic;Lnet/minecraft/world/level/WorldDataConfiguration;Lnet/minecraft/core/Registry;Lnet/minecraft/core/RegistryAccess$Frozen;)Lnet/minecraft/world/level/storage/LevelDataAndDimensions;
 		ARG 0 dynamic
 		ARG 1 dataConfiguration

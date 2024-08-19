@@ -1,4 +1,15 @@
 CLASS com/mojang/realmsclient/dto/RealmsWorldOptions
+	METHOD <init> (ZZIZIIZLjava/lang/String;Ljava/lang/String;Lcom/mojang/realmsclient/dto/RealmsServer$Compatibility;)V
+		ARG 1 pvp
+		ARG 2 spawnMonsters
+		ARG 3 spawnProtection
+		ARG 4 commandBlocks
+		ARG 5 difficulty
+		ARG 6 gameMode
+		ARG 7 forceGameMode
+		ARG 8 slotName
+		ARG 9 version
+		ARG 10 compatibility
 	METHOD <init> (ZZZZIZIIZLjava/lang/String;Ljava/lang/String;Lcom/mojang/realmsclient/dto/RealmsServer$Compatibility;)V
 		ARG 1 pvp
 		ARG 2 spawnAnimals

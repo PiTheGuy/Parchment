@@ -23,3 +23,12 @@ CLASS net/minecraft/client/renderer/entity/layers/ParrotOnShoulderLayer
 		ARG 7 netHeadYaw
 		ARG 8 headPitch
 		ARG 9 leftShoulder
+	METHOD renderOnShoulder (Lcom/mojang/blaze3d/vertex/PoseStack;Lnet/minecraft/client/renderer/MultiBufferSource;ILnet/minecraft/client/renderer/entity/state/PlayerRenderState;Lnet/minecraft/world/entity/animal/Parrot$Variant;FFZ)V
+		ARG 1 poseStack
+		ARG 2 buffer
+		ARG 3 packedLight
+		ARG 4 renderState
+		ARG 5 variant
+		ARG 6 yRot
+		ARG 7 xRot
+		ARG 8 leftShoulder

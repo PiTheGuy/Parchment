@@ -127,6 +127,8 @@ CLASS net/minecraft/world/entity/player/Player
 		ARG 1 levels
 	METHOD giveExperiencePoints (I)V
 		ARG 1 xpPoints
+	METHOD handleCreativeModeItemDrop (Lnet/minecraft/world/item/ItemStack;)V
+		ARG 1 stack
 	METHOD hasCorrectToolForDrops (Lnet/minecraft/world/level/block/state/BlockState;)Z
 		ARG 1 state
 	METHOD hurt (Lnet/minecraft/world/damagesource/DamageSource;F)Z

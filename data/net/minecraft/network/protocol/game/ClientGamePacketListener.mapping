@@ -111,6 +111,8 @@ CLASS net/minecraft/network/protocol/game/ClientGamePacketListener
 		ARG 1 packet
 	METHOD handleMerchantOffers (Lnet/minecraft/network/protocol/game/ClientboundMerchantOffersPacket;)V
 		ARG 1 packet
+	METHOD handleMinecartAlongTrack (Lnet/minecraft/network/protocol/game/ClientboundMoveMinecartPacket;)V
+		ARG 1 packet
 	METHOD handleMoveEntity (Lnet/minecraft/network/protocol/game/ClientboundMoveEntityPacket;)V
 		COMMENT Updates the specified entity's position by the specified relative moment and absolute rotation. Note that subclassing of the packet allows for the specification of a subset of this data (e.g. only rel. position, abs. rotation or both).
 		ARG 1 packet
@@ -180,6 +182,8 @@ CLASS net/minecraft/network/protocol/game/ClientGamePacketListener
 		ARG 1 packet
 	METHOD handleSetChunkCacheRadius (Lnet/minecraft/network/protocol/game/ClientboundSetChunkCacheRadiusPacket;)V
 		ARG 1 packet
+	METHOD handleSetCursorItem (Lnet/minecraft/network/protocol/game/ClientboundSetCursorItemPacket;)V
+		ARG 1 packet
 	METHOD handleSetDisplayObjective (Lnet/minecraft/network/protocol/game/ClientboundSetDisplayObjectivePacket;)V
 		COMMENT Removes or sets the ScoreObjective to be displayed at a particular scoreboard position (list, sidebar, below name)
 		ARG 1 packet
@@ -196,6 +200,10 @@ CLASS net/minecraft/network/protocol/game/ClientGamePacketListener
 	METHOD handleSetExperience (Lnet/minecraft/network/protocol/game/ClientboundSetExperiencePacket;)V
 		ARG 1 packet
 	METHOD handleSetHealth (Lnet/minecraft/network/protocol/game/ClientboundSetHealthPacket;)V
+		ARG 1 packet
+	METHOD handleSetHeldSlot (Lnet/minecraft/network/protocol/game/ClientboundSetHeldSlotPacket;)V
+		ARG 1 packet
+	METHOD handleSetPlayerInventory (Lnet/minecraft/network/protocol/game/ClientboundSetPlayerInventoryPacket;)V
 		ARG 1 packet
 	METHOD handleSetPlayerTeamPacket (Lnet/minecraft/network/protocol/game/ClientboundSetPlayerTeamPacket;)V
 		COMMENT Updates a team managed by the scoreboard: Create/Remove the team registration, Register/Remove the player-team-memberships, Set team displayname/prefix/suffix and/or whether friendly fire is enabled

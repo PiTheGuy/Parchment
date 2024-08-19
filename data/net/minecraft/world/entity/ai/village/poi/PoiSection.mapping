@@ -40,3 +40,8 @@ CLASS net/minecraft/world/entity/ai/village/poi/PoiSection
 		ARG 1 pos
 	METHOD remove (Lnet/minecraft/core/BlockPos;)V
 		ARG 1 pos
+	CLASS Packed
+		METHOD lambda$static$0 (Lcom/mojang/serialization/codecs/RecordCodecBuilder$Instance;)Lcom/mojang/datafixers/kinds/App;
+			ARG 0 instance
+		METHOD unpack (Ljava/lang/Runnable;)Lnet/minecraft/world/entity/ai/village/poi/PoiSection;
+			ARG 1 setDirty

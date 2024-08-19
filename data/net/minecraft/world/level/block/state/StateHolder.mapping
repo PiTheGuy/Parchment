@@ -11,6 +11,8 @@ CLASS net/minecraft/world/level/block/state/StateHolder
 	METHOD findNextInCollection (Ljava/util/Collection;Ljava/lang/Object;)Ljava/lang/Object;
 		ARG 0 collection
 		ARG 1 value
+	METHOD getNullableValue (Lnet/minecraft/world/level/block/state/properties/Property;)Ljava/lang/Comparable;
+		ARG 1 property
 	METHOD getOptionalValue (Lnet/minecraft/world/level/block/state/properties/Property;)Ljava/util/Optional;
 		ARG 1 property
 	METHOD getProperties ()Ljava/util/Collection;
@@ -18,6 +20,9 @@ CLASS net/minecraft/world/level/block/state/StateHolder
 	METHOD getValue (Lnet/minecraft/world/level/block/state/properties/Property;)Ljava/lang/Comparable;
 		COMMENT @return the value of the given Property for this state
 		ARG 1 property
+	METHOD getValueOrElse (Lnet/minecraft/world/level/block/state/properties/Property;Ljava/lang/Comparable;)Ljava/lang/Comparable;
+		ARG 1 property
+		ARG 2 defaultValue
 	METHOD hasProperty (Lnet/minecraft/world/level/block/state/properties/Property;)Z
 		ARG 1 property
 	METHOD lambda$codec$0 (Lnet/minecraft/world/level/block/state/StateHolder;)Ljava/lang/Object;

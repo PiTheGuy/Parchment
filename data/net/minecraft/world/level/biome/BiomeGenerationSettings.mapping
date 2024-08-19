@@ -2,6 +2,9 @@ CLASS net/minecraft/world/level/biome/BiomeGenerationSettings
 	METHOD <init> (Ljava/util/Map;Ljava/util/List;)V
 		ARG 1 carvers
 		ARG 2 features
+	METHOD <init> (Lnet/minecraft/core/HolderSet;Ljava/util/List;)V
+		ARG 1 carvers
+		ARG 2 features
 	METHOD getCarvers (Lnet/minecraft/world/level/levelgen/GenerationStep$Carving;)Ljava/lang/Iterable;
 		ARG 1 step
 	METHOD hasFeature (Lnet/minecraft/world/level/levelgen/placement/PlacedFeature;)Z
@@ -18,6 +21,8 @@ CLASS net/minecraft/world/level/biome/BiomeGenerationSettings
 		METHOD <init> (Lnet/minecraft/core/HolderGetter;Lnet/minecraft/core/HolderGetter;)V
 			ARG 1 placedFeatures
 			ARG 2 worldCarvers
+		METHOD addCarver (Lnet/minecraft/resources/ResourceKey;)Lnet/minecraft/world/level/biome/BiomeGenerationSettings$Builder;
+			ARG 1 carver
 		METHOD addCarver (Lnet/minecraft/world/level/levelgen/GenerationStep$Carving;Lnet/minecraft/resources/ResourceKey;)Lnet/minecraft/world/level/biome/BiomeGenerationSettings$Builder;
 			ARG 1 carving
 			ARG 2 carver
@@ -25,6 +30,8 @@ CLASS net/minecraft/world/level/biome/BiomeGenerationSettings
 			ARG 1 decoration
 			ARG 2 feature
 	CLASS PlainBuilder
+		METHOD addCarver (Lnet/minecraft/core/Holder;)Lnet/minecraft/world/level/biome/BiomeGenerationSettings$PlainBuilder;
+			ARG 1 carver
 		METHOD addCarver (Lnet/minecraft/world/level/levelgen/GenerationStep$Carving;Lnet/minecraft/core/Holder;)Lnet/minecraft/world/level/biome/BiomeGenerationSettings$PlainBuilder;
 			ARG 1 carving
 			ARG 2 carver

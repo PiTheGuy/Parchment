@@ -6,6 +6,8 @@ CLASS net/minecraft/world/level/material/MapColor
 		ARG 0 id
 	METHOD byIdUnsafe (I)Lnet/minecraft/world/level/material/MapColor;
 		ARG 0 id
+	METHOD calculateARGBColor (Lnet/minecraft/world/level/material/MapColor$Brightness;)I
+		ARG 1 brightness
 	METHOD calculateRGBColor (Lnet/minecraft/world/level/material/MapColor$Brightness;)I
 		ARG 1 brightness
 	METHOD getColorFromPackedId (I)I

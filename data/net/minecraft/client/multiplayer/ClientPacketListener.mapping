@@ -9,10 +9,17 @@ CLASS net/minecraft/client/multiplayer/ClientPacketListener
 		ARG 1 x
 		ARG 2 z
 		ARG 3 data
+	METHOD applyLightData (IILnet/minecraft/network/protocol/game/ClientboundLightUpdatePacketData;Z)V
+		ARG 1 x
+		ARG 2 z
+		ARG 3 data
+		ARG 4 update
 	METHOD applyPlayerInfoUpdate (Lnet/minecraft/network/protocol/game/ClientboundPlayerInfoUpdatePacket$Action;Lnet/minecraft/network/protocol/game/ClientboundPlayerInfoUpdatePacket$Entry;Lnet/minecraft/client/multiplayer/PlayerInfo;)V
 		ARG 1 action
 		ARG 2 entry
 		ARG 3 playerInfo
+	METHOD broadcastClientInformation (Lnet/minecraft/server/level/ClientInformation;)V
+		ARG 1 information
 	METHOD createEntityFromPacket (Lnet/minecraft/network/protocol/game/ClientboundAddEntityPacket;)Lnet/minecraft/world/entity/Entity;
 		ARG 1 packet
 	METHOD determineLevelLoadingReason (ZLnet/minecraft/resources/ResourceKey;Lnet/minecraft/resources/ResourceKey;)Lnet/minecraft/client/gui/screens/ReceivingLevelScreen$Reason;
@@ -236,6 +243,15 @@ CLASS net/minecraft/client/multiplayer/ClientPacketListener
 		ARG 5 skyYMask
 		ARG 6 emptySkyYMask
 		ARG 7 skyUpdates
+	METHOD readSectionList (IILnet/minecraft/world/level/lighting/LevelLightEngine;Lnet/minecraft/world/level/LightLayer;Ljava/util/BitSet;Ljava/util/BitSet;Ljava/util/Iterator;Z)V
+		ARG 1 x
+		ARG 2 z
+		ARG 3 lightEngine
+		ARG 4 lightLayer
+		ARG 5 skyYMask
+		ARG 6 emptySkyYMask
+		ARG 7 skyUpdates
+		ARG 8 update
 	METHOD sendChat (Ljava/lang/String;)V
 		ARG 1 message
 	METHOD sendCommand (Ljava/lang/String;)V
@@ -252,3 +268,6 @@ CLASS net/minecraft/client/multiplayer/ClientPacketListener
 		ARG 1 x
 		ARG 2 z
 		ARG 3 data
+	METHOD updateTags (Lnet/minecraft/resources/ResourceKey;Lnet/minecraft/tags/TagNetworkSerialization$NetworkPayload;)Lnet/minecraft/core/Registry$PendingTags;
+		ARG 1 registryKey
+		ARG 2 payload
