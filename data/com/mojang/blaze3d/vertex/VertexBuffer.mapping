@@ -5,6 +5,10 @@ CLASS com/mojang/blaze3d/vertex/VertexBuffer
 		ARG 1 modelViewMatrix
 		ARG 2 projectionMatrix
 		ARG 3 shader
+	METHOD drawWithShader (Lorg/joml/Matrix4f;Lorg/joml/Matrix4f;Lnet/minecraft/client/renderer/CompiledShaderProgram;)V
+		ARG 1 frustumMatrix
+		ARG 2 projectionMatrix
+		ARG 3 shader
 	METHOD drawWithShader (Lorg/joml/Matrix4f;Lorg/joml/Matrix4f;Lnet/minecraft/client/renderer/ShaderInstance;)V
 		ARG 1 modelViewMatrix
 		ARG 2 projectionMatrix

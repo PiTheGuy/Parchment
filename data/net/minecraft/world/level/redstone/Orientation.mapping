@@ -22,6 +22,8 @@ CLASS net/minecraft/world/level/redstone/Orientation
 		ARG 1 front
 	METHOD withFrontAdjustSideBias (Lnet/minecraft/core/Direction;)Lnet/minecraft/world/level/redstone/Orientation;
 		ARG 1 front
+	METHOD withFrontPreserveUp (Lnet/minecraft/core/Direction;)Lnet/minecraft/world/level/redstone/Orientation;
+		ARG 1 front
 	METHOD withSideBias (Lnet/minecraft/world/level/redstone/Orientation$SideBias;)Lnet/minecraft/world/level/redstone/Orientation;
 		ARG 1 sideBias
 	METHOD withUp (Lnet/minecraft/core/Direction;)Lnet/minecraft/world/level/redstone/Orientation;

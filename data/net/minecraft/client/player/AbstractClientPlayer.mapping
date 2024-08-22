@@ -6,5 +6,8 @@ CLASS net/minecraft/client/player/AbstractClientPlayer
 		ARG 1 patialTick
 	METHOD getFieldOfViewModifier (Z)F
 		ARG 1 isFirstPerson
+	METHOD getFieldOfViewModifier (ZF)F
+		ARG 1 isFirstPerson
+		ARG 2 fovEffectScale
 	METHOD isSpectator ()Z
 		COMMENT Returns {@code true} if the player is in spectator mode.

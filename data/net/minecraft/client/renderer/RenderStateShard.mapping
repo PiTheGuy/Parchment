@@ -46,6 +46,8 @@ CLASS net/minecraft/client/renderer/RenderStateShard
 	CLASS ShaderStateShard
 		METHOD <init> (Ljava/util/function/Supplier;)V
 			ARG 1 shader
+		METHOD <init> (Lnet/minecraft/client/renderer/ShaderProgram;)V
+			ARG 1 shader
 	CLASS TextureStateShard
 		METHOD <init> (Lnet/minecraft/resources/ResourceLocation;Lnet/minecraft/util/TriState;Z)V
 			ARG 1 texture

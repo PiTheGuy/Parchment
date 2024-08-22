@@ -12,6 +12,13 @@ CLASS net/minecraft/client/renderer/debug/DebugRenderer
 		ARG 3 camX
 		ARG 5 camY
 		ARG 7 camZ
+	METHOD render (Lcom/mojang/blaze3d/vertex/PoseStack;Lnet/minecraft/client/renderer/culling/Frustum;Lnet/minecraft/client/renderer/MultiBufferSource$BufferSource;DDD)V
+		ARG 1 poseStack
+		ARG 2 frustum
+		ARG 3 bufferSource
+		ARG 4 camX
+		ARG 6 camY
+		ARG 8 camZ
 	METHOD renderAfterTranslucents (Lcom/mojang/blaze3d/vertex/PoseStack;Lnet/minecraft/client/renderer/MultiBufferSource$BufferSource;DDD)V
 		ARG 1 poseStack
 		ARG 2 bufferSource

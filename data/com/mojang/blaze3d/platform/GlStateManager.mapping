@@ -324,6 +324,9 @@ CLASS com/mojang/blaze3d/platform/GlStateManager
 		ARG 1 pname
 	METHOD glLinkProgram (I)V
 		ARG 0 program
+	METHOD glShaderSource (ILjava/lang/String;)V
+		ARG 0 type
+		ARG 1 source
 	METHOD glShaderSource (ILjava/util/List;)V
 		ARG 0 shader
 			COMMENT The shader object whose source code is to be replaced.

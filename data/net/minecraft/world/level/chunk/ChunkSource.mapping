@@ -17,6 +17,11 @@ CLASS net/minecraft/world/level/chunk/ChunkSource
 		COMMENT @return {@code true} if a chunk is loaded at the provided position, without forcing a chunk load.
 		ARG 1 chunkX
 		ARG 2 chunkZ
+	METHOD onSectionEmptinessChanged (IIIZ)V
+		ARG 1 x
+		ARG 2 y
+		ARG 3 z
+		ARG 4 isEmpty
 	METHOD setSpawnSettings (Z)V
 		ARG 1 spawnSettings
 	METHOD setSpawnSettings (ZZ)V

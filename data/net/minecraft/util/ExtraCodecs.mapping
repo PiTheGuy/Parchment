@@ -15,6 +15,10 @@ CLASS net/minecraft/util/ExtraCodecs
 		ARG 0 min
 		ARG 1 max
 		ARG 2 errorMessage
+	METHOD floatRangeMinInclusiveWithMessage (FFLjava/util/function/Function;)Lcom/mojang/serialization/Codec;
+		ARG 0 min
+		ARG 1 max
+		ARG 2 errorMessage
 	METHOD idResolverCodec (Ljava/util/function/ToIntFunction;Ljava/util/function/IntFunction;I)Lcom/mojang/serialization/Codec;
 		ARG 0 encoder
 		ARG 1 decoder

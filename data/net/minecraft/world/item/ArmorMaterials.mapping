@@ -50,3 +50,18 @@ CLASS net/minecraft/world/item/ArmorMaterials
 		ARG 5 knockbackResistance
 		ARG 6 repairIngridient
 		ARG 7 layers
+	METHOD register (Ljava/lang/String;Ljava/util/EnumMap;Lnet/minecraft/core/Holder;FFLjava/util/function/Predicate;)Lnet/minecraft/core/Holder;
+		ARG 0 name
+		ARG 1 defense
+		ARG 2 equipSound
+		ARG 3 toughness
+		ARG 4 knockbackResistance
+		ARG 5 repairIngredient
+	METHOD register (Ljava/lang/String;Ljava/util/EnumMap;Lnet/minecraft/core/Holder;FFLjava/util/function/Predicate;Ljava/util/List;)Lnet/minecraft/core/Holder;
+		ARG 0 name
+		ARG 1 defense
+		ARG 2 equipSound
+		ARG 3 toughness
+		ARG 4 knockbackResistance
+		ARG 5 repairIngredient
+		ARG 6 layers

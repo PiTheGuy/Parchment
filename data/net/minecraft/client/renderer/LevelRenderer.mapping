@@ -70,6 +70,17 @@ CLASS net/minecraft/client/renderer/LevelRenderer
 		ARG 7 renderEntityOutline
 		ARG 8 deltaTracker
 		ARG 9 profiler
+	METHOD addMainPass (Lcom/mojang/blaze3d/framegraph/FrameGraphBuilder;Lnet/minecraft/client/renderer/culling/Frustum;Lnet/minecraft/client/Camera;Lorg/joml/Matrix4f;Lorg/joml/Matrix4f;Lnet/minecraft/client/renderer/FogParameters;ZZLnet/minecraft/client/DeltaTracker;Lnet/minecraft/util/profiling/ProfilerFiller;)V
+		ARG 1 frameGraphBuilder
+		ARG 2 frustum
+		ARG 3 camera
+		ARG 4 frustumMatrix
+		ARG 5 projectionMatrix
+		ARG 6 fogParameters
+		ARG 7 renderBlockOutline
+		ARG 8 renderEntityOutline
+		ARG 9 deltaTracker
+		ARG 10 profiler
 	METHOD addParticle (Lnet/minecraft/core/particles/ParticleOptions;DDDDDD)V
 		ARG 1 options
 		ARG 2 x
@@ -206,10 +217,15 @@ CLASS net/minecraft/client/renderer/LevelRenderer
 			COMMENT the type of level event to handle. This method only handles {@linkplain net.minecraft.world.level.block.LevelEvent#SOUND_WITHER_BOSS_SPAWN the wither boss spawn sound}, {@linkplain net.minecraft.world.level.block.LevelEvent#SOUND_DRAGON_DEATH the dragon's death sound}, and {@linkplain net.minecraft.world.level.block.LevelEvent#SOUND_END_PORTAL_SPAWN the end portal spawn sound}.
 		ARG 2 pos
 		ARG 3 data
+	METHOD isLightOnInSectionAndNeighbors (Lnet/minecraft/world/level/lighting/LevelLightEngine;J)Z
+		ARG 0 lightEngine
+		ARG 1 packedSectionPos
 	METHOD isSectionCompiled (Lnet/minecraft/core/BlockPos;)Z
 		ARG 1 pos
 	METHOD lambda$initTransparency$0 (Lnet/minecraft/server/packs/PackResources;)Lnet/minecraft/network/chat/MutableComponent;
 		ARG 0 levelRenderer
+	METHOD lambda$renderBlockEntities$7 (Lnet/minecraft/client/renderer/MultiBufferSource$BufferSource;Lcom/mojang/blaze3d/vertex/VertexConsumer;Lnet/minecraft/client/renderer/RenderType;)Lcom/mojang/blaze3d/vertex/VertexConsumer;
+		ARG 2 buffer
 	METHOD lambda$renderLevel$2 (Lnet/minecraft/client/renderer/MultiBufferSource$BufferSource;Lcom/mojang/blaze3d/vertex/VertexConsumer;Lnet/minecraft/client/renderer/RenderType;)Lcom/mojang/blaze3d/vertex/VertexConsumer;
 		ARG 2 lastState
 	METHOD lambda$renderShape$4 (Lcom/mojang/blaze3d/vertex/VertexConsumer;Lcom/mojang/blaze3d/vertex/PoseStack$Pose;DDDFFFFDDDDDD)V
@@ -237,6 +253,8 @@ CLASS net/minecraft/client/renderer/LevelRenderer
 		ARG 1 chunkPos
 	METHOD onResourceManagerReload (Lnet/minecraft/server/packs/resources/ResourceManager;)V
 		ARG 1 resourceManager
+	METHOD onSectionBecomingNonEmpty (J)V
+		ARG 1 sectionPos
 	METHOD playJukeboxSong (Lnet/minecraft/core/Holder;Lnet/minecraft/core/BlockPos;)V
 		ARG 1 song
 		ARG 2 pos
@@ -495,6 +513,8 @@ CLASS net/minecraft/client/renderer/LevelRenderer
 		ARG 1 blockEntitiesToRemove
 		ARG 2 blockEntitiesToAdd
 	CLASS TransparencyShaderException
+		METHOD <init> (Ljava/lang/String;)V
+			ARG 1 message
 		METHOD <init> (Ljava/lang/String;Ljava/lang/Throwable;)V
 			ARG 1 message
 			ARG 2 cause

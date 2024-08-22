@@ -17,6 +17,11 @@ CLASS net/minecraft/world/entity/EntityType
 		ARG 1 level
 		ARG 2 stack
 		ARG 3 player
+	METHOD appendCustomEntityStackConfig (Ljava/util/function/Consumer;Lnet/minecraft/world/level/Level;Lnet/minecraft/world/item/ItemStack;Lnet/minecraft/world/entity/player/Player;)Ljava/util/function/Consumer;
+		ARG 0 consumer
+		ARG 1 level
+		ARG 2 spawnedFrom
+		ARG 3 player
 	METHOD appendCustomNameConfig (Ljava/util/function/Consumer;Lnet/minecraft/world/item/ItemStack;)Ljava/util/function/Consumer;
 		ARG 0 consumer
 		ARG 1 stack
@@ -24,6 +29,11 @@ CLASS net/minecraft/world/entity/EntityType
 		ARG 0 consumer
 		ARG 1 serverLevel
 		ARG 2 stack
+		ARG 3 player
+	METHOD appendDefaultStackConfig (Ljava/util/function/Consumer;Lnet/minecraft/world/level/Level;Lnet/minecraft/world/item/ItemStack;Lnet/minecraft/world/entity/player/Player;)Ljava/util/function/Consumer;
+		ARG 0 consumer
+		ARG 1 level
+		ARG 2 spawnedFrom
 		ARG 3 player
 	METHOD by (Lnet/minecraft/nbt/CompoundTag;)Ljava/util/Optional;
 		ARG 0 tag
@@ -59,6 +69,10 @@ CLASS net/minecraft/world/entity/EntityType
 	METHOD createDefaultStackConfig (Lnet/minecraft/server/level/ServerLevel;Lnet/minecraft/world/item/ItemStack;Lnet/minecraft/world/entity/player/Player;)Ljava/util/function/Consumer;
 		ARG 0 serverLevel
 		ARG 1 stack
+		ARG 2 player
+	METHOD createDefaultStackConfig (Lnet/minecraft/world/level/Level;Lnet/minecraft/world/item/ItemStack;Lnet/minecraft/world/entity/player/Player;)Ljava/util/function/Consumer;
+		ARG 0 level
+		ARG 1 spawnedFrom
 		ARG 2 player
 	METHOD getKey (Lnet/minecraft/world/entity/EntityType;)Lnet/minecraft/resources/ResourceLocation;
 		ARG 0 entityType

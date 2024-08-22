@@ -13,6 +13,9 @@ CLASS com/mojang/blaze3d/pipeline/RenderTarget
 		ARG 3 clearError
 	METHOD bindWrite (Z)V
 		ARG 1 setViewport
+	METHOD blitAndBlendToScreen (II)V
+		ARG 1 width
+		ARG 2 height
 	METHOD blitToScreen (II)V
 		ARG 1 width
 		ARG 2 height

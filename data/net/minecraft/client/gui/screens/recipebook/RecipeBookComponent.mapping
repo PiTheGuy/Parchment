@@ -88,6 +88,9 @@ CLASS net/minecraft/client/gui/screens/recipebook/RecipeBookComponent
 		ARG 2 recipe
 	METHOD slotClicked (Lnet/minecraft/world/inventory/Slot;)V
 		ARG 1 slot
+	METHOD tryPlaceRecipe (Lnet/minecraft/client/gui/screens/recipebook/RecipeCollection;Lnet/minecraft/world/item/crafting/RecipeHolder;)Z
+		ARG 1 recipeCollection
+		ARG 2 recipe
 	METHOD updateCollections (Z)V
 		ARG 1 resetPageNumber
 	METHOD updateCollections (ZZ)V

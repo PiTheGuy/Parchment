@@ -27,6 +27,14 @@ CLASS net/minecraft/world/entity/vehicle/AbstractMinecart
 		ARG 7 type
 		ARG 8 stack
 		ARG 9 player
+	METHOD createMinecart (Lnet/minecraft/world/level/Level;DDDLnet/minecraft/world/entity/vehicle/AbstractMinecart$Type;Lnet/minecraft/world/item/ItemStack;Lnet/minecraft/world/entity/player/Player;)Lnet/minecraft/world/entity/vehicle/AbstractMinecart;
+		ARG 0 level
+		ARG 1 x
+		ARG 3 y
+		ARG 5 z
+		ARG 7 type
+		ARG 8 spawnedFrom
+		ARG 9 player
 	METHOD exits (Lnet/minecraft/world/level/block/state/properties/RailShape;)Lcom/mojang/datafixers/util/Pair;
 		ARG 0 shape
 	METHOD getBoundingBoxForCulling ()Lnet/minecraft/world/phys/AABB;

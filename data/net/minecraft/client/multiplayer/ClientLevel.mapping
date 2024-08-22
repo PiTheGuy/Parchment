@@ -148,6 +148,8 @@ CLASS net/minecraft/client/multiplayer/ClientLevel
 		ARG 4 data
 	METHOD onChunkLoaded (Lnet/minecraft/world/level/ChunkPos;)V
 		ARG 1 chunkPos
+	METHOD onSectionBecomingNonEmpty (J)V
+		ARG 1 sectionPos
 	METHOD overrideMapData (Lnet/minecraft/world/level/saveddata/maps/MapId;Lnet/minecraft/world/level/saveddata/maps/MapItemSavedData;)V
 		ARG 1 mapId
 		ARG 2 mapData

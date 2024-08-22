@@ -21,20 +21,33 @@ CLASS net/minecraft/client/renderer/chunk/SectionRenderDispatcher
 	METHOD uploadSectionLayer (Lcom/mojang/blaze3d/vertex/MeshData;Lcom/mojang/blaze3d/vertex/VertexBuffer;)Ljava/util/concurrent/CompletableFuture;
 		ARG 1 meshData
 		ARG 2 vertexBuffer
+	CLASS CompiledSection
+		METHOD facesCanSeeEachother (Lnet/minecraft/core/Direction;Lnet/minecraft/core/Direction;)Z
+			ARG 1 face1
+			ARG 2 face2
+		METHOD isEmpty (Lnet/minecraft/client/renderer/RenderType;)Z
+			ARG 1 renderType
 	CLASS RenderSection
 		METHOD <init> (Lnet/minecraft/client/renderer/chunk/SectionRenderDispatcher;IIII)V
 			ARG 2 index
 			ARG 3 originX
 			ARG 4 originY
 			ARG 5 originZ
+		METHOD <init> (Lnet/minecraft/client/renderer/chunk/SectionRenderDispatcher;IJ)V
+			ARG 2 index
+			ARG 3 sectionNode
 		METHOD compileSync (Lnet/minecraft/client/renderer/chunk/RenderRegionCache;)V
 			ARG 1 regionCache
 		METHOD createCompileTask (Lnet/minecraft/client/renderer/chunk/RenderRegionCache;)Lnet/minecraft/client/renderer/chunk/SectionRenderDispatcher$RenderSection$CompileTask;
 			ARG 1 regionCache
+		METHOD doesChunkExistAt (J)Z
+			ARG 1 pos
 		METHOD doesChunkExistAt (Lnet/minecraft/core/BlockPos;)Z
 			ARG 1 pos
 		METHOD getBuffer (Lnet/minecraft/client/renderer/RenderType;)Lcom/mojang/blaze3d/vertex/VertexBuffer;
 			ARG 1 renderType
+		METHOD getNeighborSectionNode (Lnet/minecraft/core/Direction;)J
+			ARG 1 direction
 		METHOD getRelativeOrigin (Lnet/minecraft/core/Direction;)Lnet/minecraft/core/BlockPos;
 			ARG 1 direction
 		METHOD isAxisAlignedWith (III)Z
@@ -55,6 +68,8 @@ CLASS net/minecraft/client/renderer/chunk/SectionRenderDispatcher
 			ARG 1 x
 			ARG 2 y
 			ARG 3 z
+		METHOD setSectionNode (J)V
+			ARG 1 sectionNode
 		METHOD updateGlobalBlockEntities (Ljava/util/Collection;)V
 			ARG 1 blockEntities
 		CLASS CompileTask
@@ -80,9 +95,3 @@ CLASS net/minecraft/client/renderer/chunk/SectionRenderDispatcher
 			METHOD lambda$doTask$1 (Lnet/minecraft/client/renderer/chunk/SectionRenderDispatcher$SectionTaskResult;Ljava/lang/Throwable;)Lnet/minecraft/client/renderer/chunk/SectionRenderDispatcher$SectionTaskResult;
 				ARG 1 result
 				ARG 2 exception
-	CLASS CompiledSection
-		METHOD facesCanSeeEachother (Lnet/minecraft/core/Direction;Lnet/minecraft/core/Direction;)Z
-			ARG 1 face1
-			ARG 2 face2
-		METHOD isEmpty (Lnet/minecraft/client/renderer/RenderType;)Z
-			ARG 1 renderType

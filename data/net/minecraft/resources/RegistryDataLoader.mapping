@@ -11,6 +11,8 @@ CLASS net/minecraft/resources/RegistryDataLoader
 		ARG 0 registry
 	METHOD createInfoForNewRegistry (Lnet/minecraft/core/WritableRegistry;)Lnet/minecraft/resources/RegistryOps$RegistryInfo;
 		ARG 0 registry
+	METHOD createReportWithBriefInfo (Ljava/util/Map;)Lnet/minecraft/ReportedException;
+		ARG 0 errors
 	METHOD lambda$createContext$8 (Ljava/util/Map;Lnet/minecraft/resources/RegistryDataLoader$Loader;)V
 		ARG 1 loader
 	METHOD lambda$load$2 (Lnet/minecraft/server/packs/resources/ResourceManager;Lnet/minecraft/resources/RegistryDataLoader$Loader;Lnet/minecraft/resources/RegistryOps$RegistryInfoLookup;)V
@@ -69,7 +71,11 @@ CLASS net/minecraft/resources/RegistryDataLoader
 		ARG 3 resourceKey
 		ARG 4 resource
 		ARG 5 registrationInfo
+	METHOD logErrors (Ljava/util/Map;)Lnet/minecraft/ReportedException;
+		ARG 0 errors
 	METHOD logErrors (Ljava/util/Map;)V
+		ARG 0 errors
+	METHOD printFullDetailsToLog (Ljava/util/Map;)V
 		ARG 0 errors
 	CLASS Loader
 		METHOD loadFromNetwork (Ljava/util/Map;Lnet/minecraft/server/packs/resources/ResourceProvider;Lnet/minecraft/resources/RegistryOps$RegistryInfoLookup;)V

@@ -73,6 +73,8 @@ CLASS net/minecraft/world/entity/player/Player
 	METHOD die (Lnet/minecraft/world/damagesource/DamageSource;)V
 		COMMENT Called when the mob's health reaches 0.
 		ARG 1 cause
+	METHOD disableShield (Lnet/minecraft/world/item/ItemStack;)V
+		ARG 1 stack
 	METHOD displayClientMessage (Lnet/minecraft/network/chat/Component;Z)V
 		ARG 1 chatComponent
 		ARG 2 actionBar

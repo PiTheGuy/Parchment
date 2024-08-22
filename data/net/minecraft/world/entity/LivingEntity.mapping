@@ -338,6 +338,8 @@ CLASS net/minecraft/world/entity/LivingEntity
 		ARG 1 effectInstance
 		ARG 2 forced
 		ARG 3 entity
+	METHOD onEffectsRemoved (Ljava/util/Collection;)V
+		ARG 1 effects
 	METHOD onEnterCombat ()V
 		COMMENT Sends an ENTER_COMBAT packet to the client
 	METHOD onEquipItem (Lnet/minecraft/world/entity/EquipmentSlot;Lnet/minecraft/world/item/ItemStack;Lnet/minecraft/world/item/ItemStack;)V

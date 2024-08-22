@@ -48,6 +48,8 @@ CLASS net/minecraft/world/item/Item
 		ARG 2 fluidMode
 	METHOD getTooltipImage (Lnet/minecraft/world/item/ItemStack;)Ljava/util/Optional;
 		ARG 1 stack
+	METHOD getUseAnimation (Lnet/minecraft/world/item/ItemStack;)Lnet/minecraft/world/item/ItemUseAnimation;
+		ARG 1 stack
 	METHOD getUseAnimation (Lnet/minecraft/world/item/ItemStack;)Lnet/minecraft/world/item/UseAnim;
 		COMMENT Returns the action that specifies what animation to play when the item is being used.
 		ARG 1 stack
@@ -169,6 +171,9 @@ CLASS net/minecraft/world/item/Item
 			ARG 1 enchantmentValue
 		METHOD food (Lnet/minecraft/world/food/FoodProperties;)Lnet/minecraft/world/item/Item$Properties;
 			ARG 1 food
+		METHOD food (Lnet/minecraft/world/food/FoodProperties;Lnet/minecraft/world/item/component/Consumable;)Lnet/minecraft/world/item/Item$Properties;
+			ARG 1 food
+			ARG 2 consumable
 		METHOD jukeboxPlayable (Lnet/minecraft/resources/ResourceKey;)Lnet/minecraft/world/item/Item$Properties;
 			ARG 1 song
 		METHOD rarity (Lnet/minecraft/world/item/Rarity;)Lnet/minecraft/world/item/Item$Properties;
@@ -181,6 +186,10 @@ CLASS net/minecraft/world/item/Item
 			ARG 1 requiredFeatures
 		METHOD stacksTo (I)Lnet/minecraft/world/item/Item$Properties;
 			ARG 1 maxStackSize
+		METHOD useCooldown (F)Lnet/minecraft/world/item/Item$Properties;
+			ARG 1 useCooldown
+		METHOD usingConvertsTo (Lnet/minecraft/world/item/Item;)Lnet/minecraft/world/item/Item$Properties;
+			ARG 1 usingConvertsTo
 	CLASS TooltipContext
 		METHOD mapData (Lnet/minecraft/world/level/saveddata/maps/MapId;)Lnet/minecraft/world/level/saveddata/maps/MapItemSavedData;
 			ARG 1 mapId

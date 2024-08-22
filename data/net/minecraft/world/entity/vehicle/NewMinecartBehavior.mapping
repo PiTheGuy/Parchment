@@ -2,6 +2,9 @@ CLASS net/minecraft/world/entity/vehicle/NewMinecartBehavior
 	METHOD adjustToRails (Lnet/minecraft/core/BlockPos;Lnet/minecraft/world/level/block/state/BlockState;)V
 		ARG 1 pos
 		ARG 2 state
+	METHOD adjustToRails (Lnet/minecraft/core/BlockPos;Lnet/minecraft/world/level/block/state/BlockState;Z)V
+		ARG 1 pos
+		ARG 2 state
 	METHOD calculateBoostTrackSpeed (Lnet/minecraft/world/phys/Vec3;Lnet/minecraft/core/BlockPos;Lnet/minecraft/world/level/block/state/BlockState;)Lnet/minecraft/world/phys/Vec3;
 		ARG 1 speed
 		ARG 2 pos
@@ -33,6 +36,16 @@ CLASS net/minecraft/world/entity/vehicle/NewMinecartBehavior
 	METHOD isDecending (Lnet/minecraft/world/phys/Vec3;Lnet/minecraft/world/level/block/state/properties/RailShape;)Z
 		ARG 1 speed
 		ARG 2 railShape
+	METHOD pickupEntities (Lnet/minecraft/world/phys/AABB;)Z
+		ARG 1 box
+	METHOD pushEntities (Lnet/minecraft/world/phys/AABB;)Z
+		ARG 1 box
+	METHOD restAtVShape (Lnet/minecraft/world/level/block/state/properties/RailShape;Lnet/minecraft/world/level/block/state/properties/RailShape;)Z
+		ARG 1 shape1
+		ARG 2 shape2
+	METHOD setRotation (FF)V
+		ARG 1 yRot
+		ARG 2 xRot
 	CLASS MinecartStep
 		METHOD compressRotation (F)B
 			ARG 0 rotation
