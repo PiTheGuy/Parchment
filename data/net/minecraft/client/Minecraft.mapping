@@ -178,6 +178,8 @@ CLASS net/minecraft/client/Minecraft
 		COMMENT Called when the window is closing. Sets 'running' to false which allows the game loop to exit cleanly.
 	METHOD tick ()V
 		COMMENT Runs the current tick.
+	METHOD triggerResourcePackRecovery (Ljava/lang/Exception;)V
+		ARG 1 error
 	METHOD updateLevelInEngines (Lnet/minecraft/client/multiplayer/ClientLevel;)V
 		ARG 1 level
 	METHOD updateMaxMipLevel (I)V

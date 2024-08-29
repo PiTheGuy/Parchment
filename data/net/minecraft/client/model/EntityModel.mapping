@@ -1,4 +1,6 @@
 CLASS net/minecraft/client/model/EntityModel
+	METHOD <init> (Lnet/minecraft/client/model/geom/ModelPart;)V
+		ARG 1 root
 	METHOD copyPropertiesTo (Lnet/minecraft/client/model/EntityModel;)V
 		ARG 1 otherModel
 	METHOD prepareMobModel (Lnet/minecraft/world/entity/Entity;FFF)V

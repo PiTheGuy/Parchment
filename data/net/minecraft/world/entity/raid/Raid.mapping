@@ -17,6 +17,8 @@ CLASS net/minecraft/world/entity/raid/Raid
 		ARG 1 wave
 		ARG 2 raider
 		ARG 3 isRecruited
+	METHOD findRandomSpawnPos (I)Lnet/minecraft/core/BlockPos;
+		ARG 1 attempts
 	METHOD findRandomSpawnPos (II)Lnet/minecraft/core/BlockPos;
 		ARG 1 offsetMultiplier
 		ARG 2 maxTry

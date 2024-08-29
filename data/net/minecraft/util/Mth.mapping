@@ -300,6 +300,8 @@ CLASS net/minecraft/util/Mth
 		ARG 1 lowerBound
 		ARG 2 upperBound
 		ARG 3 steps
+	METHOD packDegrees (F)B
+		ARG 0 degrees
 	METHOD positiveCeilDiv (II)I
 		COMMENT Returns the smallest (closest to negative infinity) int value that is greater than or equal to the algebraic quotient.
 		COMMENT @see java.lang.Math#floorDiv(int, int)
@@ -386,6 +388,8 @@ CLASS net/minecraft/util/Mth
 	METHOD triangleWave (FF)F
 		ARG 0 input
 		ARG 1 period
+	METHOD unpackDegrees (B)F
+		ARG 0 degrees
 	METHOD wobble (D)D
 		ARG 0 input
 	METHOD wrapDegrees (D)D

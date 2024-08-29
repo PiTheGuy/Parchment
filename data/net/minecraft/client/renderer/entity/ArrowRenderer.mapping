@@ -1,4 +1,6 @@
 CLASS net/minecraft/client/renderer/entity/ArrowRenderer
+	METHOD getTextureLocation (Lnet/minecraft/client/renderer/entity/state/ArrowRenderState;)Lnet/minecraft/resources/ResourceLocation;
+		ARG 1 renderState
 	METHOD render (Lnet/minecraft/world/entity/projectile/AbstractArrow;FFLcom/mojang/blaze3d/vertex/PoseStack;Lnet/minecraft/client/renderer/MultiBufferSource;I)V
 		ARG 1 entity
 		ARG 2 entityYaw

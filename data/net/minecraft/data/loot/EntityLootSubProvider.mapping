@@ -15,6 +15,8 @@ CLASS net/minecraft/data/loot/EntityLootSubProvider
 		ARG 2 builder
 	METHOD canHaveLootTable (Lnet/minecraft/world/entity/EntityType;)Z
 		ARG 0 entityType
+	METHOD createSheepDispatchPool (Ljava/util/Map;)Lnet/minecraft/world/level/storage/loot/LootPool$Builder;
+		ARG 0 lootTables
 	METHOD createSheepTable (Lnet/minecraft/world/level/ItemLike;)Lnet/minecraft/world/level/storage/loot/LootTable$Builder;
 		ARG 0 woolItem
 	METHOD killedByFrog (Lnet/minecraft/core/HolderGetter;)Lnet/minecraft/world/level/storage/loot/predicates/LootItemCondition$Builder;

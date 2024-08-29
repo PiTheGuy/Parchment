@@ -25,6 +25,10 @@ CLASS net/minecraft/world/entity/vehicle/ContainerEntity
 	METHOD setChestVehicleItem (ILnet/minecraft/world/item/ItemStack;)V
 		ARG 1 slot
 		ARG 2 stack
+	METHOD setContainerLootTable (Lnet/minecraft/resources/ResourceKey;)V
+		ARG 1 lootTable
+	METHOD setContainerLootTableSeed (J)V
+		ARG 1 lootTableSeed
 	METHOD setLootTable (Lnet/minecraft/resources/ResourceKey;)V
 		ARG 1 lootTable
 	METHOD setLootTableSeed (J)V

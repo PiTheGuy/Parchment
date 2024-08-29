@@ -1,4 +1,13 @@
 CLASS net/minecraft/world/level/block/entity/trialspawner/TrialSpawner
+	METHOD <init> (Lnet/minecraft/core/Holder;Lnet/minecraft/core/Holder;Lnet/minecraft/world/level/block/entity/trialspawner/TrialSpawnerData;IILnet/minecraft/world/level/block/entity/trialspawner/TrialSpawner$StateAccessor;Lnet/minecraft/world/level/block/entity/trialspawner/PlayerDetector;Lnet/minecraft/world/level/block/entity/trialspawner/PlayerDetector$EntitySelector;)V
+		ARG 1 normalConfig
+		ARG 2 ominousConfig
+		ARG 3 data
+		ARG 4 targetCooldownLength
+		ARG 5 requiredPlayerRange
+		ARG 6 stateAccessor
+		ARG 7 playerDetector
+		ARG 8 entitySelector
 	METHOD <init> (Lnet/minecraft/world/level/block/entity/trialspawner/TrialSpawner$StateAccessor;Lnet/minecraft/world/level/block/entity/trialspawner/PlayerDetector;Lnet/minecraft/world/level/block/entity/trialspawner/PlayerDetector$EntitySelector;)V
 		ARG 1 stateAccessor
 		ARG 2 playerDetector

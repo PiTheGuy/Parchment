@@ -7,10 +7,14 @@ CLASS net/minecraft/core/Registry
 		ARG 1 name
 	METHOD createIntrusiveHolder (Ljava/lang/Object;)Lnet/minecraft/core/Holder$Reference;
 		ARG 1 value
+	METHOD get (I)Ljava/util/Optional;
+		ARG 1 index
 	METHOD get (Lnet/minecraft/resources/ResourceKey;)Ljava/lang/Object;
 		ARG 1 key
 	METHOD get (Lnet/minecraft/resources/ResourceLocation;)Ljava/lang/Object;
 		ARG 1 name
+	METHOD get (Lnet/minecraft/resources/ResourceLocation;)Ljava/util/Optional;
+		ARG 1 key
 	METHOD getHolder (I)Ljava/util/Optional;
 		ARG 1 id
 	METHOD getHolder (Lnet/minecraft/resources/ResourceKey;)Ljava/util/Optional;
@@ -40,6 +44,12 @@ CLASS net/minecraft/core/Registry
 	METHOD getTag (Lnet/minecraft/tags/TagKey;)Ljava/util/Optional;
 		ARG 1 key
 	METHOD getTagOrEmpty (Lnet/minecraft/tags/TagKey;)Ljava/lang/Iterable;
+		ARG 1 key
+	METHOD getValue (Lnet/minecraft/resources/ResourceKey;)Ljava/lang/Object;
+		ARG 1 key
+	METHOD getValue (Lnet/minecraft/resources/ResourceLocation;)Ljava/lang/Object;
+		ARG 1 key
+	METHOD getValueOrThrow (Lnet/minecraft/resources/ResourceKey;)Ljava/lang/Object;
 		ARG 1 key
 	METHOD keySet ()Ljava/util/Set;
 		COMMENT @return all keys in this registry

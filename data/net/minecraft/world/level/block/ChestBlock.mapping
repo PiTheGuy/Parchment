@@ -1,4 +1,7 @@
 CLASS net/minecraft/world/level/block/ChestBlock
+	METHOD <init> (Ljava/util/function/Supplier;Lnet/minecraft/world/level/block/state/BlockBehaviour$Properties;)V
+		ARG 1 blockEntityType
+		ARG 2 properties
 	METHOD candidatePartnerFacing (Lnet/minecraft/world/item/context/BlockPlaceContext;Lnet/minecraft/core/Direction;)Lnet/minecraft/core/Direction;
 		ARG 1 context
 		ARG 2 direction

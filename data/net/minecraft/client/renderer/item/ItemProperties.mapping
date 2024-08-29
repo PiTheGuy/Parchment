@@ -2,6 +2,8 @@ CLASS net/minecraft/client/renderer/item/ItemProperties
 	METHOD getProperty (Lnet/minecraft/world/item/ItemStack;Lnet/minecraft/resources/ResourceLocation;)Lnet/minecraft/client/renderer/item/ItemPropertyFunction;
 		ARG 0 stack
 		ARG 1 location
+	METHOD honeyLevelProperty (Lnet/minecraft/world/item/ItemStack;)I
+		ARG 0 stack
 	METHOD lambda$register$2 (Lnet/minecraft/world/item/Item;)Ljava/util/Map;
 		ARG 0 k
 	METHOD lambda$static$0 (Lnet/minecraft/world/item/ItemStack;Lnet/minecraft/client/multiplayer/ClientLevel;Lnet/minecraft/world/entity/LivingEntity;I)F
@@ -73,6 +75,16 @@ CLASS net/minecraft/client/renderer/item/ItemProperties
 		ARG 2 entity
 		ARG 3 seed
 	METHOD lambda$static$22 (Lnet/minecraft/world/item/ItemStack;Lnet/minecraft/client/multiplayer/ClientLevel;Lnet/minecraft/world/entity/LivingEntity;I)F
+		ARG 0 stack
+		ARG 1 level
+		ARG 2 entity
+		ARG 3 seed
+	METHOD lambda$static$23 (Lnet/minecraft/world/item/ItemStack;Lnet/minecraft/client/multiplayer/ClientLevel;Lnet/minecraft/world/entity/LivingEntity;I)F
+		ARG 0 stack
+		ARG 1 level
+		ARG 2 entity
+		ARG 3 seed
+	METHOD lambda$static$24 (Lnet/minecraft/world/item/ItemStack;Lnet/minecraft/client/multiplayer/ClientLevel;Lnet/minecraft/world/entity/LivingEntity;I)F
 		ARG 0 stack
 		ARG 1 level
 		ARG 2 entity

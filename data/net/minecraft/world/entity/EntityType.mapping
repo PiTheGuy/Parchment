@@ -1,4 +1,19 @@
 CLASS net/minecraft/world/entity/EntityType
+	METHOD <init> (Lnet/minecraft/world/entity/EntityType$EntityFactory;Lnet/minecraft/world/entity/MobCategory;ZZZZLcom/google/common/collect/ImmutableSet;Lnet/minecraft/world/entity/EntityDimensions;FIILjava/lang/String;Ljava/util/Optional;Lnet/minecraft/world/flag/FeatureFlagSet;)V
+		ARG 1 factory
+		ARG 2 category
+		ARG 3 serialize
+		ARG 4 summon
+		ARG 5 fireImmune
+		ARG 6 canSpawnFarFromPlayer
+		ARG 7 immuneTo
+		ARG 8 dimensions
+		ARG 9 spawnDimensionsScale
+		ARG 10 clientTrackingRange
+		ARG 11 updateInterval
+		ARG 12 descriptionId
+		ARG 13 lootTable
+		ARG 14 requiredFeatures
 	METHOD <init> (Lnet/minecraft/world/entity/EntityType$EntityFactory;Lnet/minecraft/world/entity/MobCategory;ZZZZLcom/google/common/collect/ImmutableSet;Lnet/minecraft/world/entity/EntityDimensions;FIILnet/minecraft/world/flag/FeatureFlagSet;)V
 		ARG 1 factory
 		ARG 2 category
@@ -182,6 +197,8 @@ CLASS net/minecraft/world/entity/EntityType
 			ARG 2 pos
 		METHOD build (Ljava/lang/String;)Lnet/minecraft/world/entity/EntityType;
 			ARG 1 key
+		METHOD build (Lnet/minecraft/resources/ResourceKey;)Lnet/minecraft/world/entity/EntityType;
+			ARG 1 entityType
 		METHOD clientTrackingRange (I)Lnet/minecraft/world/entity/EntityType$Builder;
 			ARG 1 clientTrackingRange
 		METHOD createNothing (Lnet/minecraft/world/entity/MobCategory;)Lnet/minecraft/world/entity/EntityType$Builder;

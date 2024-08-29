@@ -57,6 +57,13 @@ CLASS net/minecraft/world/level/LevelAccessor
 		ARG 2 type
 		ARG 3 pos
 		ARG 4 data
+	METHOD neighborShapeChanged (Lnet/minecraft/core/Direction;Lnet/minecraft/core/BlockPos;Lnet/minecraft/core/BlockPos;Lnet/minecraft/world/level/block/state/BlockState;II)V
+		ARG 1 direction
+		ARG 2 pos
+		ARG 3 neighborPos
+		ARG 4 neighborState
+		ARG 5 flags
+		ARG 6 recursionLeft
 	METHOD neighborShapeChanged (Lnet/minecraft/core/Direction;Lnet/minecraft/world/level/block/state/BlockState;Lnet/minecraft/core/BlockPos;Lnet/minecraft/core/BlockPos;II)V
 		ARG 1 direction
 		ARG 2 queried

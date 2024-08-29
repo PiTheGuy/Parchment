@@ -8,6 +8,8 @@ CLASS net/minecraft/core/HolderGetter
 	METHOD getOrThrow (Lnet/minecraft/tags/TagKey;)Lnet/minecraft/core/HolderSet$Named;
 		ARG 1 tagKey
 	CLASS Provider
+		METHOD get (Lnet/minecraft/resources/ResourceKey;)Ljava/util/Optional;
+			ARG 1 key
 		METHOD get (Lnet/minecraft/resources/ResourceKey;Lnet/minecraft/resources/ResourceKey;)Ljava/util/Optional;
 			ARG 1 registryKey
 			ARG 2 key

@@ -1,4 +1,12 @@
 CLASS net/minecraft/world/level/redstone/NeighborUpdater
+	METHOD executeShapeUpdate (Lnet/minecraft/world/level/LevelAccessor;Lnet/minecraft/core/Direction;Lnet/minecraft/core/BlockPos;Lnet/minecraft/core/BlockPos;Lnet/minecraft/world/level/block/state/BlockState;II)V
+		ARG 0 level
+		ARG 1 direction
+		ARG 2 pos
+		ARG 3 neighborPos
+		ARG 4 neighborState
+		ARG 5 flags
+		ARG 6 recursionLeft
 	METHOD executeShapeUpdate (Lnet/minecraft/world/level/LevelAccessor;Lnet/minecraft/core/Direction;Lnet/minecraft/world/level/block/state/BlockState;Lnet/minecraft/core/BlockPos;Lnet/minecraft/core/BlockPos;II)V
 		ARG 0 level
 		ARG 1 direction

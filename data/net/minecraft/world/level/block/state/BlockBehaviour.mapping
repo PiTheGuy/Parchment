@@ -605,10 +605,16 @@ CLASS net/minecraft/world/level/block/state/BlockBehaviour
 			ARG 0 blockBehaviour
 		METHOD offsetType (Lnet/minecraft/world/level/block/state/BlockBehaviour$OffsetType;)Lnet/minecraft/world/level/block/state/BlockBehaviour$Properties;
 			ARG 1 offsetType
+		METHOD overrideDescription (Ljava/lang/String;)Lnet/minecraft/world/level/block/state/BlockBehaviour$Properties;
+			ARG 1 description
+		METHOD overrideLootTable (Ljava/util/Optional;)Lnet/minecraft/world/level/block/state/BlockBehaviour$Properties;
+			ARG 1 lootTable
 		METHOD pushReaction (Lnet/minecraft/world/level/material/PushReaction;)Lnet/minecraft/world/level/block/state/BlockBehaviour$Properties;
 			ARG 1 pushReaction
 		METHOD requiredFeatures ([Lnet/minecraft/world/flag/FeatureFlag;)Lnet/minecraft/world/level/block/state/BlockBehaviour$Properties;
 			ARG 1 requiredFeatures
+		METHOD setId (Lnet/minecraft/resources/ResourceKey;)Lnet/minecraft/world/level/block/state/BlockBehaviour$Properties;
+			ARG 1 id
 		METHOD sound (Lnet/minecraft/world/level/block/SoundType;)Lnet/minecraft/world/level/block/state/BlockBehaviour$Properties;
 			ARG 1 soundType
 		METHOD speedFactor (F)Lnet/minecraft/world/level/block/state/BlockBehaviour$Properties;
