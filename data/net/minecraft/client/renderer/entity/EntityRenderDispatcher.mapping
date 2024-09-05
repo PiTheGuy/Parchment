@@ -10,6 +10,16 @@ CLASS net/minecraft/client/renderer/entity/EntityRenderDispatcher
 		ARG 6 font
 		ARG 7 options
 		ARG 8 entityModels
+	METHOD <init> (Lnet/minecraft/client/Minecraft;Lnet/minecraft/client/renderer/texture/TextureManager;Lnet/minecraft/client/renderer/entity/ItemRenderer;Lnet/minecraft/client/renderer/MapRenderer;Lnet/minecraft/client/renderer/block/BlockRenderDispatcher;Lnet/minecraft/client/gui/Font;Lnet/minecraft/client/Options;Lnet/minecraft/client/model/geom/EntityModelSet;Lnet/minecraft/client/resources/model/EquipmentModelSet;)V
+		ARG 1 minecraft
+		ARG 2 textureManager
+		ARG 3 itemRenderer
+		ARG 4 mapRenderer
+		ARG 5 blockRenderDispatcher
+		ARG 6 font
+		ARG 7 options
+		ARG 8 entityModels
+		ARG 9 equipmentModels
 	METHOD <init> (Lnet/minecraft/client/Minecraft;Lnet/minecraft/client/renderer/texture/TextureManager;Lnet/minecraft/client/renderer/entity/ItemRenderer;Lnet/minecraft/client/renderer/block/BlockRenderDispatcher;Lnet/minecraft/client/gui/Font;Lnet/minecraft/client/Options;Lnet/minecraft/client/model/geom/EntityModelSet;)V
 		ARG 1 minecraft
 		ARG 2 textureManager

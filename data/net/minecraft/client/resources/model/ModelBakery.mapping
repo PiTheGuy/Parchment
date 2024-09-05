@@ -33,6 +33,8 @@ CLASS net/minecraft/client/resources/model/ModelBakery
 		METHOD bakeUncached (Lnet/minecraft/client/resources/model/UnbakedModel;Lnet/minecraft/client/resources/model/ModelState;)Lnet/minecraft/client/resources/model/BakedModel;
 			ARG 1 model
 			ARG 2 state
+		METHOD getModel (Lnet/minecraft/resources/ResourceLocation;)Lnet/minecraft/client/resources/model/UnbakedModel;
+			ARG 1 name
 	CLASS TextureGetter
 		METHOD get (Lnet/minecraft/client/resources/model/ModelResourceLocation;Lnet/minecraft/client/resources/model/Material;)Lnet/minecraft/client/renderer/texture/TextureAtlasSprite;
 			ARG 1 modelLocation

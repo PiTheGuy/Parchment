@@ -86,6 +86,8 @@ CLASS net/minecraft/world/entity/projectile/AbstractArrow
 	METHOD shouldRenderAtSqrDistance (D)Z
 		COMMENT Checks if the entity is in range to render.
 		ARG 1 distance
+	METHOD stepMoveAndHit (Lnet/minecraft/world/phys/BlockHitResult;)V
+		ARG 1 hitResult
 	METHOD tick ()V
 		COMMENT Called to update the entity's position/logic.
 	METHOD tryPickup (Lnet/minecraft/world/entity/player/Player;)Z

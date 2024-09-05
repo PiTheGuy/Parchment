@@ -1,4 +1,8 @@
 CLASS net/minecraft/client/gui/screens/inventory/tooltip/TooltipRenderUtil
+	METHOD getBackgroundSprite (Lnet/minecraft/resources/ResourceLocation;)Lnet/minecraft/resources/ResourceLocation;
+		ARG 0 name
+	METHOD getFrameSprite (Lnet/minecraft/resources/ResourceLocation;)Lnet/minecraft/resources/ResourceLocation;
+		ARG 0 name
 	METHOD renderFrameGradient (Lnet/minecraft/client/gui/GuiGraphics;IIIIIII)V
 		ARG 0 guiGraphics
 		ARG 1 x
@@ -30,6 +34,14 @@ CLASS net/minecraft/client/gui/screens/inventory/tooltip/TooltipRenderUtil
 		ARG 3 width
 		ARG 4 height
 		ARG 5 z
+	METHOD renderTooltipBackground (Lnet/minecraft/client/gui/GuiGraphics;IIIIILnet/minecraft/resources/ResourceLocation;)V
+		ARG 0 guiGraphics
+		ARG 1 x
+		ARG 2 y
+		ARG 3 width
+		ARG 4 height
+		ARG 5 z
+		ARG 6 sprite
 	METHOD renderVerticalLine (Lnet/minecraft/client/gui/GuiGraphics;IIIII)V
 		ARG 0 guiGraphics
 		ARG 1 x

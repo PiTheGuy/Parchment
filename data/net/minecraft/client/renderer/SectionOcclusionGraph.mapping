@@ -5,6 +5,10 @@ CLASS net/minecraft/client/renderer/SectionOcclusionGraph
 	METHOD addSectionsInFrustum (Lnet/minecraft/client/renderer/culling/Frustum;Ljava/util/List;)V
 		ARG 1 frustum
 		ARG 2 sections
+	METHOD addSectionsInFrustum (Lnet/minecraft/client/renderer/culling/Frustum;Ljava/util/List;Ljava/util/List;)V
+		ARG 1 frustum
+		ARG 2 visibleSections
+		ARG 3 nearbyVisibleSections
 	METHOD getNode (Lnet/minecraft/client/renderer/chunk/SectionRenderDispatcher$RenderSection;)Lnet/minecraft/client/renderer/SectionOcclusionGraph$Node;
 		ARG 1 section
 	METHOD getRelativeFrom (JLnet/minecraft/client/renderer/chunk/SectionRenderDispatcher$RenderSection;Lnet/minecraft/core/Direction;)Lnet/minecraft/client/renderer/chunk/SectionRenderDispatcher$RenderSection;
@@ -24,6 +28,11 @@ CLASS net/minecraft/client/renderer/SectionOcclusionGraph
 	METHOD isInViewDistance (Lnet/minecraft/core/BlockPos;Lnet/minecraft/core/BlockPos;)Z
 		ARG 1 pos
 		ARG 2 origin
+	METHOD lambda$addSectionsInFrustum$0 (Ljava/util/List;Ljava/util/List;Lnet/minecraft/client/renderer/Octree$Node;ZIZ)V
+		ARG 2 node
+		ARG 3 isLeafNode
+		ARG 4 recursionDepth
+		ARG 5 isNearby
 	METHOD lambda$initializeQueueForFullUpdate$4 (Lnet/minecraft/core/BlockPos;Lnet/minecraft/client/renderer/SectionOcclusionGraph$Node;)D
 		ARG 1 node
 	METHOD lambda$runPartialUpdate$3 (Lnet/minecraft/client/renderer/culling/Frustum;Ljava/util/List;Lnet/minecraft/client/renderer/chunk/SectionRenderDispatcher$RenderSection;)V

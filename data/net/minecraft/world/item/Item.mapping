@@ -165,6 +165,9 @@ CLASS net/minecraft/world/item/Item
 	CLASS Properties
 		METHOD attributes (Lnet/minecraft/world/item/component/ItemAttributeModifiers;)Lnet/minecraft/world/item/Item$Properties;
 			ARG 1 attributes
+		METHOD buildAndValidateComponents (Lnet/minecraft/network/chat/Component;Lnet/minecraft/resources/ResourceLocation;)Lnet/minecraft/core/component/DataComponentMap;
+			ARG 1 itemName
+			ARG 2 itemModel
 		METHOD component (Lnet/minecraft/core/component/DataComponentType;Ljava/lang/Object;)Lnet/minecraft/world/item/Item$Properties;
 			ARG 1 component
 			ARG 2 value
@@ -174,6 +177,12 @@ CLASS net/minecraft/world/item/Item
 			ARG 1 maxDamage
 		METHOD enchantable (I)Lnet/minecraft/world/item/Item$Properties;
 			ARG 1 enchantmentValue
+		METHOD equippable (Lnet/minecraft/world/entity/EquipmentSlot;)Lnet/minecraft/world/item/Item$Properties;
+			ARG 1 slot
+		METHOD equippable (Lnet/minecraft/world/entity/EquipmentSlot;Lnet/minecraft/core/Holder;Lnet/minecraft/resources/ResourceLocation;)Lnet/minecraft/world/item/Item$Properties;
+			ARG 1 slot
+			ARG 2 equipSound
+			ARG 3 modelId
 		METHOD food (Lnet/minecraft/world/food/FoodProperties;)Lnet/minecraft/world/item/Item$Properties;
 			ARG 1 food
 		METHOD food (Lnet/minecraft/world/food/FoodProperties;Lnet/minecraft/world/item/component/Consumable;)Lnet/minecraft/world/item/Item$Properties;
@@ -181,6 +190,10 @@ CLASS net/minecraft/world/item/Item
 			ARG 2 consumable
 		METHOD jukeboxPlayable (Lnet/minecraft/resources/ResourceKey;)Lnet/minecraft/world/item/Item$Properties;
 			ARG 1 song
+		METHOD overrideDescription (Ljava/lang/String;)Lnet/minecraft/world/item/Item$Properties;
+			ARG 1 description
+		METHOD overrideModel (Lnet/minecraft/resources/ResourceLocation;)Lnet/minecraft/world/item/Item$Properties;
+			ARG 1 model
 		METHOD rarity (Lnet/minecraft/world/item/Rarity;)Lnet/minecraft/world/item/Item$Properties;
 			ARG 1 rarity
 		METHOD repairable (Lnet/minecraft/tags/TagKey;)Lnet/minecraft/world/item/Item$Properties;
@@ -189,6 +202,8 @@ CLASS net/minecraft/world/item/Item
 			ARG 1 repairItem
 		METHOD requiredFeatures ([Lnet/minecraft/world/flag/FeatureFlag;)Lnet/minecraft/world/item/Item$Properties;
 			ARG 1 requiredFeatures
+		METHOD setId (Lnet/minecraft/resources/ResourceKey;)Lnet/minecraft/world/item/Item$Properties;
+			ARG 1 id
 		METHOD stacksTo (I)Lnet/minecraft/world/item/Item$Properties;
 			ARG 1 maxStackSize
 		METHOD useCooldown (F)Lnet/minecraft/world/item/Item$Properties;

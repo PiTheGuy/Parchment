@@ -35,10 +35,15 @@ CLASS net/minecraft/world/level/chunk/storage/IOWorker
 	METHOD runStore (Lnet/minecraft/world/level/ChunkPos;Lnet/minecraft/world/level/chunk/storage/IOWorker$PendingStore;)V
 		ARG 1 chunkPos
 		ARG 2 pendingStore
+	METHOD store (Lnet/minecraft/world/level/ChunkPos;Ljava/util/function/Supplier;)Ljava/util/concurrent/CompletableFuture;
+		ARG 1 chunkPos
+		ARG 2 dataSupplier
 	METHOD store (Lnet/minecraft/world/level/ChunkPos;Lnet/minecraft/nbt/CompoundTag;)Ljava/util/concurrent/CompletableFuture;
 		ARG 1 chunkPos
 		ARG 2 chunkData
 	METHOD submitTask (Ljava/util/function/Supplier;)Ljava/util/concurrent/CompletableFuture;
+		ARG 1 task
+	METHOD submitThrowingTask (Lnet/minecraft/world/level/chunk/storage/IOWorker$ThrowingSupplier;)Ljava/util/concurrent/CompletableFuture;
 		ARG 1 task
 	METHOD synchronize (Z)Ljava/util/concurrent/CompletableFuture;
 		ARG 1 flushStorage

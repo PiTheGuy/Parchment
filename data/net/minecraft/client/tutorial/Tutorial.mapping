@@ -17,6 +17,8 @@ CLASS net/minecraft/client/tutorial/Tutorial
 	METHOD onGetItem (Lnet/minecraft/world/item/ItemStack;)V
 		COMMENT Called when the player pick up an ItemStack
 		ARG 1 stack
+	METHOD onInput (Lnet/minecraft/client/player/ClientInput;)V
+		ARG 1 input
 	METHOD onInput (Lnet/minecraft/client/player/Input;)V
 		ARG 1 input
 	METHOD onInventoryAction (Lnet/minecraft/world/item/ItemStack;Lnet/minecraft/world/item/ItemStack;Lnet/minecraft/world/inventory/ClickAction;)V

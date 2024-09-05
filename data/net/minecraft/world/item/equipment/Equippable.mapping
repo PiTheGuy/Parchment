@@ -1,0 +1,10 @@
+CLASS net/minecraft/world/item/equipment/Equippable
+	METHOD canBeEquippedBy (Lnet/minecraft/world/entity/EntityType;)Z
+		ARG 1 entityType
+	METHOD lambda$static$0 (Lcom/mojang/serialization/codecs/RecordCodecBuilder$Instance;)Lcom/mojang/datafixers/kinds/App;
+		ARG 0 instance
+	METHOD llamaSwag (Lnet/minecraft/world/item/DyeColor;)Lnet/minecraft/world/item/equipment/Equippable;
+		ARG 0 color
+	METHOD swapWithEquipmentSlot (Lnet/minecraft/world/item/ItemStack;Lnet/minecraft/world/entity/player/Player;)Lnet/minecraft/world/InteractionResult;
+		ARG 1 stack
+		ARG 2 player

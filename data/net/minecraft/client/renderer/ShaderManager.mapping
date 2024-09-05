@@ -20,6 +20,8 @@ CLASS net/minecraft/client/renderer/ShaderManager
 		ARG 2 externalTargets
 	METHOD getProgram (Lnet/minecraft/client/renderer/ShaderProgram;)Lnet/minecraft/client/renderer/CompiledShaderProgram;
 		ARG 1 program
+	METHOD getProgramForLoading (Lnet/minecraft/client/renderer/ShaderProgram;)Lnet/minecraft/client/renderer/CompiledShaderProgram;
+		ARG 1 program
 	METHOD isProgram (Lnet/minecraft/resources/ResourceLocation;)Z
 		ARG 0 location
 	METHOD isShader (Lnet/minecraft/resources/ResourceLocation;)Z

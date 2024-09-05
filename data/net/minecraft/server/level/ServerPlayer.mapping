@@ -123,10 +123,22 @@ CLASS net/minecraft/server/level/ServerPlayer
 		ARG 1 pos
 	METHOD isSpectator ()Z
 		COMMENT Returns {@code true} if the player is in spectator mode.
+	METHOD lambda$awardStat$17 (ILnet/minecraft/world/scores/ScoreAccess;)V
+		ARG 1 score
 	METHOD lambda$readAdditionalSaveData$0 (Lnet/minecraft/world/entity/monster/warden/WardenSpawnTracker;)V
 		ARG 1 wardenSpawnTracker
 	METHOD lambda$readAdditionalSaveData$1 (Lnet/minecraft/core/BlockPos;)V
 		ARG 1 raidOmenPosition
+	METHOD lambda$readAdditionalSaveData$3 (Lnet/minecraft/world/entity/monster/warden/WardenSpawnTracker;)V
+		ARG 1 wardenSpawnTracker
+	METHOD lambda$readAdditionalSaveData$4 (Lnet/minecraft/core/BlockPos;)V
+		ARG 1 raidOmenPosition
+	METHOD lambda$startSleepInBed$15 (Lnet/minecraft/world/entity/monster/Monster;)Z
+		ARG 1 monster
+	METHOD lambda$tellNeutralMobsThatIDied$11 (Lnet/minecraft/world/entity/Mob;)Z
+		ARG 0 mob
+	METHOD lambda$tellNeutralMobsThatIDied$12 (Lnet/minecraft/world/entity/Mob;)V
+		ARG 1 mob
 	METHOD lambda$tellNeutralMobsThatIDied$8 (Lnet/minecraft/world/entity/Mob;)Z
 		ARG 0 mob
 	METHOD lambda$tellNeutralMobsThatIDied$9 (Lnet/minecraft/world/entity/Mob;)V
@@ -217,6 +229,8 @@ CLASS net/minecraft/server/level/ServerPlayer
 		ARG 1 gameMode
 	METHOD setKnownMovement (Lnet/minecraft/world/phys/Vec3;)V
 		ARG 1 knownMovement
+	METHOD setLastClientInput (Lnet/minecraft/world/entity/player/Input;)V
+		ARG 1 lastClientInput
 	METHOD setLastSectionPos (Lnet/minecraft/core/SectionPos;)V
 		ARG 1 sectionPos
 	METHOD setPlayerInput (FFZZ)V

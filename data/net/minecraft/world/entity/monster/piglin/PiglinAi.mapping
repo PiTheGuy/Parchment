@@ -102,12 +102,16 @@ CLASS net/minecraft/world/entity/monster/piglin/PiglinAi
 		ARG 0 player
 	METHOD isWearingGold (Lnet/minecraft/world/entity/LivingEntity;)Z
 		ARG 0 livingEntity
+	METHOD isWearingSafeArmor (Lnet/minecraft/world/entity/LivingEntity;)Z
+		ARG 0 entity
 	METHOD isZombified (Lnet/minecraft/world/entity/EntityType;)Z
 		ARG 0 entityType
 	METHOD lambda$angerNearbyPiglins$4 (ZLnet/minecraft/world/entity/player/Player;Lnet/minecraft/world/entity/monster/piglin/Piglin;)Z
 		ARG 2 piglin
 	METHOD lambda$angerNearbyPiglins$5 (Lnet/minecraft/world/entity/player/Player;Lnet/minecraft/world/entity/monster/piglin/Piglin;)V
 		ARG 1 piglin
+	METHOD lambda$babySometimesRideBabyHoglin$8 (Lnet/minecraft/world/entity/ai/behavior/SetEntityLookTargetSometimes$Ticker;Lnet/minecraft/world/entity/LivingEntity;)Z
+		ARG 1 entity
 	METHOD lambda$broadcastAngerTarget$9 (Lnet/minecraft/world/entity/LivingEntity;Lnet/minecraft/world/entity/monster/piglin/AbstractPiglin;)V
 		ARG 1 adultPiglin
 	METHOD lambda$broadcastRetreat$12 (Lnet/minecraft/world/entity/monster/piglin/AbstractPiglin;)Z
@@ -124,6 +128,8 @@ CLASS net/minecraft/world/entity/monster/piglin/PiglinAi
 		ARG 0 piglin
 	METHOD lambda$initFightActivity$0 (Lnet/minecraft/world/entity/monster/piglin/Piglin;Lnet/minecraft/world/entity/LivingEntity;)Z
 		ARG 1 entity
+	METHOD lambda$initRideHoglinActivity$2 (Lnet/minecraft/world/entity/monster/piglin/Piglin;)Z
+		ARG 0 piglin
 	METHOD lambda$isNearestValidAttackTarget$3 (Lnet/minecraft/world/entity/LivingEntity;Lnet/minecraft/world/entity/LivingEntity;)Z
 		ARG 1 entity
 	METHOD lambda$wasHurtBy$6 (Lnet/minecraft/world/entity/LivingEntity;Lnet/minecraft/world/entity/ai/Brain;Lnet/minecraft/world/entity/LivingEntity;)V

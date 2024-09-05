@@ -150,6 +150,9 @@ CLASS net/minecraft/Util
 	METHOD makeDescriptionId (Ljava/lang/String;Lnet/minecraft/resources/ResourceLocation;)Ljava/lang/String;
 		ARG 0 type
 		ARG 1 id
+	METHOD makeEnumMap (Ljava/lang/Class;Ljava/util/function/Function;)Ljava/util/EnumMap;
+		ARG 0 enumClass
+		ARG 1 valueGetter
 	METHOD makeExecutor (Ljava/lang/String;)Ljava/util/concurrent/ExecutorService;
 		ARG 0 serviceName
 	METHOD makeIoExecutor (Ljava/lang/String;Z)Ljava/util/concurrent/ExecutorService;

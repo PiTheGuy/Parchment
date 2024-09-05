@@ -3,6 +3,10 @@ CLASS net/minecraft/world/item/ArmorItem
 		ARG 1 material
 		ARG 2 type
 		ARG 3 properties
+	METHOD <init> (Lnet/minecraft/world/item/equipment/ArmorMaterial;Lnet/minecraft/world/item/equipment/ArmorType;Lnet/minecraft/world/item/Item$Properties;)V
+		ARG 1 material
+		ARG 2 armorType
+		ARG 3 properties
 	METHOD dispenseArmor (Lnet/minecraft/core/dispenser/BlockSource;Lnet/minecraft/world/item/ItemStack;)Z
 		ARG 0 blockSource
 		ARG 1 armorItem

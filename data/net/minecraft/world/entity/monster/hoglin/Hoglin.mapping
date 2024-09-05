@@ -48,5 +48,7 @@ CLASS net/minecraft/world/entity/monster/hoglin/Hoglin
 		ARG 1 cannotBeHunted
 	METHOD setImmuneToZombification (Z)V
 		ARG 1 immuneToZombification
+	METHOD setTimeInOverworld (I)V
+		ARG 1 timeInOverworld
 	METHOD shouldDropExperience ()Z
 		COMMENT Entity won't drop items or experience points if this returns false

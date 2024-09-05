@@ -14,6 +14,10 @@ CLASS net/minecraft/world/entity/Mob
 	METHOD canReplaceCurrentItem (Lnet/minecraft/world/item/ItemStack;Lnet/minecraft/world/item/ItemStack;)Z
 		ARG 1 candidate
 		ARG 2 existing
+	METHOD canReplaceCurrentItem (Lnet/minecraft/world/item/ItemStack;Lnet/minecraft/world/item/ItemStack;Lnet/minecraft/world/entity/EquipmentSlot;)Z
+		ARG 1 newItem
+		ARG 2 currentItem
+		ARG 3 slot
 	METHOD canReplaceEqualItem (Lnet/minecraft/world/item/ItemStack;Lnet/minecraft/world/item/ItemStack;)Z
 		ARG 1 candidate
 		ARG 2 existing
@@ -24,6 +28,12 @@ CLASS net/minecraft/world/entity/Mob
 		ARG 2 hand
 	METHOD checkDespawn ()V
 		COMMENT Makes the entity despawn if requirements are reached
+	METHOD checkMobSpawnRules (Lnet/minecraft/world/entity/EntityType;Lnet/minecraft/world/level/LevelAccessor;Lnet/minecraft/world/entity/EntitySpawnReason;Lnet/minecraft/core/BlockPos;Lnet/minecraft/util/RandomSource;)Z
+		ARG 0 entityType
+		ARG 1 level
+		ARG 2 spawnReason
+		ARG 3 pos
+		ARG 4 random
 	METHOD checkMobSpawnRules (Lnet/minecraft/world/entity/EntityType;Lnet/minecraft/world/level/LevelAccessor;Lnet/minecraft/world/entity/MobSpawnType;Lnet/minecraft/core/BlockPos;Lnet/minecraft/util/RandomSource;)Z
 		ARG 0 type
 		ARG 1 level
@@ -32,9 +42,21 @@ CLASS net/minecraft/world/entity/Mob
 		ARG 4 random
 	METHOD checkSpawnObstruction (Lnet/minecraft/world/level/LevelReader;)Z
 		ARG 1 level
+	METHOD checkSpawnRules (Lnet/minecraft/world/level/LevelAccessor;Lnet/minecraft/world/entity/EntitySpawnReason;)Z
+		ARG 1 level
+		ARG 2 spawnReason
 	METHOD checkSpawnRules (Lnet/minecraft/world/level/LevelAccessor;Lnet/minecraft/world/entity/MobSpawnType;)Z
 		ARG 1 level
 		ARG 2 reason
+	METHOD convertTo (Lnet/minecraft/world/entity/EntityType;Lnet/minecraft/world/entity/ConversionParams;Lnet/minecraft/world/entity/ConversionParams$AfterConversion;)Lnet/minecraft/world/entity/Mob;
+		ARG 1 entityType
+		ARG 2 coversionParams
+		ARG 3 afterConversion
+	METHOD convertTo (Lnet/minecraft/world/entity/EntityType;Lnet/minecraft/world/entity/ConversionParams;Lnet/minecraft/world/entity/EntitySpawnReason;Lnet/minecraft/world/entity/ConversionParams$AfterConversion;)Lnet/minecraft/world/entity/Mob;
+		ARG 1 entityType
+		ARG 2 conversionParams
+		ARG 3 spawnReason
+		ARG 4 afterConversion
 	METHOD convertTo (Lnet/minecraft/world/entity/EntityType;Z)Lnet/minecraft/world/entity/Mob;
 		ARG 1 entityType
 		ARG 2 transferInventory
@@ -89,6 +111,10 @@ CLASS net/minecraft/world/entity/Mob
 		COMMENT Get number of ticks, at least during which the living entity will be silent.
 	METHOD getApproximateAttackDamageWithItem (Lnet/minecraft/world/item/ItemStack;)D
 		ARG 1 itemStack
+	METHOD getApproximateAttributeWith (Lnet/minecraft/world/item/ItemStack;Lnet/minecraft/core/Holder;Lnet/minecraft/world/entity/EquipmentSlot;)D
+		ARG 1 item
+		ARG 2 attribute
+		ARG 3 slot
 	METHOD getEquipmentDropChance (Lnet/minecraft/world/entity/EquipmentSlot;)F
 		ARG 1 slot
 	METHOD getEquipmentForSlot (Lnet/minecraft/world/entity/EquipmentSlot;I)Lnet/minecraft/world/item/Item;
@@ -125,6 +151,10 @@ CLASS net/minecraft/world/entity/Mob
 		ARG 1 entity
 	METHOD isWithinRestriction (Lnet/minecraft/core/BlockPos;)Z
 		ARG 1 pos
+	METHOD lambda$removeAfterChangingDimensions$3 (Lnet/minecraft/world/item/ItemStack;)V
+		ARG 0 stack
+	METHOD lambda$removeFreeWill$2 (Lnet/minecraft/world/entity/ai/goal/Goal;)Z
+		ARG 0 goal
 	METHOD lookAt (Lnet/minecraft/world/entity/Entity;FF)V
 		COMMENT Changes the X and Y rotation so that this entity is facing the given entity.
 		ARG 1 entity
@@ -187,6 +217,10 @@ CLASS net/minecraft/world/entity/Mob
 		ARG 2 stack
 	METHOD setLeftHanded (Z)V
 		ARG 1 leftHanded
+	METHOD setLootTable (Ljava/util/Optional;)V
+		ARG 1 lootTable
+	METHOD setLootTableSeed (J)V
+		ARG 1 lootTableSeed
 	METHOD setNoAi (Z)V
 		COMMENT Set whether this Entity's AI is disabled
 		ARG 1 noAi

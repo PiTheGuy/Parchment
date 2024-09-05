@@ -87,3 +87,5 @@ CLASS net/minecraft/world/phys/shapes/VoxelShape
 		ARG 1 xOffset
 		ARG 3 yOffset
 		ARG 5 zOffset
+	METHOD move (Lnet/minecraft/world/phys/Vec3;)Lnet/minecraft/world/phys/shapes/VoxelShape;
+		ARG 1 offset

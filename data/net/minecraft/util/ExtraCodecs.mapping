@@ -144,6 +144,8 @@ CLASS net/minecraft/util/ExtraCodecs
 		ARG 0 codec
 	METHOD nonEmptyList (Lcom/mojang/serialization/Codec;)Lcom/mojang/serialization/Codec;
 		ARG 0 codec
+	METHOD nonEmptyMap (Lcom/mojang/serialization/Codec;)Lcom/mojang/serialization/Codec;
+		ARG 0 mapCodec
 	METHOD object2BooleanMap (Lcom/mojang/serialization/Codec;)Lcom/mojang/serialization/Codec;
 		ARG 0 codec
 	METHOD optionalEmptyMap (Lcom/mojang/serialization/Codec;)Lcom/mojang/serialization/Codec;

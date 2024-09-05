@@ -113,6 +113,10 @@ CLASS net/minecraft/world/entity/Entity
 		ARG 0 deltaMovement
 		ARG 1 entityBB
 		ARG 2 shapes
+	METHOD collidedWithShapeMovingFrom (Lnet/minecraft/world/phys/Vec3;Lnet/minecraft/core/BlockPos;Lnet/minecraft/world/phys/shapes/VoxelShape;)Z
+		ARG 1 entityPosition
+		ARG 2 blockPos
+		ARG 3 shape
 	METHOD considersEntityAsAlly (Lnet/minecraft/world/entity/Entity;)Z
 		ARG 1 entity
 	METHOD copyPosition (Lnet/minecraft/world/entity/Entity;)V
@@ -371,6 +375,8 @@ CLASS net/minecraft/world/entity/Entity
 	METHOD killedEntity (Lnet/minecraft/server/level/ServerLevel;Lnet/minecraft/world/entity/LivingEntity;)Z
 		ARG 1 level
 		ARG 2 entity
+	METHOD lambda$applyEffectsFromBlocks$0 (Lnet/minecraft/world/level/block/state/BlockState;)Z
+		ARG 0 state
 	METHOD lambda$countPlayerPassengers$13 (Lnet/minecraft/world/entity/Entity;)Z
 		ARG 0 entity
 	METHOD lambda$move$0 (Lnet/minecraft/world/level/block/state/BlockState;)Z
@@ -590,6 +596,15 @@ CLASS net/minecraft/world/entity/Entity
 		ARG 1 level
 	METHOD setNoGravity (Z)V
 		ARG 1 noGravity
+	METHOD setOldPos (Lnet/minecraft/world/phys/Vec3;)V
+		ARG 1 pos
+	METHOD setOldPosAndRot (Lnet/minecraft/world/phys/Vec3;FF)V
+		ARG 1 pos
+		ARG 2 yRot
+		ARG 3 xRot
+	METHOD setOldRot (FF)V
+		ARG 1 yRot
+		ARG 2 xRot
 	METHOD setOnGround (Z)V
 		ARG 1 onGround
 	METHOD setOnGroundWithMovement (ZLnet/minecraft/world/phys/Vec3;)V

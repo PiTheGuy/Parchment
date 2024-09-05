@@ -7,6 +7,10 @@ CLASS net/minecraft/client/renderer/block/model/BlockModel
 		ARG 5 guiLight
 		ARG 6 transforms
 		ARG 7 overrides
+	METHOD bake (Ljava/util/function/Function;Lnet/minecraft/client/resources/model/ModelState;Z)Lnet/minecraft/client/resources/model/BakedModel;
+		ARG 1 spriteGetter
+		ARG 2 state
+		ARG 3 isGui3d
 	METHOD bake (Lnet/minecraft/client/resources/model/ModelBaker;Lnet/minecraft/client/renderer/block/model/BlockModel;Ljava/util/function/Function;Lnet/minecraft/client/resources/model/ModelState;Z)Lnet/minecraft/client/resources/model/BakedModel;
 		ARG 1 baker
 		ARG 2 model

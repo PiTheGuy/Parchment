@@ -91,6 +91,10 @@ CLASS net/minecraft/client/gui/GuiGraphics
 		ARG 6 vOffset
 		ARG 7 uWidth
 		ARG 8 vHeight
+		ARG 9 width
+		ARG 10 height
+		ARG 11 textureWidth
+		ARG 12 textureHeight
 		ARG 13 color
 	METHOD blit (Lnet/minecraft/resources/ResourceLocation;IIFFIIII)V
 		COMMENT Blits a portion of the texture specified by the atlas location onto the screen at the given position and dimensions with texture coordinates.
@@ -200,6 +204,21 @@ CLASS net/minecraft/client/gui/GuiGraphics
 			COMMENT the width of the texture.
 		ARG 12 textureHeight
 			COMMENT the height of the texture.
+	METHOD blitNineSliceInnerSegment (Ljava/util/function/Function;Lnet/minecraft/client/resources/metadata/gui/GuiSpriteScaling$NineSlice;Lnet/minecraft/client/renderer/texture/TextureAtlasSprite;IIIIIIIIIII)V
+		ARG 1 renderTypeGetter
+		ARG 2 nineSlice
+		ARG 3 sprite
+		ARG 4 x
+		ARG 5 y
+		ARG 6 width
+		ARG 7 height
+		ARG 8 uPosition
+		ARG 9 vPosition
+		ARG 10 spriteWidth
+		ARG 11 spriteHeight
+		ARG 12 nineSliceWidth
+		ARG 13 nineSliceHeight
+		ARG 14 blitOffset
 	METHOD blitNineSlicedSprite (Ljava/util/function/Function;Lnet/minecraft/client/renderer/texture/TextureAtlasSprite;Lnet/minecraft/client/resources/metadata/gui/GuiSpriteScaling$NineSlice;IIIII)V
 		ARG 1 renderTypeGetter
 		ARG 2 sprite
@@ -396,6 +415,8 @@ CLASS net/minecraft/client/gui/GuiGraphics
 		COMMENT Executes a runnable while managing the render state. The render state is flushed before and after executing the runnable.
 		ARG 1 runnable
 			COMMENT the runnable to execute.
+	METHOD drawSpecial (Ljava/util/function/Consumer;)V
+		ARG 1 drawer
 	METHOD drawString (Lnet/minecraft/client/gui/Font;Ljava/lang/String;III)I
 		COMMENT Draws a string at the specified coordinates using the given font, text, and color. Returns the width of the drawn string.
 		COMMENT <p>
@@ -768,6 +789,12 @@ CLASS net/minecraft/client/gui/GuiGraphics
 			COMMENT the x-coordinate of the mouse position.
 		ARG 4 mouseY
 			COMMENT the y-coordinate of the mouse position.
+	METHOD renderComponentTooltip (Lnet/minecraft/client/gui/Font;Ljava/util/List;IILnet/minecraft/resources/ResourceLocation;)V
+		ARG 1 font
+		ARG 2 tooltipLines
+		ARG 3 mouseX
+		ARG 4 mouseY
+		ARG 5 sprite
 	METHOD renderFakeItem (Lnet/minecraft/world/item/ItemStack;II)V
 		COMMENT Renders a fake item stack at the specified coordinates.
 		ARG 1 stack
@@ -909,6 +936,13 @@ CLASS net/minecraft/client/gui/GuiGraphics
 			COMMENT the x-coordinate of the mouse position.
 		ARG 5 mouseY
 			COMMENT the y-coordinate of the mouse position.
+	METHOD renderTooltip (Lnet/minecraft/client/gui/Font;Ljava/util/List;Ljava/util/Optional;IILnet/minecraft/resources/ResourceLocation;)V
+		ARG 1 font
+		ARG 2 tooltipLines
+		ARG 3 visualTooltipComponent
+		ARG 4 mouseX
+		ARG 5 mouseY
+		ARG 6 sprite
 	METHOD renderTooltip (Lnet/minecraft/client/gui/Font;Ljava/util/List;Lnet/minecraft/client/gui/screens/inventory/tooltip/ClientTooltipPositioner;II)V
 		COMMENT Renders a tooltip with multiple lines of formatted text using a custom tooltip positioner at the specified mouse coordinates.
 		ARG 1 font
@@ -953,6 +987,13 @@ CLASS net/minecraft/client/gui/GuiGraphics
 			COMMENT the y-coordinate of the mouse position.
 		ARG 5 tooltipPositioner
 			COMMENT the positioner to determine the tooltip's position.
+	METHOD renderTooltipInternal (Lnet/minecraft/client/gui/Font;Ljava/util/List;IILnet/minecraft/client/gui/screens/inventory/tooltip/ClientTooltipPositioner;Lnet/minecraft/resources/ResourceLocation;)V
+		ARG 1 font
+		ARG 2 tooltipLines
+		ARG 3 mouseX
+		ARG 4 mouseY
+		ARG 5 tooltipPositioner
+		ARG 6 sprite
 	METHOD setColor (FFFF)V
 		COMMENT Sets the current rendering color.
 		ARG 1 red

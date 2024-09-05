@@ -43,6 +43,9 @@ CLASS net/minecraft/world/phys/AABB
 		ARG 19 startSide
 		ARG 21 startOtherA
 		ARG 23 startOtherB
+	METHOD collidedAlongVector (Lnet/minecraft/world/phys/Vec3;Ljava/util/List;)Z
+		ARG 1 vector
+		ARG 2 boxes
 	METHOD contains (DDD)Z
 		ARG 1 x
 		ARG 3 y

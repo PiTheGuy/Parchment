@@ -1,4 +1,11 @@
 CLASS net/minecraft/client/renderer/entity/layers/HumanoidArmorLayer
+	METHOD <init> (Lnet/minecraft/client/renderer/entity/RenderLayerParent;Lnet/minecraft/client/model/HumanoidModel;Lnet/minecraft/client/model/HumanoidModel;Lnet/minecraft/client/model/HumanoidModel;Lnet/minecraft/client/model/HumanoidModel;Lnet/minecraft/client/renderer/entity/layers/EquipmentLayerRenderer;)V
+		ARG 1 renderer
+		ARG 2 innerModel
+		ARG 3 outerModel
+		ARG 4 innerModelBaby
+		ARG 5 outerModelBaby
+		ARG 6 equipmentRenderer
 	METHOD <init> (Lnet/minecraft/client/renderer/entity/RenderLayerParent;Lnet/minecraft/client/model/HumanoidModel;Lnet/minecraft/client/model/HumanoidModel;Lnet/minecraft/client/model/HumanoidModel;Lnet/minecraft/client/model/HumanoidModel;Lnet/minecraft/client/resources/model/ModelManager;)V
 		ARG 1 renderer
 		ARG 2 innerModel
@@ -6,6 +13,11 @@ CLASS net/minecraft/client/renderer/entity/layers/HumanoidArmorLayer
 		ARG 4 innerModelBaby
 		ARG 5 outerModelBaby
 		ARG 6 modelManager
+	METHOD <init> (Lnet/minecraft/client/renderer/entity/RenderLayerParent;Lnet/minecraft/client/model/HumanoidModel;Lnet/minecraft/client/model/HumanoidModel;Lnet/minecraft/client/renderer/entity/layers/EquipmentLayerRenderer;)V
+		ARG 1 renderer
+		ARG 2 innerModel
+		ARG 3 outerModel
+		ARG 4 equipmentRenderer
 	METHOD <init> (Lnet/minecraft/client/renderer/entity/RenderLayerParent;Lnet/minecraft/client/model/HumanoidModel;Lnet/minecraft/client/model/HumanoidModel;Lnet/minecraft/client/resources/model/ModelManager;)V
 		ARG 1 renderer
 		ARG 2 innerModel
@@ -72,5 +84,11 @@ CLASS net/minecraft/client/renderer/entity/layers/HumanoidArmorLayer
 	METHOD setPartVisibility (Lnet/minecraft/client/model/HumanoidModel;Lnet/minecraft/world/entity/EquipmentSlot;)V
 		ARG 1 model
 		ARG 2 slot
+	METHOD shouldRender (Lnet/minecraft/world/item/ItemStack;Lnet/minecraft/world/entity/EquipmentSlot;)Z
+		ARG 0 stack
+		ARG 1 slot
+	METHOD shouldRender (Lnet/minecraft/world/item/equipment/Equippable;Lnet/minecraft/world/entity/EquipmentSlot;)Z
+		ARG 0 equippable
+		ARG 1 slot
 	METHOD usesInnerModel (Lnet/minecraft/world/entity/EquipmentSlot;)Z
 		ARG 1 slot
