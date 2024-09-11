@@ -21,7 +21,7 @@ CLASS net/minecraft/client/animation/KeyframeAnimations
 	METHOD lambda$animate$0 (F[Lnet/minecraft/client/animation/Keyframe;I)Z
 		ARG 2 index
 	METHOD lambda$animate$1 (FLorg/joml/Vector3f;FLnet/minecraft/client/model/geom/ModelPart;Lnet/minecraft/client/animation/AnimationChannel;)V
-		ARG 4 animationChannel
+		ARG 4 channel
 	METHOD lambda$animate$2 (Ljava/util/List;FLorg/joml/Vector3f;FLnet/minecraft/client/model/geom/ModelPart;)V
 		ARG 4 modelPart
 	METHOD posVec (FFF)Lorg/joml/Vector3f;

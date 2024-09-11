@@ -5,7 +5,8 @@ CLASS net/minecraft/client/renderer/entity/PiglinRenderer
 		ARG 3 babyModelLayer
 		ARG 4 innerModel
 		ARG 5 outerModel
-		ARG 6 babyModel
+		ARG 6 innerModelBaby
+		ARG 7 outerModelBaby
 	METHOD <init> (Lnet/minecraft/client/renderer/entity/EntityRendererProvider$Context;Lnet/minecraft/client/model/geom/ModelLayerLocation;Lnet/minecraft/client/model/geom/ModelLayerLocation;Lnet/minecraft/client/model/geom/ModelLayerLocation;Z)V
 		ARG 1 context
 		ARG 2 layer

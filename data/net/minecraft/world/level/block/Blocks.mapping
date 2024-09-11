@@ -12,6 +12,8 @@ CLASS net/minecraft/world/level/block/Blocks
 		ARG 0 color
 	METHOD candle (Lnet/minecraft/world/level/material/MapColor;)Lnet/minecraft/world/level/block/Block;
 		ARG 0 mapColor
+	METHOD candleProperties (Lnet/minecraft/world/level/material/MapColor;)Lnet/minecraft/world/level/block/state/BlockBehaviour$Properties;
+		ARG 0 mapColor
 	METHOD flowerPot (Lnet/minecraft/world/level/block/Block;)Lnet/minecraft/world/level/block/Block;
 		ARG 0 potted
 	METHOD lambda$litBlockEmission$2 (ILnet/minecraft/world/level/block/state/BlockState;)I
@@ -374,6 +376,8 @@ CLASS net/minecraft/world/level/block/Blocks
 		ARG 1 state
 	METHOD leaves (Lnet/minecraft/world/level/block/SoundType;)Lnet/minecraft/world/level/block/Block;
 		ARG 0 soundType
+	METHOD leavesProperties (Lnet/minecraft/world/level/block/SoundType;)Lnet/minecraft/world/level/block/state/BlockBehaviour$Properties;
+		ARG 0 sound
 	METHOD legacyStair (Lnet/minecraft/world/level/block/Block;)Lnet/minecraft/world/level/block/Block;
 		ARG 0 baseBlock
 	METHOD litBlockEmission (I)Ljava/util/function/ToIntFunction;
@@ -432,15 +436,29 @@ CLASS net/minecraft/world/level/block/Blocks
 	METHOD registerBed (Ljava/lang/String;Lnet/minecraft/world/item/DyeColor;)Lnet/minecraft/world/level/block/Block;
 		ARG 0 name
 		ARG 1 color
+	METHOD registerLegacyStair (Ljava/lang/String;Lnet/minecraft/world/level/block/Block;)Lnet/minecraft/world/level/block/Block;
+		ARG 0 name
+		ARG 1 baseBlock
+	METHOD registerStainedGlass (Ljava/lang/String;Lnet/minecraft/world/item/DyeColor;)Lnet/minecraft/world/level/block/Block;
+		ARG 0 name
+		ARG 1 color
+	METHOD registerStair (Ljava/lang/String;Lnet/minecraft/world/level/block/Block;)Lnet/minecraft/world/level/block/Block;
+		ARG 0 name
+		ARG 1 baseBlock
 	METHOD shulkerBox (Lnet/minecraft/world/item/DyeColor;Lnet/minecraft/world/level/material/MapColor;)Lnet/minecraft/world/level/block/Block;
 		ARG 0 color
 		ARG 1 mapColor
+	METHOD shulkerBoxProperties (Lnet/minecraft/world/level/material/MapColor;)Lnet/minecraft/world/level/block/state/BlockBehaviour$Properties;
+		ARG 0 mapColor
 	METHOD stainedGlass (Lnet/minecraft/world/item/DyeColor;)Lnet/minecraft/world/level/block/Block;
 		ARG 0 color
 	METHOD stair (Lnet/minecraft/world/level/block/Block;)Lnet/minecraft/world/level/block/Block;
 		ARG 0 baseBlock
 	METHOD vanillaBlockId (Ljava/lang/String;)Lnet/minecraft/resources/ResourceKey;
 		ARG 0 name
+	METHOD wallVariant (Lnet/minecraft/world/level/block/Block;Z)Lnet/minecraft/world/level/block/state/BlockBehaviour$Properties;
+		ARG 0 baseBlock
+		ARG 1 overrideDescription
 	METHOD waterloggedMapColor (Lnet/minecraft/world/level/material/MapColor;)Ljava/util/function/Function;
 		ARG 0 unwaterloggedMapColor
 	METHOD woodenButton (Lnet/minecraft/world/level/block/state/properties/BlockSetType;)Lnet/minecraft/world/level/block/Block;

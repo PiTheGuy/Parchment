@@ -78,6 +78,8 @@ CLASS net/minecraft/server/level/ServerLevel
 		COMMENT Gets an unmodifiable iterator of all loaded entities in the world.
 	METHOD getChunkSource ()Lnet/minecraft/server/level/ServerChunkCache;
 		COMMENT Gets the world's chunk provider
+	METHOD getDestroyType (Lnet/minecraft/world/level/GameRules$Key;)Lnet/minecraft/world/level/Explosion$BlockInteraction;
+		ARG 1 decayGameRule
 	METHOD getEntities (Lnet/minecraft/world/level/entity/EntityTypeTest;Ljava/util/function/Predicate;)Ljava/util/List;
 		ARG 1 typeTest
 		ARG 2 predicate
@@ -146,6 +148,8 @@ CLASS net/minecraft/server/level/ServerLevel
 		ARG 3 entity
 	METHOD lambda$getTypeCount$17 (Lit/unimi/dsi/fastutil/objects/Object2IntMap$Entry;)Ljava/lang/String;
 		ARG 0 entry
+	METHOD lambda$getWatchdogStats$16 (Lnet/minecraft/world/entity/Entity;)Ljava/lang/String;
+		ARG 0 entity
 	METHOD lambda$tick$2 (Lnet/minecraft/world/TickRateManager;Lnet/minecraft/util/profiling/ProfilerFiller;Lnet/minecraft/world/entity/Entity;)V
 		ARG 3 entity
 	METHOD lambda$wakeUpAllPlayers$3 (Lnet/minecraft/server/level/ServerPlayer;)V
@@ -181,6 +185,8 @@ CLASS net/minecraft/server/level/ServerLevel
 		ARG 1 path
 	METHOD saveLevelData ()V
 		COMMENT Saves the chunks to disk.
+	METHOD saveLevelData (Z)V
+		ARG 1 join
 	METHOD sectionsToVillage (Lnet/minecraft/core/SectionPos;)I
 		ARG 1 pos
 	METHOD sendBlockUpdated (Lnet/minecraft/core/BlockPos;Lnet/minecraft/world/level/block/state/BlockState;Lnet/minecraft/world/level/block/state/BlockState;I)V

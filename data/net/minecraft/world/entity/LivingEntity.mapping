@@ -4,6 +4,8 @@ CLASS net/minecraft/world/entity/LivingEntity
 		COMMENT Damage taken in the last hit. Mobs are resistant to damage less than this for a short time after taking damage.
 	FIELD lastHurtMobTimestamp I
 		COMMENT Holds the value of ticksExisted when setLastAttacker was last called.
+	METHOD activeLocationDependentEnchantments (Lnet/minecraft/world/entity/EquipmentSlot;)Ljava/util/Map;
+		ARG 1 slot
 	METHOD actuallyHurt (Lnet/minecraft/world/damagesource/DamageSource;F)V
 		COMMENT Deals damage to the entity. This will take the armor of the entity into consideration before damaging the health bar.
 		ARG 1 damageSource

@@ -5,4 +5,5 @@ CLASS net/minecraft/client/renderer/entity/ZombifiedPiglinRenderer
 		ARG 3 babyModel
 		ARG 4 innerArmorLayer
 		ARG 5 outerArmorLayer
-		ARG 6 babyArmorLayer
+		ARG 6 innerArmorBaby
+		ARG 7 outerArmorBaby

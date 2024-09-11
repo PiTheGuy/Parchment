@@ -111,6 +111,8 @@ CLASS net/minecraft/world/entity/EntityType
 		ARG 1 entityType
 	METHOD lambda$create$5 (Lnet/minecraft/nbt/CompoundTag;Lnet/minecraft/world/entity/Entity;)V
 		ARG 1 entity
+	METHOD lambda$loadEntityRecursive$7 (Lnet/minecraft/nbt/CompoundTag;Lnet/minecraft/world/level/Level;Lnet/minecraft/world/entity/EntitySpawnReason;Ljava/util/function/Function;Lnet/minecraft/world/entity/Entity;)Lnet/minecraft/world/entity/Entity;
+		ARG 4 entity
 	METHOD loadEntitiesRecursive (Ljava/util/List;Lnet/minecraft/world/level/Level;)Ljava/util/stream/Stream;
 		ARG 0 tags
 		ARG 1 level
@@ -135,6 +137,9 @@ CLASS net/minecraft/world/entity/EntityType
 		ARG 1 level
 		ARG 2 spawnReason
 	METHOD register (Ljava/lang/String;Lnet/minecraft/world/entity/EntityType$Builder;)Lnet/minecraft/world/entity/EntityType;
+		ARG 0 key
+		ARG 1 builder
+	METHOD register (Lnet/minecraft/resources/ResourceKey;Lnet/minecraft/world/entity/EntityType$Builder;)Lnet/minecraft/world/entity/EntityType;
 		ARG 0 key
 		ARG 1 builder
 	METHOD spawn (Lnet/minecraft/server/level/ServerLevel;Ljava/util/function/Consumer;Lnet/minecraft/core/BlockPos;Lnet/minecraft/world/entity/EntitySpawnReason;ZZ)Lnet/minecraft/world/entity/Entity;
@@ -180,6 +185,8 @@ CLASS net/minecraft/world/entity/EntityType
 		ARG 1 player
 		ARG 2 entity
 		ARG 3 customData
+	METHOD vanillaEntityId (Ljava/lang/String;)Lnet/minecraft/resources/ResourceKey;
+		ARG 0 name
 	CLASS 1
 		METHOD tryAdvance (Ljava/util/function/Consumer;)Z
 			ARG 1 consumer

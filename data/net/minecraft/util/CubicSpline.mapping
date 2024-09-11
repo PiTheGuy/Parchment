@@ -4,6 +4,8 @@ CLASS net/minecraft/util/CubicSpline
 	METHOD builder (Lnet/minecraft/util/ToFloatFunction;Lnet/minecraft/util/ToFloatFunction;)Lnet/minecraft/util/CubicSpline$Builder;
 		ARG 0 coordinate
 		ARG 1 valueTransformer
+	METHOD codec (Lcom/mojang/serialization/Codec;)Lcom/mojang/serialization/Codec;
+		ARG 0 codec
 	METHOD constant (F)Lnet/minecraft/util/CubicSpline;
 		ARG 0 value
 	METHOD lambda$codec$1 (Lorg/apache/commons/lang3/mutable/MutableObject;Lcom/mojang/serialization/codecs/RecordCodecBuilder$Instance;)Lcom/mojang/datafixers/kinds/App;
@@ -34,6 +36,9 @@ CLASS net/minecraft/util/CubicSpline
 			ARG 1 location
 			ARG 2 value
 			ARG 3 derivative
+	CLASS CoordinateVisitor
+		METHOD visit (Ljava/lang/Object;)Ljava/lang/Object;
+			ARG 1 coordinate
 	CLASS Multipoint
 		METHOD <init> (Lnet/minecraft/util/ToFloatFunction;[FLjava/util/List;[FFF)V
 			ARG 1 coordinate
@@ -62,6 +67,3 @@ CLASS net/minecraft/util/CubicSpline
 			ARG 0 locations
 			ARG 1 values
 			ARG 2 derivatives
-	CLASS CoordinateVisitor
-		METHOD visit (Ljava/lang/Object;)Ljava/lang/Object;
-			ARG 1 coordinate

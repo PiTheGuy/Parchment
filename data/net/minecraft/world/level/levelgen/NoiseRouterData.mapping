@@ -61,17 +61,17 @@ CLASS net/minecraft/world/level/levelgen/NoiseRouterData
 	METHOD slide (Lnet/minecraft/world/level/levelgen/DensityFunction;IIIIDIID)Lnet/minecraft/world/level/levelgen/DensityFunction;
 		ARG 0 input
 		ARG 1 minY
-		ARG 2 maxY
+		ARG 2 height
 	METHOD slideEnd (Lnet/minecraft/world/level/levelgen/DensityFunction;)Lnet/minecraft/world/level/levelgen/DensityFunction;
 		ARG 0 densityFunction
 	METHOD slideEndLike (Lnet/minecraft/world/level/levelgen/DensityFunction;II)Lnet/minecraft/world/level/levelgen/DensityFunction;
 		ARG 0 densityFunction
 		ARG 1 minY
-		ARG 2 maxY
+		ARG 2 height
 	METHOD slideNetherLike (Lnet/minecraft/core/HolderGetter;II)Lnet/minecraft/world/level/levelgen/DensityFunction;
 		ARG 0 densityFunctions
 		ARG 1 minY
-		ARG 2 maxY
+		ARG 2 height
 	METHOD slideOverworld (ZLnet/minecraft/world/level/levelgen/DensityFunction;)Lnet/minecraft/world/level/levelgen/DensityFunction;
 		ARG 0 amplified
 		ARG 1 densityFunction

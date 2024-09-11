@@ -71,6 +71,10 @@ CLASS net/minecraft/util/datafix/fixes/ChunkPalettedStorageFix
 			ARG 0 map
 			ARG 1 id
 			ARG 2 bannerColor
+		METHOD addBeds (Ljava/util/Map;ILjava/lang/String;)V
+			ARG 0 map
+			ARG 1 id
+			ARG 2 bedColor
 		METHOD lambda$static$0 (Ljava/util/HashMap;)V
 			ARG 0 map
 		METHOD mapDoor (Ljava/util/Map;Ljava/lang/String;)V
@@ -84,19 +88,30 @@ CLASS net/minecraft/util/datafix/fixes/ChunkPalettedStorageFix
 	CLASS Section
 		METHOD <init> (Lcom/mojang/serialization/Dynamic;)V
 			ARG 1 section
+		METHOD addFix (II)V
+			ARG 1 index
+			ARG 2 value
 		METHOD getBlock (I)Lcom/mojang/serialization/Dynamic;
-			ARG 1 id
+			ARG 1 index
 		METHOD setBlock (ILcom/mojang/serialization/Dynamic;)V
 			ARG 1 index
-			ARG 2 data
+			ARG 2 block
+		METHOD upgrade (I)I
+			ARG 1 sides
 	CLASS UpgradeChunk
 		METHOD <init> (Lcom/mojang/serialization/Dynamic;)V
 			ARG 1 level
+		METHOD getBlock (I)Lcom/mojang/serialization/Dynamic;
+			ARG 1 index
 		METHOD getBlockEntity (I)Lcom/mojang/serialization/Dynamic;
 			ARG 1 index
+		METHOD getSection (I)Lnet/minecraft/util/datafix/fixes/ChunkPalettedStorageFix$Section;
+			ARG 1 index
 		METHOD relative (ILnet/minecraft/util/datafix/fixes/ChunkPalettedStorageFix$Direction;)I
+			ARG 0 data
 			ARG 1 direction
 		METHOD removeBlockEntity (I)Lcom/mojang/serialization/Dynamic;
 			ARG 1 index
 		METHOD setBlock (ILcom/mojang/serialization/Dynamic;)V
-			ARG 2 dynamic
+			ARG 1 index
+			ARG 2 block

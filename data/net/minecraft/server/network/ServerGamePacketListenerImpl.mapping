@@ -188,6 +188,9 @@ CLASS net/minecraft/server/network/ServerGamePacketListenerImpl
 		ARG 7 yaw
 		ARG 8 pitch
 		ARG 9 relativeSet
+	METHOD teleport (Lnet/minecraft/world/entity/PositionMoveRotation;Ljava/util/Set;)V
+		ARG 1 posMoveRotation
+		ARG 2 relatives
 	METHOD tryHandleChat (Ljava/lang/String;Ljava/lang/Runnable;)V
 		ARG 1 message
 		ARG 2 handler

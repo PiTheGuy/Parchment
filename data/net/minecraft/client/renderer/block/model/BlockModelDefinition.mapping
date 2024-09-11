@@ -34,6 +34,9 @@ CLASS net/minecraft/client/renderer/block/model/BlockModelDefinition
 			ARG 1 json
 			ARG 2 type
 			ARG 3 context
+		METHOD getMultiPart (Lcom/google/gson/JsonDeserializationContext;Lcom/google/gson/JsonObject;)Lnet/minecraft/client/renderer/block/model/multipart/MultiPart$Definition;
+			ARG 1 context
+			ARG 2 json
 		METHOD getMultiPart (Lcom/google/gson/JsonDeserializationContext;Lcom/google/gson/JsonObject;)Lnet/minecraft/client/renderer/block/model/multipart/MultiPart;
 			ARG 1 context
 			ARG 2 json

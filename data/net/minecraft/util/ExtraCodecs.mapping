@@ -6,6 +6,8 @@ CLASS net/minecraft/util/ExtraCodecs
 	METHOD converter (Lcom/mojang/serialization/DynamicOps;)Lcom/mojang/serialization/Codec;
 		ARG 0 ops
 	METHOD dispatchOptionalValue (Ljava/lang/String;Ljava/lang/String;Lcom/mojang/serialization/Codec;Ljava/util/function/Function;Ljava/util/function/Function;)Lcom/mojang/serialization/MapCodec;
+		ARG 0 key1
+		ARG 1 key2
 		ARG 2 codec
 		ARG 3 keyGetter
 		ARG 4 codecGetter
@@ -65,21 +67,33 @@ CLASS net/minecraft/util/ExtraCodecs
 		ARG 0 list
 	METHOD lambda$static$16 (Lorg/joml/Matrix4f;)Ljava/util/List;
 		ARG 0 matrix
+	METHOD lambda$static$17 (Lorg/joml/Vector3f;)Ljava/lang/Integer;
+		ARG 0 color
 	METHOD lambda$static$17 (Lorg/joml/Vector4f;)Ljava/lang/Integer;
+		ARG 0 color
+	METHOD lambda$static$18 (Lorg/joml/Vector4f;)Ljava/lang/Integer;
 		ARG 0 color
 	METHOD lambda$static$19 (Ljava/lang/Integer;)Lcom/mojang/serialization/DataResult;
 		ARG 0 value
 	METHOD lambda$static$2 (Ljava/util/List;)Lorg/joml/Vector3f;
 		ARG 0 values
+	METHOD lambda$static$20 (Ljava/lang/Integer;)Lcom/mojang/serialization/DataResult;
+		ARG 0 value
 	METHOD lambda$static$3 (Ljava/util/List;)Lcom/mojang/serialization/DataResult;
 		ARG 0 list
 	METHOD lambda$static$36 (Ljava/lang/Integer;)Ljava/lang/String;
 		ARG 0 value
 	METHOD lambda$static$37 (Ljava/lang/Integer;)Ljava/lang/String;
 		ARG 0 value
+	METHOD lambda$static$38 (Ljava/lang/Integer;)Ljava/lang/String;
+		ARG 0 value
 	METHOD lambda$static$4 (Lorg/joml/Vector3f;)Ljava/util/List;
 		ARG 0 vector
 	METHOD lambda$static$41 (Ljava/lang/Float;)Ljava/lang/String;
+		ARG 0 value
+	METHOD lambda$static$44 (Ljava/lang/Float;)Ljava/lang/String;
+		ARG 0 value
+	METHOD lambda$static$45 (Ljava/lang/Float;)Ljava/lang/String;
 		ARG 0 value
 	METHOD lambda$static$49 (Ljava/lang/String;)Lcom/mojang/serialization/DataResult;
 		ARG 0 pattern
@@ -91,24 +105,34 @@ CLASS net/minecraft/util/ExtraCodecs
 		ARG 0 value
 	METHOD lambda$static$54 (Ljava/lang/String;)Lcom/mojang/serialization/DataResult;
 		ARG 0 value
+	METHOD lambda$static$55 (Ljava/lang/String;)Lcom/mojang/serialization/DataResult;
+		ARG 0 pattern
 	METHOD lambda$static$55 (Lnet/minecraft/resources/ResourceLocation;)Lnet/minecraft/util/ExtraCodecs$TagOrElementLocation;
 		ARG 0 location
 	METHOD lambda$static$56 (Lnet/minecraft/resources/ResourceLocation;)Lnet/minecraft/util/ExtraCodecs$TagOrElementLocation;
 		ARG 0 location
 	METHOD lambda$static$57 (Ljava/lang/String;)Lcom/mojang/serialization/DataResult;
 		ARG 0 value
+	METHOD lambda$static$58 (Ljava/lang/String;)Lcom/mojang/serialization/DataResult;
+		ARG 0 data
 	METHOD lambda$static$58 (Ljava/util/Optional;)Ljava/util/OptionalLong;
 		ARG 0 value
 	METHOD lambda$static$59 (Ljava/util/OptionalLong;)Ljava/util/Optional;
 		ARG 0 value
 	METHOD lambda$static$6 (Ljava/util/List;)Lcom/mojang/serialization/DataResult;
 		ARG 0 list
+	METHOD lambda$static$60 (Ljava/lang/String;)Lcom/mojang/serialization/DataResult;
+		ARG 0 value
 	METHOD lambda$static$60 (Ljava/util/stream/LongStream;)Ljava/util/BitSet;
 		ARG 0 longs
 	METHOD lambda$static$61 (Ljava/util/BitSet;)Ljava/util/stream/LongStream;
 		ARG 0 bitSet
+	METHOD lambda$static$61 (Lnet/minecraft/resources/ResourceLocation;)Lnet/minecraft/util/ExtraCodecs$TagOrElementLocation;
+		ARG 0 location
 	METHOD lambda$static$62 (Lcom/mojang/authlib/properties/Property;)Ljava/util/Optional;
 		ARG 0 property
+	METHOD lambda$static$63 (Ljava/lang/String;)Lcom/mojang/serialization/DataResult;
+		ARG 0 value
 	METHOD lambda$static$63 (Ljava/lang/String;Ljava/lang/String;Ljava/util/Optional;)Lcom/mojang/authlib/properties/Property;
 		ARG 0 name
 		ARG 1 value
@@ -163,6 +187,8 @@ CLASS net/minecraft/util/ExtraCodecs
 		ARG 1 lifecycleGetter
 	METHOD overrideLifecycle (Lcom/mojang/serialization/Codec;Ljava/util/function/Function;Ljava/util/function/Function;)Lcom/mojang/serialization/Codec;
 		ARG 0 codec
+		ARG 1 applyLifecycle
+		ARG 2 coApplyLifecycle
 	METHOD retrieveContext (Ljava/util/function/Function;)Lcom/mojang/serialization/MapCodec;
 		ARG 0 retriever
 	METHOD sizeLimitedMap (Lcom/mojang/serialization/Codec;I)Lcom/mojang/serialization/Codec;

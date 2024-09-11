@@ -25,6 +25,7 @@ CLASS net/minecraft/client/renderer/entity/GuardianRenderer
 		ARG 2 beamVector
 		ARG 3 attackTime
 		ARG 4 scale
+		ARG 5 animationTime
 	METHOD shouldRender (Lnet/minecraft/world/entity/monster/Guardian;Lnet/minecraft/client/renderer/culling/Frustum;DDD)Z
 		ARG 1 livingEntity
 		ARG 2 camera

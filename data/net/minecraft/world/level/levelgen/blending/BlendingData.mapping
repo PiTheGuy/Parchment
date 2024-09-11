@@ -105,3 +105,5 @@ CLASS net/minecraft/world/level/levelgen/blending/BlendingData
 	CLASS Packed
 		METHOD lambda$static$0 (Lcom/mojang/serialization/codecs/RecordCodecBuilder$Instance;)Lcom/mojang/datafixers/kinds/App;
 			ARG 0 instance
+		METHOD validateArraySize (Lnet/minecraft/world/level/levelgen/blending/BlendingData$Packed;)Lcom/mojang/serialization/DataResult;
+			ARG 0 packed

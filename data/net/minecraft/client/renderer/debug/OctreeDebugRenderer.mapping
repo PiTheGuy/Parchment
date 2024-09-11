@@ -39,4 +39,5 @@ CLASS net/minecraft/client/renderer/debug/OctreeDebugRenderer
 		ARG 8 camZ
 		ARG 10 recursionDepth
 		ARG 11 isLeafNode
+		ARG 12 nodesRendered
 		ARG 13 isNearby

@@ -17,6 +17,8 @@ CLASS net/minecraft/client/model/Model
 		ARG 1 definition
 		ARG 2 walkAnimationPos
 		ARG 3 walkAnimationSpeed
+		ARG 4 timeMultiplier
+		ARG 5 speedMultiplier
 	METHOD applyStatic (Lnet/minecraft/client/animation/AnimationDefinition;)V
 		ARG 1 animationDefinition
 	METHOD getAnyDescendantWithName (Ljava/lang/String;)Ljava/util/Optional;
