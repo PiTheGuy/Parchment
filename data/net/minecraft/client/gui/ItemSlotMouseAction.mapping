@@ -11,5 +11,8 @@ CLASS net/minecraft/client/gui/ItemSlotMouseAction
 		ARG 3 yOffset
 		ARG 5 hoveredSlotIndex
 		ARG 6 hoveredSlotItem
+	METHOD onSlotClicked (Lnet/minecraft/world/inventory/Slot;Lnet/minecraft/world/inventory/ClickType;)V
+		ARG 1 slot
+		ARG 2 clickType
 	METHOD onStopHovering (Lnet/minecraft/world/inventory/Slot;)V
 		ARG 1 slot

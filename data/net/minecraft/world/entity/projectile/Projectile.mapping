@@ -56,6 +56,8 @@ CLASS net/minecraft/world/entity/projectile/Projectile
 		ARG 1 compound
 	METHOD setOwner (Lnet/minecraft/world/entity/Entity;)V
 		ARG 1 owner
+	METHOD setOwnerThroughUUID (Ljava/util/UUID;)V
+		ARG 1 uuid
 	METHOD shoot (DDDFF)V
 		COMMENT Similar to setArrowHeading, it's point the throwable entity to a x, y, z direction.
 		ARG 1 x

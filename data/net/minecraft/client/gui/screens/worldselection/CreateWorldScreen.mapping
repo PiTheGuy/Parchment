@@ -39,6 +39,12 @@ CLASS net/minecraft/client/gui/screens/worldselection/CreateWorldScreen
 		ARG 1 keyCode
 		ARG 2 scanCode
 		ARG 3 modifiers
+	METHOD openCreateWorldScreen (Lnet/minecraft/client/Minecraft;Lnet/minecraft/client/gui/screens/Screen;Ljava/util/function/Function;Lnet/minecraft/client/gui/screens/worldselection/WorldCreationContextMapper;Lnet/minecraft/resources/ResourceKey;)V
+		ARG 0 minecraft
+		ARG 1 lastScreen
+		ARG 2 worldGenSettingsGetter
+		ARG 3 creationContextMapper
+		ARG 4 preset
 	METHOD openDataPackSelectionScreen (Lnet/minecraft/world/level/WorldDataConfiguration;)V
 		ARG 1 worldDataConfiguration
 	METHOD openExperimentsScreen (Lnet/minecraft/world/level/WorldDataConfiguration;)V
@@ -49,6 +55,9 @@ CLASS net/minecraft/client/gui/screens/worldselection/CreateWorldScreen
 	METHOD queueLoadScreen (Lnet/minecraft/client/Minecraft;Lnet/minecraft/network/chat/Component;)V
 		ARG 0 minecraft
 		ARG 1 title
+	METHOD testWorld (Lnet/minecraft/client/Minecraft;Lnet/minecraft/client/gui/screens/Screen;)V
+		ARG 0 minecraft
+		ARG 1 lastScreen
 	METHOD tryApplyNewDataPacks (Lnet/minecraft/server/packs/repository/PackRepository;ZLjava/util/function/Consumer;)V
 		ARG 1 packRepository
 		ARG 2 shouldConfirm

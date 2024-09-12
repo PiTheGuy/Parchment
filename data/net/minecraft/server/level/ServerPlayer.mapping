@@ -65,6 +65,8 @@ CLASS net/minecraft/server/level/ServerPlayer
 	METHOD crit (Lnet/minecraft/world/entity/Entity;)V
 		COMMENT Called when the entity is dealt a critical hit.
 		ARG 1 entityHit
+	METHOD deregisterEnderPearl (Lnet/minecraft/world/entity/projectile/ThrownEnderpearl;)V
+		ARG 1 enderPearl
 	METHOD didNotMove (DDD)Z
 		ARG 0 dx
 		ARG 2 dy
@@ -123,7 +125,11 @@ CLASS net/minecraft/server/level/ServerPlayer
 		ARG 1 pos
 	METHOD isSpectator ()Z
 		COMMENT Returns {@code true} if the player is in spectator mode.
+	METHOD lambda$awardRecipesByKey$22 (Lnet/minecraft/resources/ResourceLocation;)Ljava/util/stream/Stream;
+		ARG 1 recipe
 	METHOD lambda$awardStat$17 (ILnet/minecraft/world/scores/ScoreAccess;)V
+		ARG 1 score
+	METHOD lambda$awardStat$21 (ILnet/minecraft/world/scores/ScoreAccess;)V
 		ARG 1 score
 	METHOD lambda$readAdditionalSaveData$0 (Lnet/minecraft/world/entity/monster/warden/WardenSpawnTracker;)V
 		ARG 1 wardenSpawnTracker
@@ -139,12 +145,20 @@ CLASS net/minecraft/server/level/ServerPlayer
 		ARG 0 mob
 	METHOD lambda$tellNeutralMobsThatIDied$12 (Lnet/minecraft/world/entity/Mob;)V
 		ARG 1 mob
+	METHOD lambda$tellNeutralMobsThatIDied$15 (Lnet/minecraft/world/entity/Mob;)Z
+		ARG 0 mob
+	METHOD lambda$tellNeutralMobsThatIDied$16 (Lnet/minecraft/world/entity/Mob;)V
+		ARG 1 mob
 	METHOD lambda$tellNeutralMobsThatIDied$8 (Lnet/minecraft/world/entity/Mob;)Z
 		ARG 0 mob
 	METHOD lambda$tellNeutralMobsThatIDied$9 (Lnet/minecraft/world/entity/Mob;)V
 		ARG 1 mob
 	METHOD lambda$updateScoreForCriteria$5 (ILnet/minecraft/world/scores/ScoreAccess;)V
 		ARG 1 score
+	METHOD loadAndSpawnEnderpearls (Ljava/util/Optional;)V
+		ARG 1 tag
+	METHOD loadAndSpawnParentVehicle (Ljava/util/Optional;)V
+		ARG 1 tag
 	METHOD loadGameTypes (Lnet/minecraft/nbt/CompoundTag;)V
 		ARG 1 tag
 	METHOD lookAt (Lnet/minecraft/commands/arguments/EntityAnchorArgument$Anchor;Lnet/minecraft/world/entity/Entity;Lnet/minecraft/commands/arguments/EntityAnchorArgument$Anchor;)V
@@ -186,6 +200,9 @@ CLASS net/minecraft/server/level/ServerPlayer
 	METHOD openItemGui (Lnet/minecraft/world/item/ItemStack;Lnet/minecraft/world/InteractionHand;)V
 		ARG 1 stack
 		ARG 2 hand
+	METHOD placeEnderPearlTicket (Lnet/minecraft/server/level/ServerLevel;Lnet/minecraft/world/level/ChunkPos;)J
+		ARG 0 level
+		ARG 1 pos
 	METHOD processPortalCooldown ()V
 		COMMENT Decrements the counter for the remaining time until the entity may use a portal again.
 	METHOD readAdditionalSaveData (Lnet/minecraft/nbt/CompoundTag;)V
@@ -194,6 +211,10 @@ CLASS net/minecraft/server/level/ServerPlayer
 	METHOD readPlayerMode (Lnet/minecraft/nbt/CompoundTag;Ljava/lang/String;)Lnet/minecraft/world/level/GameType;
 		ARG 0 tag
 		ARG 1 key
+	METHOD registerAndUpdateEnderPearlTicket (Lnet/minecraft/world/entity/projectile/ThrownEnderpearl;)J
+		ARG 1 enderPearl
+	METHOD registerEnderPearl (Lnet/minecraft/world/entity/projectile/ThrownEnderpearl;)V
+		ARG 1 enderPearl
 	METHOD resetSentInfo ()V
 		COMMENT This function is called when a player's inventory is sent to him, {@code lastHealth} is updated on any dimension transitions, then reset.
 	METHOD resetStat (Lnet/minecraft/stats/Stat;)V
@@ -201,6 +222,10 @@ CLASS net/minecraft/server/level/ServerPlayer
 	METHOD restoreFrom (Lnet/minecraft/server/level/ServerPlayer;Z)V
 		ARG 1 that
 		ARG 2 keepEverything
+	METHOD saveEnderPearls (Lnet/minecraft/nbt/CompoundTag;)V
+		ARG 1 tag
+	METHOD saveParentVehicle (Lnet/minecraft/nbt/CompoundTag;)V
+		ARG 1 tag
 	METHOD sendChatMessage (Lnet/minecraft/network/chat/OutgoingChatMessage;ZLnet/minecraft/network/chat/ChatType$Bound;)V
 		ARG 1 message
 		ARG 2 filtered
@@ -260,6 +285,8 @@ CLASS net/minecraft/server/level/ServerPlayer
 		ARG 1 tag
 	METHOD swing (Lnet/minecraft/world/InteractionHand;)V
 		ARG 1 hand
+	METHOD synchronizeSpecialItemUpdates (Lnet/minecraft/world/item/ItemStack;)V
+		ARG 1 stack
 	METHOD take (Lnet/minecraft/world/entity/Entity;I)V
 		COMMENT Called when the entity picks up an item.
 		ARG 1 entity

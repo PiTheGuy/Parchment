@@ -75,6 +75,10 @@ CLASS net/minecraft/world/entity/vehicle/Boat
 	METHOD tick ()V
 		COMMENT Called to update the entity's position/logic.
 	CLASS Type
+		METHOD <init> (Ljava/lang/String;ILjava/util/function/Supplier;Ljava/lang/String;Ljava/lang/String;)V
+			ARG 3 boat
+			ARG 4 name
+			ARG 5 decriptionId
 		METHOD <init> (Ljava/lang/String;ILnet/minecraft/world/item/Item;Lnet/minecraft/world/item/Item;Ljava/lang/String;Ljava/lang/String;)V
 			ARG 3 planks
 			ARG 4 boat

@@ -135,6 +135,9 @@ CLASS net/minecraft/network/FriendlyByteBuf
 		ARG 1 exception
 	METHOD lambda$writeJsonWithCodec$3 (Ljava/lang/Object;Ljava/lang/String;)Lio/netty/handler/codec/EncoderException;
 		ARG 1 exception
+	METHOD lambda$writeMap$5 (Lnet/minecraft/network/codec/StreamEncoder;Lnet/minecraft/network/codec/StreamEncoder;Ljava/lang/Object;Ljava/lang/Object;)V
+		ARG 3 key
+		ARG 4 value
 	METHOD lambda$writeWithCodec$1 (Ljava/lang/Object;Ljava/lang/String;)Lio/netty/handler/codec/EncoderException;
 		ARG 1 exception
 	METHOD limitValue (Ljava/util/function/IntFunction;I)Ljava/util/function/IntFunction;
@@ -207,6 +210,8 @@ CLASS net/minecraft/network/FriendlyByteBuf
 		COMMENT Reads a ChunkPos encoded as a long from the buffer.
 		COMMENT
 		COMMENT @see #writeChunkPos
+	METHOD readChunkPos (Lio/netty/buffer/ByteBuf;)Lnet/minecraft/world/level/ChunkPos;
+		ARG 0 buffer
 	METHOD readCollection (Ljava/util/function/IntFunction;Lnet/minecraft/network/codec/StreamDecoder;)Ljava/util/Collection;
 		ARG 1 collectionFactory
 		ARG 2 elementReader
@@ -506,6 +511,9 @@ CLASS net/minecraft/network/FriendlyByteBuf
 	METHOD writeCharSequence (Ljava/lang/CharSequence;Ljava/nio/charset/Charset;)I
 		ARG 1 charSequence
 		ARG 2 charset
+	METHOD writeChunkPos (Lio/netty/buffer/ByteBuf;Lnet/minecraft/world/level/ChunkPos;)V
+		ARG 0 buffer
+		ARG 1 chunkPos
 	METHOD writeChunkPos (Lnet/minecraft/world/level/ChunkPos;)Lnet/minecraft/network/FriendlyByteBuf;
 		COMMENT Writes a ChunkPos encoded as a long to the buffer.
 		COMMENT

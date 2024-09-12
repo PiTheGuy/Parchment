@@ -135,6 +135,8 @@ CLASS net/minecraft/Util
 		ARG 0 width
 		ARG 1 height
 		ARG 2 list
+	METHOD lambda$getVmArguments$19 (Ljava/lang/String;)Z
+		ARG 0 argument
 	METHOD lastOf (Ljava/util/List;)Ljava/lang/Object;
 		ARG 0 list
 	METHOD logAndPauseIfInIde (Ljava/lang/String;)V
@@ -155,7 +157,12 @@ CLASS net/minecraft/Util
 		ARG 1 valueGetter
 	METHOD makeExecutor (Ljava/lang/String;)Ljava/util/concurrent/ExecutorService;
 		ARG 0 serviceName
+	METHOD makeExecutor (Ljava/lang/String;)Lnet/minecraft/TracingExecutor;
+		ARG 0 name
 	METHOD makeIoExecutor (Ljava/lang/String;Z)Ljava/util/concurrent/ExecutorService;
+		ARG 0 name
+		ARG 1 daemon
+	METHOD makeIoExecutor (Ljava/lang/String;Z)Lnet/minecraft/TracingExecutor;
 		ARG 0 name
 		ARG 1 daemon
 	METHOD memoize (Ljava/util/function/BiFunction;)Ljava/util/function/BiFunction;
@@ -189,6 +196,9 @@ CLASS net/minecraft/Util
 		ARG 0 type
 		ARG 1 data
 		ARG 2 partial
+	METHOD runNamed (Ljava/lang/Runnable;Ljava/lang/String;)V
+		ARG 0 task
+		ARG 1 name
 	METHOD runWithRetries (ILjava/lang/String;[Ljava/util/function/BooleanSupplier;)Z
 		ARG 0 maxTries
 		ARG 1 actionName

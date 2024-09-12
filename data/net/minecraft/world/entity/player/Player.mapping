@@ -152,6 +152,8 @@ CLASS net/minecraft/world/entity/player/Player
 		ARG 1 maxUpStep
 	METHOD isAlwaysExperienceDropper ()Z
 		COMMENT Only use is to identify if class is an instance of player for experience dropping
+	METHOD isEquipped (Lnet/minecraft/world/item/Item;)Z
+		ARG 1 item
 	METHOD isHurt ()Z
 		COMMENT Checks if the player's health is not full and not zero.
 	METHOD isImmobile ()Z
@@ -171,8 +173,12 @@ CLASS net/minecraft/world/entity/player/Player
 		COMMENT Returns {@code true} if the player is in spectator mode.
 	METHOD jumpFromGround ()V
 		COMMENT Causes this entity to do an upwards motion (jumping).
+	METHOD lambda$addAdditionalSaveData$3 (Lnet/minecraft/core/GlobalPos;)Ljava/util/Optional;
+		ARG 0 pos
 	METHOD lambda$playShoulderEntityAmbientSound$0 (Lnet/minecraft/world/entity/EntityType;)Z
 		ARG 0 entityType
+	METHOD lambda$playShoulderEntityAmbientSound$1 (Lnet/minecraft/world/entity/EntityType;)V
+		ARG 1 entityType
 	METHOD lambda$readAdditionalSaveData$2 (Lnet/minecraft/world/phys/Vec3;)V
 		ARG 1 currentImpulseImpactPos
 	METHOD magicCrit (Lnet/minecraft/world/entity/Entity;)V

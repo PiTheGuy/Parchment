@@ -1,3 +1,6 @@
 CLASS net/minecraft/world/entity/Shearable
 	METHOD shear (Lnet/minecraft/sounds/SoundSource;)V
 		ARG 1 source
+	METHOD shear (Lnet/minecraft/sounds/SoundSource;Lnet/minecraft/world/item/ItemStack;)V
+		ARG 1 soundSource
+		ARG 2 stack

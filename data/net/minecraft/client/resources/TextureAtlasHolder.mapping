@@ -8,6 +8,8 @@ CLASS net/minecraft/client/resources/TextureAtlasHolder
 		ARG 2 textureAtlasLocation
 		ARG 3 atlasInfoLocation
 		ARG 4 metadataSections
+	METHOD apply (Lnet/minecraft/client/renderer/texture/SpriteLoader$Preparations;)V
+		ARG 1 preperations
 	METHOD apply (Lnet/minecraft/client/renderer/texture/SpriteLoader$Preparations;Lnet/minecraft/util/profiling/ProfilerFiller;)V
 		ARG 1 preparations
 		ARG 2 profiler

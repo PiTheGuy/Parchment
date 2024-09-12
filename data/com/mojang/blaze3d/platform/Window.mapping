@@ -62,8 +62,13 @@ CLASS com/mojang/blaze3d/platform/Window
 	METHOD setWindowed (II)V
 		ARG 1 windowedWidth
 		ARG 2 windowedHeight
+	METHOD updateDisplay (Lcom/mojang/blaze3d/TracyFrameCapture;)V
+		ARG 1 tracyFrameCapture
 	METHOD updateFullscreen (Z)V
 		ARG 1 vsyncEnabled
+	METHOD updateFullscreen (ZLcom/mojang/blaze3d/TracyFrameCapture;)V
+		ARG 1 vsyncEnabled
+		ARG 2 tracyFrameCapture
 	METHOD updateRawMouseInput (Z)V
 		ARG 1 enableRawMouseMotion
 	METHOD updateVsync (Z)V

@@ -49,6 +49,18 @@ CLASS net/minecraft/client/renderer/entity/ItemRenderer
 		ARG 6 packedLIght
 		ARG 7 packedOverlay
 		ARG 8 model
+	METHOD renderBundleItem (Lnet/minecraft/world/item/ItemStack;Lnet/minecraft/world/item/ItemDisplayContext;ZLcom/mojang/blaze3d/vertex/PoseStack;Lnet/minecraft/client/renderer/MultiBufferSource;IILnet/minecraft/client/resources/model/BakedModel;Lnet/minecraft/world/level/Level;Lnet/minecraft/world/entity/LivingEntity;I)V
+		ARG 1 itemStack
+		ARG 2 displayContext
+		ARG 3 leftHand
+		ARG 4 poseStack
+		ARG 5 bufferSource
+		ARG 6 packedLight
+		ARG 7 packedOverlay
+		ARG 8 model
+		ARG 9 level
+		ARG 10 entity
+		ARG 11 seed
 	METHOD renderBundleWithSelectedItem (Lnet/minecraft/world/item/BundleItem;Lnet/minecraft/world/item/ItemStack;Lnet/minecraft/world/item/ItemDisplayContext;ZLcom/mojang/blaze3d/vertex/PoseStack;Lnet/minecraft/client/renderer/MultiBufferSource;IIZ)V
 		ARG 1 bundle
 		ARG 2 itemStack
@@ -136,3 +148,11 @@ CLASS net/minecraft/client/renderer/entity/ItemRenderer
 		ARG 1 stack
 		ARG 2 entity
 		ARG 3 displayContext
+	METHOD resolveModelOverride (Lnet/minecraft/client/resources/model/BakedModel;Lnet/minecraft/world/item/ItemStack;Lnet/minecraft/world/level/Level;Lnet/minecraft/world/entity/LivingEntity;I)Lnet/minecraft/client/resources/model/BakedModel;
+		ARG 1 model
+		ARG 2 stack
+		ARG 3 level
+		ARG 4 entity
+		ARG 5 seed
+	METHOD shouldRenderItemFlat (Lnet/minecraft/world/item/ItemDisplayContext;)Z
+		ARG 0 displayContent

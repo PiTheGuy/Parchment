@@ -6,6 +6,9 @@ CLASS net/minecraft/client/renderer/entity/layers/CapeLayer
 		ARG 1 renderer
 		ARG 2 entityModels
 		ARG 3 equipmentModels
+	METHOD hasLayer (Lnet/minecraft/world/item/ItemStack;Lnet/minecraft/world/item/equipment/EquipmentModel$LayerType;)Z
+		ARG 1 stack
+		ARG 2 layerType
 	METHOD hasWings (Lnet/minecraft/world/item/ItemStack;)Z
 		ARG 1 stack
 	METHOD render (Lcom/mojang/blaze3d/vertex/PoseStack;Lnet/minecraft/client/renderer/MultiBufferSource;ILnet/minecraft/client/player/AbstractClientPlayer;FFFFFF)V

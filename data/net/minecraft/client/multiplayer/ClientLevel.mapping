@@ -22,6 +22,17 @@ CLASS net/minecraft/client/multiplayer/ClientLevel
 		ARG 9 isDebug
 		ARG 10 biomeZoomSeed
 		ARG 12 seaLevel
+	METHOD <init> (Lnet/minecraft/client/multiplayer/ClientPacketListener;Lnet/minecraft/client/multiplayer/ClientLevel$ClientLevelData;Lnet/minecraft/resources/ResourceKey;Lnet/minecraft/core/Holder;IILnet/minecraft/client/renderer/LevelRenderer;ZJI)V
+		ARG 1 connection
+		ARG 2 levelData
+		ARG 3 dimension
+		ARG 4 dimensionTypeRegistration
+		ARG 5 viewDistance
+		ARG 6 serverSimulationDistance
+		ARG 7 levelRenderer
+		ARG 8 isDebug
+		ARG 9 biomeZoomSeed
+		ARG 11 seaLevel
 	METHOD addAlwaysVisibleParticle (Lnet/minecraft/core/particles/ParticleOptions;DDDDDD)V
 		ARG 1 particleData
 		ARG 2 x

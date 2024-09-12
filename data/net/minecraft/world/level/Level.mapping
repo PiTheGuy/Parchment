@@ -11,6 +11,15 @@ CLASS net/minecraft/world/level/Level
 		ARG 7 isDebug
 		ARG 8 biomeZoomSeed
 		ARG 10 maxChainedNeighborUpdates
+	METHOD <init> (Lnet/minecraft/world/level/storage/WritableLevelData;Lnet/minecraft/resources/ResourceKey;Lnet/minecraft/core/RegistryAccess;Lnet/minecraft/core/Holder;ZZJI)V
+		ARG 1 levelData
+		ARG 2 dimension
+		ARG 3 registryAccess
+		ARG 4 dimensionTypeRegistration
+		ARG 5 isClientSide
+		ARG 6 isDebug
+		ARG 7 biomeZoomSeed
+		ARG 9 maxChainedNeighborUpdates
 	METHOD addAlwaysVisibleParticle (Lnet/minecraft/core/particles/ParticleOptions;DDDDDD)V
 		ARG 1 particleData
 		ARG 2 x
