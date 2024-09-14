@@ -20,6 +20,8 @@ CLASS net/minecraft/world/entity/animal/PolarBear
 	METHOD isFood (Lnet/minecraft/world/item/ItemStack;)Z
 		COMMENT Checks if the parameter is an item which this animal can be fed to breed it (wheat, carrots or seeds depending on the animal type)
 		ARG 1 stack
+	METHOD lambda$registerGoals$0 (Lnet/minecraft/world/entity/PathfinderMob;)Lnet/minecraft/tags/TagKey;
+		ARG 0 mob
 	METHOD playStepSound (Lnet/minecraft/core/BlockPos;Lnet/minecraft/world/level/block/state/BlockState;)V
 		ARG 1 pos
 		ARG 2 block

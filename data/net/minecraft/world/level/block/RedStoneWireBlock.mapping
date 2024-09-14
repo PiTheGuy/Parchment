@@ -113,6 +113,8 @@ CLASS net/minecraft/world/level/block/RedStoneWireBlock
 		ARG 4 color
 		ARG 5 forwardDirection
 		ARG 6 perpendicularDirection
+		ARG 7 start
+		ARG 8 end
 	METHOD updateIndirectNeighbourShapes (Lnet/minecraft/world/level/block/state/BlockState;Lnet/minecraft/world/level/LevelAccessor;Lnet/minecraft/core/BlockPos;II)V
 		ARG 1 state
 		ARG 2 level
