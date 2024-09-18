@@ -1,4 +1,6 @@
 CLASS com/mojang/blaze3d/vertex/VertexBuffer
+	METHOD <init> (Lcom/mojang/blaze3d/buffers/BufferUsage;)V
+		ARG 1 usage
 	METHOD <init> (Lcom/mojang/blaze3d/vertex/VertexBuffer$Usage;)V
 		ARG 1 usage
 	METHOD _drawWithShader (Lorg/joml/Matrix4f;Lorg/joml/Matrix4f;Lnet/minecraft/client/renderer/ShaderInstance;)V

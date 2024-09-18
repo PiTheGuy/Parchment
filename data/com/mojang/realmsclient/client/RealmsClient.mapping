@@ -56,6 +56,8 @@ CLASS com/mojang/realmsclient/client/RealmsClient
 	METHOD requestDownloadInfo (JI)Lcom/mojang/realmsclient/dto/WorldDownload;
 		ARG 1 worldId
 		ARG 3 slotId
+	METHOD requestUploadInfo (J)Lcom/mojang/realmsclient/dto/UploadInfo;
+		ARG 1 worldId
 	METHOD requestUploadInfo (JLjava/lang/String;)Lcom/mojang/realmsclient/dto/UploadInfo;
 		ARG 1 worldId
 		ARG 3 token

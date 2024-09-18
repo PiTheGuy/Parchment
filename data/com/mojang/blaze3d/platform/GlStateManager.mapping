@@ -99,7 +99,15 @@ CLASS com/mojang/blaze3d/platform/GlStateManager
 		ARG 0 target
 		ARG 1 data
 		ARG 2 usage
+	METHOD _glBufferSubData (IILjava/nio/ByteBuffer;)V
+		ARG 0 target
+		ARG 1 offset
+		ARG 2 data
 	METHOD _glClientWaitSync (JII)I
+		ARG 0 sync
+		ARG 2 flags
+		ARG 3 timeout
+	METHOD _glClientWaitSync (JIJ)I
 		ARG 0 sync
 		ARG 2 flags
 		ARG 3 timeout

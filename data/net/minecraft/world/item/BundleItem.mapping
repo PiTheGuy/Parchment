@@ -18,6 +18,8 @@ CLASS net/minecraft/world/item/BundleItem
 		ARG 1 player
 	METHOD getBarColor (Lorg/apache/commons/lang3/math/Fraction;)I
 		ARG 0 fullness
+	METHOD getByColor (Lnet/minecraft/world/item/DyeColor;)Lnet/minecraft/world/item/Item;
+		ARG 0 color
 	METHOD getFullnessDisplay (Lnet/minecraft/world/item/ItemStack;)F
 		ARG 0 stack
 	METHOD getNumberOfItemsToShow (Lnet/minecraft/world/item/ItemStack;)I
@@ -28,6 +30,8 @@ CLASS net/minecraft/world/item/BundleItem
 		ARG 0 bundle
 	METHOD hasSelectedItem (Lnet/minecraft/world/item/ItemStack;)Z
 		ARG 0 bundle
+	METHOD lambda$getAllBundleItemColors$0 (Lnet/minecraft/world/item/Item;)Lnet/minecraft/world/item/BundleItem;
+		ARG 0 item
 	METHOD playDropContentsSound (Lnet/minecraft/world/entity/Entity;)V
 		ARG 0 entity
 		ARG 1 entity

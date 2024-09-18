@@ -1,6 +1,9 @@
 CLASS net/minecraft/server/commands/TeleportCommand
 	METHOD formatDouble (D)Ljava/lang/String;
 		ARG 0 value
+	METHOD getRelatives (Lnet/minecraft/commands/arguments/coordinates/Coordinates;Lnet/minecraft/commands/arguments/coordinates/Coordinates;)Ljava/util/Set;
+		ARG 0 position
+		ARG 1 rotation
 	METHOD lambda$register$0 (Lnet/minecraft/commands/CommandSourceStack;)Z
 		ARG 0 source
 	METHOD lambda$register$1 (Lcom/mojang/brigadier/context/CommandContext;)I
