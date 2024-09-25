@@ -8,3 +8,5 @@ CLASS net/minecraft/world/entity/OminousItemSpawner
 		ARG 1 level
 		ARG 2 projectileItem
 		ARG 3 stack
+	METHOD tickServer (Lnet/minecraft/server/level/ServerLevel;)V
+		ARG 1 level

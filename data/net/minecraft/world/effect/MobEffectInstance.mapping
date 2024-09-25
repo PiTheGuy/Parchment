@@ -66,10 +66,19 @@ CLASS net/minecraft/world/effect/MobEffectInstance
 		ARG 1 livingEntity
 	METHOD onEffectStarted (Lnet/minecraft/world/entity/LivingEntity;)V
 		ARG 1 entity
+	METHOD onMobHurt (Lnet/minecraft/server/level/ServerLevel;Lnet/minecraft/world/entity/LivingEntity;Lnet/minecraft/world/damagesource/DamageSource;F)V
+		ARG 1 level
+		ARG 2 entity
+		ARG 3 damageSource
+		ARG 4 amount
 	METHOD onMobHurt (Lnet/minecraft/world/entity/LivingEntity;Lnet/minecraft/world/damagesource/DamageSource;F)V
 		ARG 1 livingEntity
 		ARG 2 damageSource
 		ARG 3 amount
+	METHOD onMobRemoved (Lnet/minecraft/server/level/ServerLevel;Lnet/minecraft/world/entity/LivingEntity;Lnet/minecraft/world/entity/Entity$RemovalReason;)V
+		ARG 1 level
+		ARG 2 entity
+		ARG 3 reason
 	METHOD onMobRemoved (Lnet/minecraft/world/entity/LivingEntity;Lnet/minecraft/world/entity/Entity$RemovalReason;)V
 		ARG 1 livingEntity
 		ARG 2 reason
@@ -80,16 +89,6 @@ CLASS net/minecraft/world/effect/MobEffectInstance
 		ARG 2 onExpirationRunnable
 	METHOD update (Lnet/minecraft/world/effect/MobEffectInstance;)Z
 		ARG 1 other
-	CLASS Details
-		METHOD create (IIZZLjava/util/Optional;Ljava/util/Optional;)Lnet/minecraft/world/effect/MobEffectInstance$Details;
-			ARG 0 amplifier
-			ARG 1 duration
-			ARG 2 ambient
-			ARG 3 showParticles
-			ARG 4 showIcon
-			ARG 5 hiddenEffect
-		METHOD lambda$static$1 (Lcom/mojang/serialization/Codec;Lcom/mojang/serialization/codecs/RecordCodecBuilder$Instance;)Lcom/mojang/datafixers/kinds/App;
-			ARG 1 instance
 	CLASS BlendState
 		METHOD computeTarget (Lnet/minecraft/world/effect/MobEffectInstance;)F
 			ARG 0 effect
@@ -104,3 +103,19 @@ CLASS net/minecraft/world/effect/MobEffectInstance
 			ARG 1 effectInstance
 		METHOD tick (Lnet/minecraft/world/effect/MobEffectInstance;)V
 			ARG 1 effect
+	CLASS Details
+		METHOD create (IIZZLjava/util/Optional;Ljava/util/Optional;)Lnet/minecraft/world/effect/MobEffectInstance$Details;
+			ARG 0 amplifier
+			ARG 1 duration
+			ARG 2 ambient
+			ARG 3 showParticles
+			ARG 4 showIcon
+			ARG 5 hiddenEffect
+		METHOD lambda$static$0 (Lnet/minecraft/world/effect/MobEffectInstance$Details;)Ljava/util/Optional;
+			ARG 0 details
+		METHOD lambda$static$1 (Lcom/mojang/serialization/Codec;Lcom/mojang/serialization/codecs/RecordCodecBuilder$Instance;)Lcom/mojang/datafixers/kinds/App;
+			ARG 1 instance
+		METHOD lambda$static$2 (Lcom/mojang/serialization/Codec;)Lcom/mojang/serialization/MapCodec;
+			ARG 0 codec
+		METHOD lambda$static$3 (Lnet/minecraft/network/codec/StreamCodec;)Lnet/minecraft/network/codec/StreamCodec;
+			ARG 0 codec

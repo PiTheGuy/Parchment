@@ -5,6 +5,8 @@ CLASS net/minecraft/world/level/material/FlowingFluid
 		ARG 1 level
 		ARG 2 pos
 		ARG 3 state
+	METHOD canConvertToSource (Lnet/minecraft/server/level/ServerLevel;)Z
+		ARG 1 level
 	METHOD canConvertToSource (Lnet/minecraft/world/level/Level;)Z
 		ARG 1 level
 	METHOD canHoldAnyFluid (Lnet/minecraft/world/level/block/state/BlockState;)Z
@@ -68,6 +70,10 @@ CLASS net/minecraft/world/level/material/FlowingFluid
 		ARG 2 falling
 	METHOD getLegacyLevel (Lnet/minecraft/world/level/material/FluidState;)I
 		ARG 0 state
+	METHOD getNewLiquid (Lnet/minecraft/server/level/ServerLevel;Lnet/minecraft/core/BlockPos;Lnet/minecraft/world/level/block/state/BlockState;)Lnet/minecraft/world/level/material/FluidState;
+		ARG 1 level
+		ARG 2 pos
+		ARG 3 state
 	METHOD getNewLiquid (Lnet/minecraft/world/level/Level;Lnet/minecraft/core/BlockPos;Lnet/minecraft/world/level/block/state/BlockState;)Lnet/minecraft/world/level/material/FluidState;
 		ARG 1 level
 		ARG 2 pos
@@ -92,6 +98,10 @@ CLASS net/minecraft/world/level/material/FlowingFluid
 		ARG 1 level
 	METHOD getSource (Z)Lnet/minecraft/world/level/material/FluidState;
 		ARG 1 falling
+	METHOD getSpread (Lnet/minecraft/server/level/ServerLevel;Lnet/minecraft/core/BlockPos;Lnet/minecraft/world/level/block/state/BlockState;)Ljava/util/Map;
+		ARG 1 level
+		ARG 2 pos
+		ARG 3 state
 	METHOD getSpread (Lnet/minecraft/world/level/Level;Lnet/minecraft/core/BlockPos;Lnet/minecraft/world/level/block/state/BlockState;)Ljava/util/Map;
 		ARG 1 level
 		ARG 2 pos
@@ -138,6 +148,11 @@ CLASS net/minecraft/world/level/material/FlowingFluid
 		COMMENT Returns the number of immediately adjacent source blocks of the same fluid that lie on the horizontal plane.
 		ARG 1 level
 		ARG 2 pos
+	METHOD spread (Lnet/minecraft/server/level/ServerLevel;Lnet/minecraft/core/BlockPos;Lnet/minecraft/world/level/block/state/BlockState;Lnet/minecraft/world/level/material/FluidState;)V
+		ARG 1 level
+		ARG 2 pos
+		ARG 3 blockState
+		ARG 4 fluidState
 	METHOD spread (Lnet/minecraft/world/level/Level;Lnet/minecraft/core/BlockPos;Lnet/minecraft/world/level/block/state/BlockState;Lnet/minecraft/world/level/material/FluidState;)V
 		ARG 1 level
 		ARG 2 pos
@@ -153,6 +168,11 @@ CLASS net/minecraft/world/level/material/FlowingFluid
 		ARG 3 blockState
 		ARG 4 direction
 		ARG 5 fluidState
+	METHOD spreadToSides (Lnet/minecraft/server/level/ServerLevel;Lnet/minecraft/core/BlockPos;Lnet/minecraft/world/level/material/FluidState;Lnet/minecraft/world/level/block/state/BlockState;)V
+		ARG 1 level
+		ARG 2 pos
+		ARG 3 fluidState
+		ARG 4 blockState
 	METHOD spreadToSides (Lnet/minecraft/world/level/Level;Lnet/minecraft/core/BlockPos;Lnet/minecraft/world/level/material/FluidState;Lnet/minecraft/world/level/block/state/BlockState;)V
 		ARG 1 level
 		ARG 2 pos

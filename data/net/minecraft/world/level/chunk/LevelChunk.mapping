@@ -48,6 +48,8 @@ CLASS net/minecraft/world/level/chunk/LevelChunk
 	METHOD lambda$updateBlockEntityTicker$6 (Lnet/minecraft/world/level/block/entity/BlockEntity;Lnet/minecraft/world/level/block/entity/BlockEntityTicker;Lnet/minecraft/core/BlockPos;Lnet/minecraft/world/level/chunk/LevelChunk$RebindableTickingBlockEntityWrapper;)Lnet/minecraft/world/level/chunk/LevelChunk$RebindableTickingBlockEntityWrapper;
 		ARG 3 keyBlockPos
 		ARG 4 blockEntityWrapper
+	METHOD postProcessGeneration (Lnet/minecraft/server/level/ServerLevel;)V
+		ARG 1 level
 	METHOD promotePendingBlockEntity (Lnet/minecraft/core/BlockPos;Lnet/minecraft/nbt/CompoundTag;)Lnet/minecraft/world/level/block/entity/BlockEntity;
 		ARG 1 pos
 		ARG 2 tag
@@ -76,13 +78,13 @@ CLASS net/minecraft/world/level/chunk/LevelChunk
 		ARG 1 level
 	METHOD updateBlockEntityTicker (Lnet/minecraft/world/level/block/entity/BlockEntity;)V
 		ARG 1 blockEntity
-	CLASS PostLoadProcessor
-		METHOD run (Lnet/minecraft/world/level/chunk/LevelChunk;)V
-			ARG 1 chunk
 	CLASS BoundTickingBlockEntity
 		METHOD <init> (Lnet/minecraft/world/level/chunk/LevelChunk;Lnet/minecraft/world/level/block/entity/BlockEntity;Lnet/minecraft/world/level/block/entity/BlockEntityTicker;)V
 			ARG 2 blockEntity
 			ARG 3 ticker
+	CLASS PostLoadProcessor
+		METHOD run (Lnet/minecraft/world/level/chunk/LevelChunk;)V
+			ARG 1 chunk
 	CLASS RebindableTickingBlockEntityWrapper
 		METHOD <init> (Lnet/minecraft/world/level/chunk/LevelChunk;Lnet/minecraft/world/level/block/entity/TickingBlockEntity;)V
 			ARG 2 ticker

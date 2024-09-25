@@ -24,8 +24,16 @@ CLASS net/minecraft/world/entity/projectile/Projectile
 		ARG 8 inaccuracy
 	METHOD hitTargetOrDeflectSelf (Lnet/minecraft/world/phys/HitResult;)Lnet/minecraft/world/entity/projectile/ProjectileDeflection;
 		ARG 1 hitResult
+	METHOD lambda$applyOnProjectileSpawned$5 (Lnet/minecraft/world/item/Item;)V
+		ARG 0 item
 	METHOD lambda$checkLeftOwner$0 (Lnet/minecraft/world/entity/Entity;)Z
 		ARG 0 entity
+	METHOD lambda$checkLeftOwner$0 (Lnet/minecraft/world/phys/AABB;Lnet/minecraft/world/entity/Entity;)Z
+		ARG 1 entity
+	METHOD lambda$spawnProjectileFromRotation$1 (Lnet/minecraft/world/entity/LivingEntity;FFFLnet/minecraft/world/entity/projectile/Projectile;)V
+		ARG 4 projectlie
+	METHOD lambda$spawnProjectileUsingShoot$2 (DDDFFLnet/minecraft/world/entity/projectile/Projectile;)V
+		ARG 8 projectile
 	METHOD lerpMotion (DDD)V
 		COMMENT Updates the entity motion clientside, called by packets from the server
 		ARG 1 x
@@ -34,6 +42,8 @@ CLASS net/minecraft/world/entity/projectile/Projectile
 	METHOD lerpRotation (FF)F
 		ARG 0 currentRotation
 		ARG 1 targetRotation
+	METHOD mayBreak (Lnet/minecraft/server/level/ServerLevel;)Z
+		ARG 1 level
 	METHOD mayBreak (Lnet/minecraft/world/level/Level;)Z
 		ARG 1 level
 	METHOD onDeflection (Lnet/minecraft/world/entity/Entity;Z)V

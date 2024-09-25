@@ -35,6 +35,10 @@ CLASS net/minecraft/world/entity/ai/behavior/GiveGiftToHero
 		ARG 1 level
 		ARG 2 entity
 		ARG 3 gameTime
+	METHOD throwGift (Lnet/minecraft/server/level/ServerLevel;Lnet/minecraft/world/entity/npc/Villager;Lnet/minecraft/world/entity/LivingEntity;)V
+		ARG 1 level
+		ARG 2 villager
+		ARG 3 target
 	METHOD throwGift (Lnet/minecraft/world/entity/npc/Villager;Lnet/minecraft/world/entity/LivingEntity;)V
 		ARG 1 villager
 		ARG 2 hero

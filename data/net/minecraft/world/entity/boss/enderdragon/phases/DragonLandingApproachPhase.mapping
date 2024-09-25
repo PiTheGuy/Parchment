@@ -4,5 +4,7 @@ CLASS net/minecraft/world/entity/boss/enderdragon/phases/DragonLandingApproachPh
 	METHOD doServerTick ()V
 		COMMENT Gives the phase a chance to update its status.
 		COMMENT Called by dragon's onLivingUpdate. Only used when !worldObj.isRemote.
+	METHOD findNewTarget (Lnet/minecraft/server/level/ServerLevel;)V
+		ARG 1 level
 	METHOD getFlyTargetLocation ()Lnet/minecraft/world/phys/Vec3;
 		COMMENT Returns the location the dragon is flying toward

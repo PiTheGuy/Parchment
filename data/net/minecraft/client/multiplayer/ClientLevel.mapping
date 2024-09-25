@@ -135,6 +135,10 @@ CLASS net/minecraft/client/multiplayer/ClientLevel
 		ARG 1 cache
 	METHOD lambda$doAnimateTick$8 (Lnet/minecraft/core/BlockPos$MutableBlockPos;Lnet/minecraft/world/level/biome/AmbientParticleSettings;)V
 		ARG 2 particleSettings
+	METHOD lambda$getSkyColor$12 (III)Lnet/minecraft/world/phys/Vec3;
+		ARG 1 x
+		ARG 2 y
+		ARG 3 z
 	METHOD lambda$getSkyColor$12 (Lnet/minecraft/world/level/biome/BiomeManager;III)Lnet/minecraft/world/phys/Vec3;
 		ARG 1 x
 		ARG 2 y
@@ -227,6 +231,10 @@ CLASS net/minecraft/client/multiplayer/ClientLevel
 		ARG 3 flags
 	METHOD setSkyFlashTime (I)V
 		ARG 1 timeFlash
+	METHOD setTimeFromServer (JJZ)V
+		ARG 1 gameTime
+		ARG 3 dayTime
+		ARG 5 tickDayTime
 	METHOD spawnFluidParticle (DDDDDLnet/minecraft/core/particles/ParticleOptions;)V
 		ARG 1 xStart
 		ARG 3 xEnd

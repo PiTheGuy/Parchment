@@ -133,6 +133,8 @@ CLASS net/minecraft/world/entity/player/Player
 		ARG 1 stack
 	METHOD hasCorrectToolForDrops (Lnet/minecraft/world/level/block/state/BlockState;)Z
 		ARG 1 state
+	METHOD hasPermissions (I)Z
+		ARG 1 permissionLevel
 	METHOD hurt (Lnet/minecraft/world/damagesource/DamageSource;F)Z
 		COMMENT Called when the entity is attacked.
 		ARG 1 source
@@ -175,12 +177,16 @@ CLASS net/minecraft/world/entity/player/Player
 		COMMENT Causes this entity to do an upwards motion (jumping).
 	METHOD lambda$addAdditionalSaveData$3 (Lnet/minecraft/core/GlobalPos;)Ljava/util/Optional;
 		ARG 0 pos
+	METHOD lambda$decorateDisplayNameComponent$6 (Ljava/lang/String;Lnet/minecraft/network/chat/Style;)Lnet/minecraft/network/chat/Style;
+		ARG 2 style
 	METHOD lambda$playShoulderEntityAmbientSound$0 (Lnet/minecraft/world/entity/EntityType;)Z
 		ARG 0 entityType
 	METHOD lambda$playShoulderEntityAmbientSound$1 (Lnet/minecraft/world/entity/EntityType;)V
 		ARG 1 entityType
 	METHOD lambda$readAdditionalSaveData$2 (Lnet/minecraft/world/phys/Vec3;)V
 		ARG 1 currentImpulseImpactPos
+	METHOD lambda$respawnEntityOnShoulder$5 (Lnet/minecraft/world/entity/Entity;)V
+		ARG 1 entity
 	METHOD magicCrit (Lnet/minecraft/world/entity/Entity;)V
 		ARG 1 entityHit
 	METHOD makeStuckInBlock (Lnet/minecraft/world/level/block/state/BlockState;Lnet/minecraft/world/phys/Vec3;)V

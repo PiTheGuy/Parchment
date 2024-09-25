@@ -2,6 +2,10 @@ CLASS net/minecraft/world/entity/vehicle/ContainerEntity
 	METHOD addChestVehicleSaveData (Lnet/minecraft/nbt/CompoundTag;Lnet/minecraft/core/HolderLookup$Provider;)V
 		ARG 1 tag
 		ARG 2 levelRegistry
+	METHOD chestVehicleDestroyed (Lnet/minecraft/world/damagesource/DamageSource;Lnet/minecraft/server/level/ServerLevel;Lnet/minecraft/world/entity/Entity;)V
+		ARG 1 damageSource
+		ARG 2 level
+		ARG 3 entity
 	METHOD chestVehicleDestroyed (Lnet/minecraft/world/damagesource/DamageSource;Lnet/minecraft/world/level/Level;Lnet/minecraft/world/entity/Entity;)V
 		ARG 1 damageSource
 		ARG 2 level

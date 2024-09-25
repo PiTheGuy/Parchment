@@ -55,6 +55,9 @@ CLASS net/minecraft/client/gui/screens/recipebook/RecipeBookComponent
 		ARG 2 leftPos
 		ARG 3 topPos
 		ARG 5 partialTick
+	METHOD renderGhostRecipe (Lnet/minecraft/client/gui/GuiGraphics;Z)V
+		ARG 1 guiGraphics
+		ARG 2 isBiggerResultSlot
 	METHOD renderGhostRecipeTooltip (Lnet/minecraft/client/gui/GuiGraphics;IIII)V
 		ARG 1 guiGraphics
 		ARG 2 x

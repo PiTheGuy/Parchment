@@ -10,6 +10,12 @@ CLASS net/minecraft/world/entity/decoration/ItemFrame
 		ARG 3 facingDirection
 	METHOD addAdditionalSaveData (Lnet/minecraft/nbt/CompoundTag;)V
 		ARG 1 compound
+	METHOD canHurtWhenFixed (Lnet/minecraft/world/damagesource/DamageSource;)Z
+		ARG 0 damageSource
+	METHOD dropItem (Lnet/minecraft/server/level/ServerLevel;Lnet/minecraft/world/entity/Entity;Z)V
+		ARG 1 level
+		ARG 2 entity
+		ARG 3 dropItem
 	METHOD dropItem (Lnet/minecraft/world/entity/Entity;)V
 		COMMENT Called when this entity is broken. Entity parameter may be null.
 		ARG 1 brokenEntity
@@ -60,6 +66,8 @@ CLASS net/minecraft/world/entity/decoration/ItemFrame
 	METHOD setRotation (IZ)V
 		ARG 1 rotation
 		ARG 2 updateNeighbours
+	METHOD shouldDamageDropItem (Lnet/minecraft/world/damagesource/DamageSource;)Z
+		ARG 1 damageSource
 	METHOD shouldRenderAtSqrDistance (D)Z
 		COMMENT Checks if the entity is in range to render.
 		ARG 1 distance

@@ -134,6 +134,8 @@ CLASS net/minecraft/world/entity/Entity
 	METHOD copyPosition (Lnet/minecraft/world/entity/Entity;)V
 		COMMENT Sets this entity's location and angles to the location and angles of the passed in entity.
 		ARG 1 entity
+	METHOD createCommandSourceStackForNameResolution (Lnet/minecraft/server/level/ServerLevel;)Lnet/minecraft/commands/CommandSourceStack;
+		ARG 1 level
 	METHOD defineSynchedData (Lnet/minecraft/network/syncher/SynchedEntityData$Builder;)V
 		ARG 1 builder
 	METHOD deflection (Lnet/minecraft/world/entity/projectile/Projectile;)Lnet/minecraft/world/entity/projectile/ProjectileDeflection;
@@ -300,10 +302,22 @@ CLASS net/minecraft/world/entity/Entity
 		ARG 1 level
 	METHOD hasPose (Lnet/minecraft/world/entity/Pose;)Z
 		ARG 1 pose
+	METHOD hurt (Lnet/minecraft/world/damagesource/DamageSource;F)V
+		ARG 1 damageSource
+		ARG 2 amount
 	METHOD hurt (Lnet/minecraft/world/damagesource/DamageSource;F)Z
 		COMMENT Called when the entity is attacked.
 		ARG 1 source
 		ARG 2 amount
+	METHOD hurtClient (Lnet/minecraft/world/damagesource/DamageSource;)Z
+		ARG 1 damageSource
+	METHOD hurtOrSimulate (Lnet/minecraft/world/damagesource/DamageSource;F)Z
+		ARG 1 damageSource
+		ARG 2 amount
+	METHOD hurtServer (Lnet/minecraft/server/level/ServerLevel;Lnet/minecraft/world/damagesource/DamageSource;F)Z
+		ARG 1 level
+		ARG 2 damageSource
+		ARG 3 amount
 	METHOD igniteForSeconds (F)V
 		ARG 1 seconds
 	METHOD igniteForTicks (I)V
@@ -362,6 +376,8 @@ CLASS net/minecraft/world/entity/Entity
 	METHOD isInvulnerableTo (Lnet/minecraft/world/damagesource/DamageSource;)Z
 		COMMENT Returns whether this Entity is invulnerable to the given DamageSource.
 		ARG 1 source
+	METHOD isInvulnerableToBase (Lnet/minecraft/world/damagesource/DamageSource;)Z
+		ARG 1 damageSource
 	METHOD isOnFire ()Z
 		COMMENT Returns {@code true} if the entity is on fire. Used by render to add the fire effect on rendering.
 	METHOD isPassengerOfSameVehicle (Lnet/minecraft/world/entity/Entity;)Z
@@ -384,6 +400,8 @@ CLASS net/minecraft/world/entity/Entity
 		COMMENT If at least 1 entity is riding this one
 	METHOD kill ()V
 		COMMENT Called by the /kill command.
+	METHOD kill (Lnet/minecraft/server/level/ServerLevel;)V
+		ARG 1 level
 	METHOD killedEntity (Lnet/minecraft/server/level/ServerLevel;Lnet/minecraft/world/entity/LivingEntity;)Z
 		ARG 1 level
 		ARG 2 entity
@@ -448,6 +466,9 @@ CLASS net/minecraft/world/entity/Entity
 		ARG 2 motionMultiplier
 	METHOD markHurt ()V
 		COMMENT Marks this entity's velocity as changed, so that it can be re-synced with the client later
+	METHOD mayInteract (Lnet/minecraft/server/level/ServerLevel;Lnet/minecraft/core/BlockPos;)Z
+		ARG 1 level
+		ARG 2 pos
 	METHOD mayInteract (Lnet/minecraft/world/level/Level;Lnet/minecraft/core/BlockPos;)Z
 		ARG 1 level
 		ARG 2 pos
@@ -717,6 +738,20 @@ CLASS net/minecraft/world/entity/Entity
 	METHOD skipAttackInteraction (Lnet/minecraft/world/entity/Entity;)Z
 		COMMENT Called when a player attacks an entity. If this returns true the attack will not happen.
 		ARG 1 entity
+	METHOD spawnAtLocation (Lnet/minecraft/server/level/ServerLevel;Lnet/minecraft/world/item/ItemStack;)Lnet/minecraft/world/entity/item/ItemEntity;
+		ARG 1 level
+		ARG 2 stack
+	METHOD spawnAtLocation (Lnet/minecraft/server/level/ServerLevel;Lnet/minecraft/world/item/ItemStack;F)Lnet/minecraft/world/entity/item/ItemEntity;
+		ARG 1 level
+		ARG 2 stack
+		ARG 3 yOffset
+	METHOD spawnAtLocation (Lnet/minecraft/server/level/ServerLevel;Lnet/minecraft/world/level/ItemLike;)Lnet/minecraft/world/entity/item/ItemEntity;
+		ARG 1 level
+		ARG 2 item
+	METHOD spawnAtLocation (Lnet/minecraft/server/level/ServerLevel;Lnet/minecraft/world/level/ItemLike;I)Lnet/minecraft/world/entity/item/ItemEntity;
+		ARG 1 level
+		ARG 2 item
+		ARG 3 yOffset
 	METHOD spawnAtLocation (Lnet/minecraft/world/item/ItemStack;)Lnet/minecraft/world/entity/item/ItemEntity;
 		ARG 1 stack
 	METHOD spawnAtLocation (Lnet/minecraft/world/item/ItemStack;F)Lnet/minecraft/world/entity/item/ItemEntity;
@@ -749,6 +784,9 @@ CLASS net/minecraft/world/entity/Entity
 		ARG 1 dx
 		ARG 3 dy
 		ARG 5 dz
+	METHOD teleportSetPosition (Lnet/minecraft/world/entity/PositionMoveRotation;Ljava/util/Set;)V
+		ARG 1 positionMovementRotation
+		ARG 2 relatives
 	METHOD teleportSetPosition (Lnet/minecraft/world/level/portal/DimensionTransition;)V
 		ARG 1 dimensionTransition
 	METHOD teleportTo (DDD)V

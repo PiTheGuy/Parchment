@@ -59,6 +59,8 @@ CLASS net/minecraft/world/entity/item/ItemEntity
 	METHOD readAdditionalSaveData (Lnet/minecraft/nbt/CompoundTag;)V
 		COMMENT (abstract) Protected helper method to read subclass entity data from NBT.
 		ARG 1 compound
+	METHOD setFluidMovement (D)V
+		ARG 1 multiplier
 	METHOD setItem (Lnet/minecraft/world/item/ItemStack;)V
 		COMMENT Sets the item that this entity represents.
 		ARG 1 stack
