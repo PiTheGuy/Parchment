@@ -27,6 +27,8 @@ CLASS net/minecraft/world/item/component/BundleContents
 			ARG 1 stack
 		METHOD setSelectedItem (I)V
 			ARG 1 selectedItem
+		METHOD toggleSelectedItem (I)V
+			ARG 1 selectedItem
 		METHOD tryInsert (Lnet/minecraft/world/item/ItemStack;)I
 			ARG 1 stack
 		METHOD tryTransfer (Lnet/minecraft/world/inventory/Slot;Lnet/minecraft/world/entity/player/Player;)I

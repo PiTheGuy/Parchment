@@ -50,5 +50,8 @@ CLASS com/mojang/realmsclient/dto/RealmsWorldOptions
 		ARG 1 slotIndex
 	METHOD parse (Lcom/google/gson/JsonObject;)Lcom/mojang/realmsclient/dto/RealmsWorldOptions;
 		ARG 0 json
+	METHOD parse (Lcom/google/gson/JsonObject;Lcom/mojang/realmsclient/dto/RealmsSettings;)Lcom/mojang/realmsclient/dto/RealmsWorldOptions;
+		ARG 0 json
+		ARG 1 realmsSettings
 	METHOD setEmpty (Z)V
 		ARG 1 empty

@@ -9,6 +9,12 @@ CLASS net/minecraft/world/item/AnimalArmorItem
 		ARG 2 bodyType
 		ARG 3 equipSound
 		ARG 4 properties
+	METHOD <init> (Lnet/minecraft/world/item/equipment/ArmorMaterial;Lnet/minecraft/world/item/AnimalArmorItem$BodyType;Lnet/minecraft/sounds/SoundEvent;ZLnet/minecraft/world/item/Item$Properties;)V
+		ARG 1 material
+		ARG 2 bodyType
+		ARG 3 equipSound
+		ARG 4 damageOnHurt
+		ARG 5 properties
 	METHOD <init> (Lnet/minecraft/world/item/equipment/ArmorMaterial;Lnet/minecraft/world/item/AnimalArmorItem$BodyType;Lnet/minecraft/world/item/Item$Properties;)V
 		ARG 1 material
 		ARG 2 bodyType

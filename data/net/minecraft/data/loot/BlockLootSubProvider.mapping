@@ -65,6 +65,8 @@ CLASS net/minecraft/data/loot/BlockLootSubProvider
 		ARG 3 chances
 	METHOD createMangroveLeavesDrops (Lnet/minecraft/world/level/block/Block;)Lnet/minecraft/world/level/storage/loot/LootTable$Builder;
 		ARG 1 block
+	METHOD createMossyCarpetBlockDrops (Lnet/minecraft/world/level/block/Block;)Lnet/minecraft/world/level/storage/loot/LootTable$Builder;
+		ARG 1 block
 	METHOD createMultifaceBlockDrops (Lnet/minecraft/world/level/block/Block;Lnet/minecraft/world/level/storage/loot/predicates/LootItemCondition$Builder;)Lnet/minecraft/world/level/storage/loot/LootTable$Builder;
 		ARG 1 block
 		ARG 2 builder
@@ -146,6 +148,8 @@ CLASS net/minecraft/data/loot/BlockLootSubProvider
 		ARG 1 block
 	METHOD dropWhenSilkTouch (Lnet/minecraft/world/level/block/Block;)V
 		ARG 1 block
+	METHOD lambda$createMultifaceBlockDrops$1 (Lnet/minecraft/world/level/block/Block;Lnet/minecraft/core/Direction;)Lnet/minecraft/world/level/storage/loot/functions/LootItemFunction$Builder;
+		ARG 1 direction
 	METHOD otherWhenSilkTouch (Lnet/minecraft/world/level/block/Block;Lnet/minecraft/world/level/block/Block;)V
 		ARG 1 block
 		ARG 2 other

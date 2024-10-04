@@ -1,4 +1,7 @@
 CLASS net/minecraft/world/level/block/JigsawBlock
+	METHOD canAttach (Lnet/minecraft/world/level/levelgen/structure/templatesystem/StructureTemplate$JigsawBlockInfo;Lnet/minecraft/world/level/levelgen/structure/templatesystem/StructureTemplate$JigsawBlockInfo;)Z
+		ARG 0 parent
+		ARG 1 child
 	METHOD canAttach (Lnet/minecraft/world/level/levelgen/structure/templatesystem/StructureTemplate$StructureBlockInfo;Lnet/minecraft/world/level/levelgen/structure/templatesystem/StructureTemplate$StructureBlockInfo;)Z
 		ARG 0 info
 		ARG 1 info2

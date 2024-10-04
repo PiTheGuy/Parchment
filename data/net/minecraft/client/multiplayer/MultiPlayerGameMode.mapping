@@ -49,6 +49,10 @@ CLASS net/minecraft/client/multiplayer/MultiPlayerGameMode
 		ARG 1 containerId
 		ARG 2 recipe
 		ARG 3 shiftDown
+	METHOD handlePlaceRecipe (ILnet/minecraft/world/item/crafting/display/RecipeDisplayId;Z)V
+		ARG 1 containerId
+		ARG 2 recipe
+		ARG 3 useMaxItems
 	METHOD handleSlotStateChanged (IIZ)V
 		ARG 1 slotId
 		ARG 2 containerId

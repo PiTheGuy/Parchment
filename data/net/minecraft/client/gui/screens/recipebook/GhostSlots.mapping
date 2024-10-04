@@ -7,6 +7,9 @@ CLASS net/minecraft/client/gui/screens/recipebook/GhostSlots
 	METHOD addResult (Lnet/minecraft/world/item/ItemStack;Lnet/minecraft/world/inventory/Slot;)V
 		ARG 1 result
 		ARG 2 slot
+	METHOD lambda$render$0 (ZLnet/minecraft/client/gui/GuiGraphics;Lnet/minecraft/client/Minecraft;Lnet/minecraft/world/inventory/Slot;Lnet/minecraft/client/gui/screens/recipebook/GhostSlots$GhostSlot;)V
+		ARG 4 slot
+		ARG 5 ghostSlot
 	METHOD render (Lnet/minecraft/client/gui/GuiGraphics;Lnet/minecraft/client/Minecraft;IIZ)V
 		ARG 1 guiGraphics
 		ARG 2 minecraft
@@ -23,6 +26,19 @@ CLASS net/minecraft/client/gui/screens/recipebook/GhostSlots
 		ARG 3 mouseX
 		ARG 4 mouseY
 		ARG 5 slot
+	METHOD setInput (Lnet/minecraft/world/inventory/Slot;Lnet/minecraft/world/item/crafting/display/SlotDisplay$ResolutionContext;Lnet/minecraft/world/item/crafting/display/SlotDisplay;)V
+		ARG 1 slot
+		ARG 2 resolutionContext
+		ARG 3 slotDisplay
+	METHOD setResult (Lnet/minecraft/world/inventory/Slot;Lnet/minecraft/world/item/crafting/display/SlotDisplay$ResolutionContext;Lnet/minecraft/world/item/crafting/display/SlotDisplay;)V
+		ARG 1 slot
+		ARG 2 resolutionContext
+		ARG 3 slotDisplay
+	METHOD setSlot (Lnet/minecraft/world/inventory/Slot;Lnet/minecraft/world/item/crafting/display/SlotDisplay$ResolutionContext;Lnet/minecraft/world/item/crafting/display/SlotDisplay;Z)V
+		ARG 1 slot
+		ARG 2 resolutionContext
+		ARG 3 slotDisplay
+		ARG 4 isResultSlot
 	CLASS GhostSlot
 		METHOD getItem (I)Lnet/minecraft/world/item/ItemStack;
 			ARG 1 index

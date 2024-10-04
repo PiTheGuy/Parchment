@@ -19,11 +19,23 @@ CLASS net/minecraft/world/level/block/entity/AbstractFurnaceBlockEntity
 		ARG 1 recipe
 		ARG 2 inventory
 		ARG 3 maxStackSize
+	METHOD burn (Lnet/minecraft/core/RegistryAccess;Lnet/minecraft/world/item/crafting/RecipeHolder;Lnet/minecraft/world/item/crafting/SingleRecipeInput;Lnet/minecraft/core/NonNullList;I)Z
+		ARG 0 registryAccess
+		ARG 1 recipe
+		ARG 2 recipeInput
+		ARG 3 items
+		ARG 4 maxStackSize
 	METHOD canBurn (Lnet/minecraft/core/RegistryAccess;Lnet/minecraft/world/item/crafting/RecipeHolder;Lnet/minecraft/core/NonNullList;I)Z
 		ARG 0 registryAccess
 		ARG 1 recipe
 		ARG 2 inventory
 		ARG 3 maxStackSize
+	METHOD canBurn (Lnet/minecraft/core/RegistryAccess;Lnet/minecraft/world/item/crafting/RecipeHolder;Lnet/minecraft/world/item/crafting/SingleRecipeInput;Lnet/minecraft/core/NonNullList;I)Z
+		ARG 0 registryAccess
+		ARG 1 recipe
+		ARG 2 recipeInput
+		ARG 3 items
+		ARG 4 maxStackSize
 	METHOD canPlaceItem (ILnet/minecraft/world/item/ItemStack;)Z
 		ARG 1 index
 		ARG 2 stack
@@ -52,6 +64,9 @@ CLASS net/minecraft/world/level/block/entity/AbstractFurnaceBlockEntity
 		ARG 2 popVec
 	METHOD getSlotsForFace (Lnet/minecraft/core/Direction;)[I
 		ARG 1 side
+	METHOD getTotalCookTime (Lnet/minecraft/server/level/ServerLevel;Lnet/minecraft/world/level/block/entity/AbstractFurnaceBlockEntity;)I
+		ARG 0 level
+		ARG 1 furnace
 	METHOD getTotalCookTime (Lnet/minecraft/world/level/Level;Lnet/minecraft/world/level/block/entity/AbstractFurnaceBlockEntity;)I
 		ARG 0 level
 		ARG 1 blockEntity
@@ -59,9 +74,21 @@ CLASS net/minecraft/world/level/block/entity/AbstractFurnaceBlockEntity
 		ARG 0 stack
 	METHOD isNeverAFurnaceFuel (Lnet/minecraft/world/item/Item;)Z
 		ARG 0 item
+	METHOD lambda$getRecipesToAwardAndPopExperience$2 (Ljava/util/List;Lnet/minecraft/server/level/ServerLevel;Lnet/minecraft/world/phys/Vec3;Lit/unimi/dsi/fastutil/objects/Reference2IntMap$Entry;Lnet/minecraft/world/item/crafting/RecipeHolder;)V
+		ARG 4 recipe
+	METHOD lambda$getTotalCookTime$1 (Lnet/minecraft/world/item/crafting/RecipeHolder;)Ljava/lang/Integer;
+		ARG 0 recipe
+	METHOD lambda$saveAdditional$0 (Lnet/minecraft/nbt/CompoundTag;Lnet/minecraft/resources/ResourceKey;Ljava/lang/Integer;)V
+		ARG 1 recipe
+		ARG 2 count
 	METHOD lambda$saveAdditional$0 (Lnet/minecraft/nbt/CompoundTag;Lnet/minecraft/resources/ResourceLocation;Ljava/lang/Integer;)V
 		ARG 1 id
 		ARG 2 index
+	METHOD serverTick (Lnet/minecraft/server/level/ServerLevel;Lnet/minecraft/core/BlockPos;Lnet/minecraft/world/level/block/state/BlockState;Lnet/minecraft/world/level/block/entity/AbstractFurnaceBlockEntity;)V
+		ARG 0 level
+		ARG 1 pos
+		ARG 2 state
+		ARG 3 furnace
 	METHOD serverTick (Lnet/minecraft/world/level/Level;Lnet/minecraft/core/BlockPos;Lnet/minecraft/world/level/block/state/BlockState;Lnet/minecraft/world/level/block/entity/AbstractFurnaceBlockEntity;)V
 		ARG 0 level
 		ARG 1 pos

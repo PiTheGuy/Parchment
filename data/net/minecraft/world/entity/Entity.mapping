@@ -48,6 +48,9 @@ CLASS net/minecraft/world/entity/Entity
 		COMMENT Gets called every tick from main Entity class
 	METHOD broadcastToPlayer (Lnet/minecraft/server/level/ServerPlayer;)Z
 		ARG 1 player
+	METHOD calculatePassengerTransition (Lnet/minecraft/world/level/portal/TeleportTransition;Lnet/minecraft/world/entity/Entity;)Lnet/minecraft/world/level/portal/TeleportTransition;
+		ARG 1 teleportTransition
+		ARG 2 entity
 	METHOD calculateUpVector (FF)Lnet/minecraft/world/phys/Vec3;
 		ARG 1 xRot
 		ARG 2 yRot
@@ -64,6 +67,9 @@ CLASS net/minecraft/world/entity/Entity
 		ARG 1 entity
 	METHOD canRide (Lnet/minecraft/world/entity/Entity;)Z
 		ARG 1 vehicle
+	METHOD canTeleport (Lnet/minecraft/world/level/Level;Lnet/minecraft/world/level/Level;)Z
+		ARG 1 fromLevel
+		ARG 2 toLevel
 	METHOD canUsePortal (Z)Z
 		ARG 1 allowPassengers
 	METHOD causeFallDamage (FFLnet/minecraft/world/damagesource/DamageSource;)Z
@@ -167,6 +173,9 @@ CLASS net/minecraft/world/entity/Entity
 		ARG 1 object
 	METHOD fillCrashReportCategory (Lnet/minecraft/CrashReportCategory;)V
 		ARG 1 category
+	METHOD forceSetRotation (FF)V
+		ARG 1 yRot
+		ARG 2 xRot
 	METHOD fudgePositionAfterSizeChange (Lnet/minecraft/world/entity/EntityDimensions;)Z
 		ARG 1 dimensions
 	METHOD gameEvent (Lnet/minecraft/core/Holder;)V
@@ -526,6 +535,8 @@ CLASS net/minecraft/world/entity/Entity
 	METHOD onPassengerTurned (Lnet/minecraft/world/entity/Entity;)V
 		COMMENT Applies this entity's orientation to another entity. Used to update passenger orientation.
 		ARG 1 entityToUpdate
+	METHOD onRemoval (Lnet/minecraft/world/entity/Entity$RemovalReason;)V
+		ARG 1 reason
 	METHOD onSyncedDataUpdated (Ljava/util/List;)V
 		ARG 1 dataValues
 	METHOD onSyncedDataUpdated (Lnet/minecraft/network/syncher/EntityDataAccessor;)V
@@ -616,6 +627,8 @@ CLASS net/minecraft/world/entity/Entity
 	METHOD saveWithoutId (Lnet/minecraft/nbt/CompoundTag;)Lnet/minecraft/nbt/CompoundTag;
 		COMMENT Writes this entity, including passengers, to NBT, regardless as to whether it is removed or a passenger. Does <b>not</b> include the entity's type ID, so the NBT is insufficient to recreate the entity using {@link AnvilChunkLoader#readWorldEntity}. Use {@link #writeUnlessPassenger} for that purpose.
 		ARG 1 compound
+	METHOD sendTeleportTransitionToRidingPlayers (Lnet/minecraft/world/level/portal/TeleportTransition;)V
+		ARG 1 teleportTransition
 	METHOD setAirSupply (I)V
 		ARG 1 air
 	METHOD setAsInsidePortal (Lnet/minecraft/world/level/block/Portal;Lnet/minecraft/core/BlockPos;)V
@@ -780,10 +793,18 @@ CLASS net/minecraft/world/entity/Entity
 		ARG 1 x
 		ARG 3 y
 		ARG 5 z
+	METHOD teleport (Lnet/minecraft/world/level/portal/TeleportTransition;)Lnet/minecraft/world/entity/Entity;
+		ARG 1 teleportTransition
+	METHOD teleportCrossDimension (Lnet/minecraft/server/level/ServerLevel;Lnet/minecraft/world/level/portal/TeleportTransition;)Lnet/minecraft/world/entity/Entity;
+		ARG 1 level
+		ARG 2 teleportTransition
 	METHOD teleportRelative (DDD)V
 		ARG 1 dx
 		ARG 3 dy
 		ARG 5 dz
+	METHOD teleportSameDimension (Lnet/minecraft/server/level/ServerLevel;Lnet/minecraft/world/level/portal/TeleportTransition;)Lnet/minecraft/world/entity/Entity;
+		ARG 1 level
+		ARG 2 teleportTransition
 	METHOD teleportSetPosition (Lnet/minecraft/world/entity/PositionMoveRotation;Ljava/util/Set;)V
 		ARG 1 positionMovementRotation
 		ARG 2 relatives

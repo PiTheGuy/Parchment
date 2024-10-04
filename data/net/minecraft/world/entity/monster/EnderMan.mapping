@@ -16,6 +16,8 @@ CLASS net/minecraft/world/entity/monster/EnderMan
 		ARG 1 source
 		ARG 2 potion
 		ARG 3 amount
+	METHOD isBeingStaredBy (Lnet/minecraft/world/entity/player/Player;)Z
+		ARG 1 player
 	METHOD isLookingAtMe (Lnet/minecraft/world/entity/player/Player;)Z
 		COMMENT Checks to see if this enderman should be attacking this player
 		ARG 1 player

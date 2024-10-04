@@ -224,6 +224,8 @@ CLASS net/minecraft/client/renderer/LevelRenderer
 		ARG 1 pos
 	METHOD lambda$initTransparency$0 (Lnet/minecraft/server/packs/PackResources;)Lnet/minecraft/network/chat/MutableComponent;
 		ARG 0 levelRenderer
+	METHOD lambda$renderBlockEntities$6 (Lnet/minecraft/client/renderer/MultiBufferSource$BufferSource;Lcom/mojang/blaze3d/vertex/VertexConsumer;Lnet/minecraft/client/renderer/RenderType;)Lcom/mojang/blaze3d/vertex/VertexConsumer;
+		ARG 2 renderType
 	METHOD lambda$renderBlockEntities$7 (Lnet/minecraft/client/renderer/MultiBufferSource$BufferSource;Lcom/mojang/blaze3d/vertex/VertexConsumer;Lnet/minecraft/client/renderer/RenderType;)Lcom/mojang/blaze3d/vertex/VertexConsumer;
 		ARG 2 buffer
 	METHOD lambda$renderLevel$2 (Lnet/minecraft/client/renderer/MultiBufferSource$BufferSource;Lcom/mojang/blaze3d/vertex/VertexConsumer;Lnet/minecraft/client/renderer/RenderType;)Lcom/mojang/blaze3d/vertex/VertexConsumer;
@@ -330,6 +332,16 @@ CLASS net/minecraft/client/renderer/LevelRenderer
 		ARG 8 camZ
 		ARG 10 pos
 		ARG 11 state
+	METHOD renderHitOutline (Lcom/mojang/blaze3d/vertex/PoseStack;Lcom/mojang/blaze3d/vertex/VertexConsumer;Lnet/minecraft/world/entity/Entity;DDDLnet/minecraft/core/BlockPos;Lnet/minecraft/world/level/block/state/BlockState;I)V
+		ARG 1 poseStack
+		ARG 2 buffer
+		ARG 3 entity
+		ARG 4 camX
+		ARG 6 camY
+		ARG 8 camZ
+		ARG 10 pos
+		ARG 11 state
+		ARG 12 color
 	METHOD renderLevel (Lcom/mojang/blaze3d/resource/GraphicsResourceAllocator;Lnet/minecraft/client/DeltaTracker;ZLnet/minecraft/client/Camera;Lnet/minecraft/client/renderer/GameRenderer;Lnet/minecraft/client/renderer/LightTexture;Lorg/joml/Matrix4f;Lorg/joml/Matrix4f;)V
 		ARG 1 graphicsResourceAllocator
 		ARG 2 deltaTracker

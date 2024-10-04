@@ -215,17 +215,26 @@ CLASS net/minecraft/client/multiplayer/ClientPacketListener
 		ARG 2 playerInfo
 	METHOD isFeatureEnabled (Lnet/minecraft/world/flag/FeatureFlagSet;)Z
 		ARG 1 enabledFeatures
+	METHOD lambda$handleBlockEntityData$4 (Lnet/minecraft/network/protocol/game/ClientboundBlockEntityDataPacket;Lnet/minecraft/world/level/block/entity/BlockEntity;)V
+		ARG 2 blockEntity
 	METHOD lambda$handleBlockEntityData$5 (Lnet/minecraft/network/protocol/game/ClientboundBlockEntityDataPacket;Lnet/minecraft/world/level/block/entity/BlockEntity;)V
 		ARG 2 blockEntity
+	METHOD lambda$handleChunkBlocksUpdate$1 (Lnet/minecraft/core/BlockPos;Lnet/minecraft/world/level/block/state/BlockState;)V
+		ARG 1 pos
+		ARG 2 state
 	METHOD lambda$handleChunkBlocksUpdate$2 (Lnet/minecraft/core/BlockPos;Lnet/minecraft/world/level/block/state/BlockState;)V
 		ARG 1 blockPos
 		ARG 2 blockState
 	METHOD lambda$handleLogin$0 (Ljava/util/Optional;)V
 		ARG 1 keyPair
+	METHOD lambda$handleRemoveEntities$0 (I)V
+		ARG 1 id
 	METHOD lambda$handleRemoveEntities$1 (I)V
 		ARG 1 entityId
 	METHOD lambda$handleSetEquipment$6 (Lnet/minecraft/world/entity/LivingEntity;Lcom/mojang/datafixers/util/Pair;)V
 		ARG 1 slot
+	METHOD lambda$handleSetPlayerTeamPacket$8 (Lnet/minecraft/world/scores/PlayerTeam;Lnet/minecraft/network/protocol/game/ClientboundSetPlayerTeamPacket$Parameters;)V
+		ARG 1 parameters
 	METHOD markMessageAsProcessed (Lnet/minecraft/network/chat/PlayerChatMessage;Z)V
 		ARG 1 chatMessage
 		ARG 2 acknowledged
@@ -252,6 +261,8 @@ CLASS net/minecraft/client/multiplayer/ClientPacketListener
 		ARG 6 emptySkyYMask
 		ARG 7 skyUpdates
 		ARG 8 update
+	METHOD refreshRecipeBook (Lnet/minecraft/client/ClientRecipeBook;)V
+		ARG 1 recipeBook
 	METHOD sendChat (Ljava/lang/String;)V
 		ARG 1 message
 	METHOD sendCommand (Ljava/lang/String;)V
@@ -260,6 +271,11 @@ CLASS net/minecraft/client/multiplayer/ClientPacketListener
 		ARG 1 command
 	METHOD setKeyPair (Lnet/minecraft/world/entity/player/ProfileKeyPair;)V
 		ARG 1 keyPair
+	METHOD setValuesFromPositionPacket (Lnet/minecraft/world/entity/PositionMoveRotation;Ljava/util/Set;Lnet/minecraft/world/entity/Entity;Z)Z
+		ARG 0 positionMoveRotation
+		ARG 1 relatives
+		ARG 2 entity
+		ARG 3 lerp
 	METHOD startWaitingForNewLevel (Lnet/minecraft/client/player/LocalPlayer;Lnet/minecraft/client/multiplayer/ClientLevel;Lnet/minecraft/client/gui/screens/ReceivingLevelScreen$Reason;)V
 		ARG 1 player
 		ARG 2 level

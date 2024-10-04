@@ -49,6 +49,11 @@ CLASS net/minecraft/util/ARGB
 	METHOD scaleRGB (IF)I
 		ARG 0 color
 		ARG 1 scale
+	METHOD scaleRGB (IFFF)I
+		ARG 0 color
+		ARG 1 redScale
+		ARG 2 greenScale
+		ARG 3 blueScale
 	METHOD scaleRGB (II)I
 		ARG 0 color
 		ARG 1 scale

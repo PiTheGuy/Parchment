@@ -80,6 +80,8 @@ CLASS net/minecraft/network/protocol/game/ClientGamePacketListener
 		ARG 1 packet
 	METHOD handleEntityLinkPacket (Lnet/minecraft/network/protocol/game/ClientboundSetEntityLinkPacket;)V
 		ARG 1 packet
+	METHOD handleEntityPositionSync (Lnet/minecraft/network/protocol/game/ClientboundEntityPositionSyncPacket;)V
+		ARG 1 packet
 	METHOD handleExplosion (Lnet/minecraft/network/protocol/game/ClientboundExplodePacket;)V
 		COMMENT Initiates a new explosion (sound, particles, drop spawn) for the affected blocks indicated by the packet.
 		ARG 1 packet
@@ -148,6 +150,12 @@ CLASS net/minecraft/network/protocol/game/ClientGamePacketListener
 		ARG 1 packet
 	METHOD handleProjectilePowerPacket (Lnet/minecraft/network/protocol/game/ClientboundProjectilePowerPacket;)V
 		ARG 1 packet
+	METHOD handleRecipeBookAdd (Lnet/minecraft/network/protocol/game/ClientboundRecipeBookAddPacket;)V
+		ARG 1 packet
+	METHOD handleRecipeBookRemove (Lnet/minecraft/network/protocol/game/ClientboundRecipeBookRemovePacket;)V
+		ARG 1 packet
+	METHOD handleRecipeBookSettings (Lnet/minecraft/network/protocol/game/ClientboundRecipeBookSettingsPacket;)V
+		ARG 1 packet
 	METHOD handleRemoveEntities (Lnet/minecraft/network/protocol/game/ClientboundRemoveEntitiesPacket;)V
 		ARG 1 packet
 	METHOD handleRemoveMobEffect (Lnet/minecraft/network/protocol/game/ClientboundRemoveMobEffectPacket;)V
@@ -158,6 +166,8 @@ CLASS net/minecraft/network/protocol/game/ClientGamePacketListener
 		ARG 1 packet
 	METHOD handleRotateMob (Lnet/minecraft/network/protocol/game/ClientboundRotateHeadPacket;)V
 		COMMENT Updates the direction in which the specified entity is looking, normally this head rotation is independent of the rotation of the entity itself
+		ARG 1 packet
+	METHOD handleRotatePlayer (Lnet/minecraft/network/protocol/game/ClientboundPlayerRotationPacket;)V
 		ARG 1 packet
 	METHOD handleSelectAdvancementsTab (Lnet/minecraft/network/protocol/game/ClientboundSelectAdvancementsTabPacket;)V
 		ARG 1 packet

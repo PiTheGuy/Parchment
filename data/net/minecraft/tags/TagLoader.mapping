@@ -2,6 +2,9 @@ CLASS net/minecraft/tags/TagLoader
 	METHOD <init> (Ljava/util/function/Function;Ljava/lang/String;)V
 		ARG 1 idToValue
 		ARG 2 directory
+	METHOD <init> (Lnet/minecraft/tags/TagLoader$ElementLookup;Ljava/lang/String;)V
+		ARG 1 elementLookup
+		ARG 2 directory
 	METHOD build (Ljava/util/Map;)Ljava/util/Map;
 		ARG 1 builders
 	METHOD build (Lnet/minecraft/tags/TagEntry$Lookup;Ljava/util/List;)Lcom/mojang/datafixers/util/Either;
@@ -49,6 +52,14 @@ CLASS net/minecraft/tags/TagLoader
 	METHOD wrapTags (Lnet/minecraft/resources/ResourceKey;Ljava/util/Map;)Ljava/util/Map;
 		ARG 0 registryKey
 		ARG 1 tags
+	CLASS ElementLookup
+		METHOD fromFrozenRegistry (Lnet/minecraft/core/Registry;)Lnet/minecraft/tags/TagLoader$ElementLookup;
+			ARG 0 registry
+		METHOD fromWritableRegistry (Lnet/minecraft/core/WritableRegistry;)Lnet/minecraft/tags/TagLoader$ElementLookup;
+			ARG 0 registry
+		METHOD get (Lnet/minecraft/resources/ResourceLocation;Z)Ljava/util/Optional;
+			ARG 1 id
+			ARG 2 required
 	CLASS SortingEntry
 		METHOD lambda$visitOptionalDependencies$1 (Ljava/util/function/Consumer;Lnet/minecraft/tags/TagLoader$EntryWithSource;)V
 			ARG 1 entry

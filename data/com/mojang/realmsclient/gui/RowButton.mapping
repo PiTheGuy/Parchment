@@ -9,6 +9,14 @@ CLASS com/mojang/realmsclient/gui/RowButton
 		ARG 2 x
 		ARG 3 y
 		ARG 4 showTooltip
+	METHOD drawButtonsInRow (Lnet/minecraft/client/gui/GuiGraphics;Ljava/util/List;Lnet/minecraft/client/gui/components/AbstractSelectionList;IIII)V
+		ARG 0 guiGraphics
+		ARG 1 rowButtons
+		ARG 2 pendingInvitations
+		ARG 3 x
+		ARG 4 y
+		ARG 5 mouseX
+		ARG 6 mouseY
 	METHOD drawButtonsInRow (Lnet/minecraft/client/gui/GuiGraphics;Ljava/util/List;Lnet/minecraft/realms/RealmsObjectSelectionList;IIII)V
 		ARG 0 guiGraphics
 		ARG 1 buttons
@@ -25,6 +33,13 @@ CLASS com/mojang/realmsclient/gui/RowButton
 		ARG 5 mouseY
 	METHOD onClick (I)V
 		ARG 1 index
+	METHOD rowButtonMouseClicked (Lnet/minecraft/client/gui/components/AbstractSelectionList;Lnet/minecraft/client/gui/components/ObjectSelectionList$Entry;Ljava/util/List;IDD)V
+		ARG 0 pendingInvitations
+		ARG 1 entry
+		ARG 2 rowButtons
+		ARG 3 button
+		ARG 4 mouseX
+		ARG 6 mouseY
 	METHOD rowButtonMouseClicked (Lnet/minecraft/realms/RealmsObjectSelectionList;Lnet/minecraft/client/gui/components/ObjectSelectionList$Entry;Ljava/util/List;IDD)V
 		ARG 0 list
 		ARG 1 entry

@@ -880,6 +880,20 @@ CLASS net/minecraft/client/gui/GuiGraphics
 			COMMENT the random seed.
 		ARG 5 guiOffset
 			COMMENT the GUI offset.
+	METHOD renderItemBar (Lnet/minecraft/world/item/ItemStack;II)V
+		ARG 1 stack
+		ARG 2 x
+		ARG 3 y
+	METHOD renderItemCooldown (Lnet/minecraft/world/item/ItemStack;II)V
+		ARG 1 stack
+		ARG 2 x
+		ARG 3 y
+	METHOD renderItemCount (Lnet/minecraft/client/gui/Font;Lnet/minecraft/world/item/ItemStack;IILjava/lang/String;)V
+		ARG 1 font
+		ARG 2 stack
+		ARG 3 x
+		ARG 4 y
+		ARG 5 text
 	METHOD renderItemDecorations (Lnet/minecraft/client/gui/Font;Lnet/minecraft/world/item/ItemStack;II)V
 		COMMENT Renders additional decorations for an item stack at the specified coordinates.
 		ARG 1 font

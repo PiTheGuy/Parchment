@@ -39,5 +39,8 @@ CLASS net/minecraft/tags/TagEntry
 	CLASS Lookup
 		METHOD element (Lnet/minecraft/resources/ResourceLocation;)Ljava/lang/Object;
 			ARG 1 elementLocation
+		METHOD element (Lnet/minecraft/resources/ResourceLocation;Z)Ljava/lang/Object;
+			ARG 1 id
+			ARG 2 required
 		METHOD tag (Lnet/minecraft/resources/ResourceLocation;)Ljava/util/Collection;
-			ARG 1 tagLocation
+			ARG 1 id

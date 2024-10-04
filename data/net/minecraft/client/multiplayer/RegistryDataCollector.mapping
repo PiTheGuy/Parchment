@@ -1,4 +1,8 @@
 CLASS net/minecraft/client/multiplayer/RegistryDataCollector
+	METHOD addCrashDetails (Lnet/minecraft/CrashReport;Ljava/util/Map;Ljava/util/List;)V
+		ARG 0 crashReport
+		ARG 1 dynamicRegistries
+		ARG 2 staticRegistries
 	METHOD appendContents (Lnet/minecraft/resources/ResourceKey;Ljava/util/List;)V
 		ARG 1 registryKey
 		ARG 2 registryEntries

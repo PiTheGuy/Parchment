@@ -24,6 +24,17 @@ CLASS net/minecraft/server/commands/TeleportCommand
 		ARG 0 context
 	METHOD lambda$register$9 (Lnet/minecraft/commands/CommandSourceStack;)Z
 		ARG 0 source
+	METHOD performTeleport (Lnet/minecraft/commands/CommandSourceStack;Lnet/minecraft/world/entity/Entity;Lnet/minecraft/server/level/ServerLevel;DDDLjava/util/Set;FFLnet/minecraft/server/commands/LookAt;)V
+		ARG 0 source
+		ARG 1 target
+		ARG 2 level
+		ARG 3 x
+		ARG 5 y
+		ARG 7 z
+		ARG 9 relatives
+		ARG 10 yRot
+		ARG 11 xRot
+		ARG 12 lookAt
 	METHOD performTeleport (Lnet/minecraft/commands/CommandSourceStack;Lnet/minecraft/world/entity/Entity;Lnet/minecraft/server/level/ServerLevel;DDDLjava/util/Set;FFLnet/minecraft/server/commands/TeleportCommand$LookAt;)V
 		ARG 0 source
 		ARG 1 entity
@@ -41,6 +52,13 @@ CLASS net/minecraft/server/commands/TeleportCommand
 		ARG 0 source
 		ARG 1 targets
 		ARG 2 destination
+	METHOD teleportToPos (Lnet/minecraft/commands/CommandSourceStack;Ljava/util/Collection;Lnet/minecraft/server/level/ServerLevel;Lnet/minecraft/commands/arguments/coordinates/Coordinates;Lnet/minecraft/commands/arguments/coordinates/Coordinates;Lnet/minecraft/server/commands/LookAt;)I
+		ARG 0 source
+		ARG 1 targets
+		ARG 2 level
+		ARG 3 position
+		ARG 4 rotation
+		ARG 5 lookAt
 	METHOD teleportToPos (Lnet/minecraft/commands/CommandSourceStack;Ljava/util/Collection;Lnet/minecraft/server/level/ServerLevel;Lnet/minecraft/commands/arguments/coordinates/Coordinates;Lnet/minecraft/commands/arguments/coordinates/Coordinates;Lnet/minecraft/server/commands/TeleportCommand$LookAt;)I
 		ARG 0 source
 		ARG 1 targets

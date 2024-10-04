@@ -116,6 +116,17 @@ CLASS net/minecraft/client/gui/Font
 		ARG 11 blue
 		ARG 12 alpha
 		ARG 13 packedLight
+	METHOD renderChar (Lnet/minecraft/client/gui/font/glyphs/BakedGlyph;ZZFFFLorg/joml/Matrix4f;Lcom/mojang/blaze3d/vertex/VertexConsumer;II)V
+		ARG 1 glyph
+		ARG 2 bold
+		ARG 3 italic
+		ARG 4 boldOffset
+		ARG 5 x
+		ARG 6 y
+		ARG 7 pose
+		ARG 8 buffer
+		ARG 9 color
+		ARG 10 packedLightCoords
 	METHOD renderText (Ljava/lang/String;FFIZLorg/joml/Matrix4f;Lnet/minecraft/client/renderer/MultiBufferSource;Lnet/minecraft/client/gui/Font$DisplayMode;II)F
 		ARG 1 text
 		ARG 2 x
@@ -159,7 +170,19 @@ CLASS net/minecraft/client/gui/Font
 		ARG 1 text
 		ARG 2 maxWidth
 	CLASS StringRenderOutput
+		METHOD <init> (Lnet/minecraft/client/gui/Font;Lnet/minecraft/client/renderer/MultiBufferSource;FFIIZLorg/joml/Matrix4f;Lnet/minecraft/client/gui/Font$DisplayMode;I)V
+			ARG 1 font
+			ARG 2 bufferSource
+			ARG 3 x
+			ARG 4 y
+			ARG 5 color
+			ARG 6 backgroundColor
+			ARG 7 dropShadow
+			ARG 8 pose
+			ARG 9 mode
+			ARG 10 packedLightCoords
 		METHOD <init> (Lnet/minecraft/client/gui/Font;Lnet/minecraft/client/renderer/MultiBufferSource;FFIZLorg/joml/Matrix4f;Lnet/minecraft/client/gui/Font$DisplayMode;I)V
+			ARG 1 font
 			ARG 2 bufferSource
 			ARG 3 x
 			ARG 4 y
