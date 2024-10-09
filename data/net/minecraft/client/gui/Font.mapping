@@ -193,6 +193,8 @@ CLASS net/minecraft/client/gui/Font
 			ARG 9 packedLightCoords
 		METHOD addEffect (Lnet/minecraft/client/gui/font/glyphs/BakedGlyph$Effect;)V
 			ARG 1 effect
+		METHOD finish (F)F
+			ARG 1 x
 		METHOD finish (IF)F
 			ARG 1 backgroundColor
 			ARG 2 x

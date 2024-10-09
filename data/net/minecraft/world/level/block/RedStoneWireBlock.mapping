@@ -97,6 +97,15 @@ CLASS net/minecraft/world/level/block/RedStoneWireBlock
 	METHOD shouldConnectTo (Lnet/minecraft/world/level/block/state/BlockState;Lnet/minecraft/core/Direction;)Z
 		ARG 0 state
 		ARG 1 direction
+	METHOD spawnParticlesAlongLine (Lnet/minecraft/world/level/Level;Lnet/minecraft/util/RandomSource;Lnet/minecraft/core/BlockPos;ILnet/minecraft/core/Direction;Lnet/minecraft/core/Direction;FF)V
+		ARG 0 level
+		ARG 1 random
+		ARG 2 pos
+		ARG 3 color
+		ARG 4 direction
+		ARG 5 perpendicularDirection
+		ARG 6 start
+		ARG 7 end
 	METHOD spawnParticlesAlongLine (Lnet/minecraft/world/level/Level;Lnet/minecraft/util/RandomSource;Lnet/minecraft/core/BlockPos;Lnet/minecraft/world/phys/Vec3;Lnet/minecraft/core/Direction;Lnet/minecraft/core/Direction;FF)V
 		ARG 1 level
 		ARG 2 random

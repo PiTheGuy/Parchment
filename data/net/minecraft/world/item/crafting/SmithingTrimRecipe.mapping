@@ -7,6 +7,11 @@ CLASS net/minecraft/world/item/crafting/SmithingTrimRecipe
 		ARG 1 template
 		ARG 2 base
 		ARG 3 addition
+	METHOD applyTrim (Lnet/minecraft/core/HolderLookup$Provider;Lnet/minecraft/world/item/ItemStack;Lnet/minecraft/world/item/ItemStack;Lnet/minecraft/world/item/ItemStack;)Lnet/minecraft/world/item/ItemStack;
+		ARG 0 registries
+		ARG 1 base
+		ARG 2 addition
+		ARG 3 template
 	CLASS Serializer
 		METHOD fromNetwork (Lnet/minecraft/network/RegistryFriendlyByteBuf;)Lnet/minecraft/world/item/crafting/SmithingTrimRecipe;
 			ARG 0 buffer

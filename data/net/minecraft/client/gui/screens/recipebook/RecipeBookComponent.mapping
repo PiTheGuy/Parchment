@@ -7,6 +7,10 @@ CLASS net/minecraft/client/gui/screens/recipebook/RecipeBookComponent
 	METHOD charTyped (CI)Z
 		ARG 1 codePoint
 		ARG 2 modifiers
+	METHOD fillGhostRecipe (Lnet/minecraft/client/gui/screens/recipebook/GhostSlots;Lnet/minecraft/world/item/crafting/display/RecipeDisplay;Lnet/minecraft/util/context/ContextMap;)V
+		ARG 1 ghostSlots
+		ARG 2 recipeDisplay
+		ARG 3 contextMap
 	METHOD fillGhostRecipe (Lnet/minecraft/client/gui/screens/recipebook/GhostSlots;Lnet/minecraft/world/item/crafting/display/RecipeDisplay;Lnet/minecraft/world/item/crafting/display/SlotDisplay$ResolutionContext;)V
 		ARG 1 ghostSlots
 		ARG 2 recipeDisplay
@@ -47,6 +51,14 @@ CLASS net/minecraft/client/gui/screens/recipebook/RecipeBookComponent
 		ARG 3 modifiers
 	METHOD lambda$initVisuals$1 (Lnet/minecraft/client/gui/screens/recipebook/RecipeBookTabButton;)Z
 		ARG 1 button
+	METHOD lambda$updateCollections$2 (Lnet/minecraft/client/gui/screens/recipebook/RecipeCollection;)V
+		ARG 1 collection
+	METHOD lambda$updateCollections$3 (Lnet/minecraft/client/gui/screens/recipebook/RecipeCollection;)Z
+		ARG 0 collection
+	METHOD lambda$updateCollections$4 (Lit/unimi/dsi/fastutil/objects/ObjectSet;Lnet/minecraft/client/gui/screens/recipebook/RecipeCollection;)Z
+		ARG 1 collection
+	METHOD lambda$updateCollections$5 (Lnet/minecraft/client/gui/screens/recipebook/RecipeCollection;)Z
+		ARG 0 collection
 	METHOD lambda$updateNarration$6 (Ljava/util/List;Lnet/minecraft/client/gui/components/AbstractWidget;)V
 		ARG 1 widget
 	METHOD mouseClicked (DDI)Z
@@ -132,6 +144,13 @@ CLASS net/minecraft/client/gui/screens/recipebook/RecipeBookComponent
 			ARG 1 primaryIcon
 			ARG 2 secondaryIcon
 			ARG 3 category
+		METHOD <init> (Lnet/minecraft/world/item/Item;Lnet/minecraft/world/item/Item;Lnet/minecraft/world/item/crafting/RecipeBookCategory;)V
+			ARG 1 primaryIcon
+			ARG 2 secondaryIcon
+			ARG 3 category
 		METHOD <init> (Lnet/minecraft/world/item/Item;Lnet/minecraft/world/item/crafting/BasicRecipeBookCategory;)V
+			ARG 1 primaryIcon
+			ARG 2 category
+		METHOD <init> (Lnet/minecraft/world/item/Item;Lnet/minecraft/world/item/crafting/RecipeBookCategory;)V
 			ARG 1 primaryIcon
 			ARG 2 category

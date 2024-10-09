@@ -61,5 +61,7 @@ CLASS net/minecraft/util/ARGB
 		ARG 0 color
 	METHOD transparent (I)I
 		ARG 0 color
+	METHOD vector3fFromRGB24 (I)Lorg/joml/Vector3f;
+		ARG 0 color
 	METHOD white (F)I
 		ARG 0 alpha

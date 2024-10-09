@@ -6,6 +6,8 @@ CLASS net/minecraft/client/renderer/CompiledShaderProgram
 		ARG 2 textureId
 	METHOD getUniform (Ljava/lang/String;)Lcom/mojang/blaze3d/shaders/Uniform;
 		ARG 1 name
+	METHOD getUniformConfig (Ljava/lang/String;)Lnet/minecraft/client/renderer/ShaderProgramConfig$Uniform;
+		ARG 1 name
 	METHOD link (Lcom/mojang/blaze3d/shaders/CompiledShader;Lcom/mojang/blaze3d/shaders/CompiledShader;Lcom/mojang/blaze3d/vertex/VertexFormat;)Lnet/minecraft/client/renderer/CompiledShaderProgram;
 		ARG 0 vertexShader
 		ARG 1 fragmentShader

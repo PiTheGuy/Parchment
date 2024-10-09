@@ -5,6 +5,16 @@ CLASS com/mojang/realmsclient/gui/screens/RealmsPendingInvitesScreen
 	METHOD handleInvitation (IZ)V
 		ARG 1 index
 		ARG 2 shouldAccept
+	METHOD handleInvitation (Z)V
+		ARG 1 accept
+	METHOD lambda$init$1 (Lcom/mojang/realmsclient/dto/PendingInvite;)Lcom/mojang/realmsclient/gui/screens/RealmsPendingInvitesScreen$Entry;
+		ARG 1 invite
+	METHOD lambda$init$3 (Lnet/minecraft/client/gui/components/Button;)V
+		ARG 1 button
+	METHOD lambda$init$4 (Lnet/minecraft/client/gui/components/Button;)V
+		ARG 1 button
+	METHOD lambda$init$5 (Lnet/minecraft/client/gui/components/Button;)V
+		ARG 1 button
 	METHOD shouldAcceptAndRejectButtonBeVisible (I)Z
 		ARG 1 selectedInvite
 	CLASS Entry
@@ -20,5 +30,7 @@ CLASS com/mojang/realmsclient/gui/screens/RealmsPendingInvitesScreen
 	CLASS PendingInvitationSelectionList
 		METHOD removeAtIndex (I)V
 			ARG 1 index
+		METHOD removeInvitation (Lcom/mojang/realmsclient/gui/screens/RealmsPendingInvitesScreen$Entry;)V
+			ARG 1 entry
 		METHOD selectInviteListItem (I)V
 			ARG 1 index

@@ -1,4 +1,7 @@
 CLASS net/minecraft/core/particles/DustParticleOptions
+	METHOD <init> (IF)V
+		ARG 1 color
+		ARG 2 scale
 	METHOD <init> (Lorg/joml/Vector3f;F)V
 		ARG 1 color
 		ARG 2 scale

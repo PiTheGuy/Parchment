@@ -23,6 +23,11 @@ CLASS com/mojang/blaze3d/shaders/Uniform
 	METHOD set (IF)V
 		ARG 1 index
 		ARG 2 value
+	METHOD setFromConfig (Ljava/util/List;I)V
+		ARG 1 values
+		ARG 2 count
+	METHOD setFromConfig (Lnet/minecraft/client/renderer/ShaderProgramConfig$Uniform;)V
+		ARG 1 uniform
 	METHOD setLocation (I)V
 		ARG 1 location
 	METHOD uploadInteger (II)V
