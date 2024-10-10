@@ -1,7 +1,12 @@
 CLASS net/minecraft/world/item/equipment/ArmorMaterial
+	METHOD animalProperties (Lnet/minecraft/world/item/Item$Properties;Lnet/minecraft/core/Holder;ZLnet/minecraft/core/HolderSet;)Lnet/minecraft/world/item/Item$Properties;
+		ARG 1 properties
+		ARG 2 equipSound
+		ARG 3 damageOnHurt
+		ARG 4 allowedEntities
 	METHOD animalProperties (Lnet/minecraft/world/item/Item$Properties;Lnet/minecraft/core/HolderSet;)Lnet/minecraft/world/item/Item$Properties;
 		ARG 1 properties
-		ARG 2 entityTypes
+		ARG 2 allowedEntities
 	METHOD animalProperties (Lnet/minecraft/world/item/Item$Properties;Lnet/minecraft/sounds/SoundEvent;Lnet/minecraft/core/HolderSet;)Lnet/minecraft/world/item/Item$Properties;
 		ARG 1 properties
 		ARG 2 equipSound

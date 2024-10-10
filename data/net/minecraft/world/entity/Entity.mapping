@@ -85,6 +85,9 @@ CLASS net/minecraft/world/entity/Entity
 		ARG 3 onGround
 		ARG 4 state
 		ARG 5 pos
+	METHOD checkInsideBlocks (Ljava/util/List;Ljava/util/Set;)V
+		ARG 1 movements
+		ARG 2 blocksInside
 	METHOD checkInsideBlocks (Ljava/util/Set;)V
 		ARG 1 blocks
 	METHOD checkSupportingBlock (ZLnet/minecraft/world/phys/Vec3;)V
@@ -418,21 +421,33 @@ CLASS net/minecraft/world/entity/Entity
 		ARG 0 state
 	METHOD lambda$checkFallDamage$0 (Lnet/minecraft/core/BlockPos;)Lnet/minecraft/world/level/block/state/BlockState;
 		ARG 1 pos1
+	METHOD lambda$checkFallDamage$1 (Lnet/minecraft/core/BlockPos;)Lnet/minecraft/world/level/block/state/BlockState;
+		ARG 1 supportingPos
 	METHOD lambda$countPlayerPassengers$12 (Lnet/minecraft/world/entity/Entity;)Z
 		ARG 0 entity
 	METHOD lambda$countPlayerPassengers$13 (Lnet/minecraft/world/entity/Entity;)Z
 		ARG 0 entity
+	METHOD lambda$getDisplayName$10 (Lnet/minecraft/network/chat/Style;)Lnet/minecraft/network/chat/Style;
+		ARG 1 style
 	METHOD lambda$getDisplayName$9 (Lnet/minecraft/network/chat/Style;)Lnet/minecraft/network/chat/Style;
 		ARG 1 style
 	METHOD lambda$isInWall$1 (Lnet/minecraft/world/phys/AABB;Lnet/minecraft/core/BlockPos;)Z
+		ARG 2 pos
+	METHOD lambda$isInWall$2 (Lnet/minecraft/world/phys/AABB;Lnet/minecraft/core/BlockPos;)Z
 		ARG 2 pos
 	METHOD lambda$move$0 (Lnet/minecraft/world/level/block/state/BlockState;)Z
 		ARG 0 loadedState
 	METHOD lambda$removePassenger$4 (Lnet/minecraft/world/entity/Entity;Lnet/minecraft/world/entity/Entity;)Z
 		ARG 1 entity
+	METHOD lambda$removePassenger$5 (Lnet/minecraft/world/entity/Entity;Lnet/minecraft/world/entity/Entity;)Z
+		ARG 1 entity
 	METHOD lambda$startRiding$2 (Lnet/minecraft/world/entity/Entity;)Z
 		ARG 0 entity
 	METHOD lambda$startRiding$3 (Lnet/minecraft/world/entity/Entity;)V
+		ARG 0 entity
+	METHOD lambda$startRiding$3 (Lnet/minecraft/world/entity/Entity;)Z
+		ARG 0 entity
+	METHOD lambda$startRiding$4 (Lnet/minecraft/world/entity/Entity;)V
 		ARG 0 entity
 	METHOD lambda$teleportPassengers$10 (Lnet/minecraft/world/entity/Entity;)V
 		ARG 0 entity

@@ -37,8 +37,16 @@ CLASS com/mojang/realmsclient/RealmsMainScreen
 		ARG 0 server
 	METHOD lambda$callRealmsClient$21 (Ljava/lang/Throwable;)Ljava/lang/Void;
 		ARG 0 exception
+	METHOD lambda$confirmToPlay$27 (Lnet/minecraft/client/gui/screens/Screen;Lcom/mojang/realmsclient/dto/RealmsServer;Lnet/minecraft/client/gui/components/PopupScreen;)V
+		ARG 2 screen
 	METHOD lambda$dismissNotification$24 (Ljava/util/UUID;Lcom/mojang/realmsclient/client/RealmsClient;)Ljava/lang/Object;
 		ARG 1 client
+	METHOD lambda$dismissNotification$25 (Ljava/util/UUID;Lcom/mojang/realmsclient/dto/RealmsNotification;)Z
+		ARG 1 notification
+	METHOD lambda$init$0 (Lnet/minecraft/network/chat/Component;Lnet/minecraft/client/gui/components/Button;)V
+		ARG 2 button
+	METHOD lambda$init$1 (Lnet/minecraft/client/gui/components/Button;)V
+		ARG 1 button
 	METHOD lambda$init$2 (Lnet/minecraft/client/gui/components/Button;)V
 		ARG 1 button
 	METHOD lambda$init$3 (Lnet/minecraft/client/gui/components/Button;)V
@@ -52,6 +60,7 @@ CLASS com/mojang/realmsclient/RealmsMainScreen
 	METHOD lambda$init$7 (Lnet/minecraft/client/gui/components/Button;)V
 		ARG 1 button
 	METHOD lambda$init$8 (Lnet/minecraft/client/gui/components/CycleButton;Ljava/lang/Boolean;)V
+		ARG 1 button
 		ARG 2 snapshotToggle
 	METHOD lambda$init$9 (Lcom/mojang/realmsclient/RealmsAvailability$Result;)V
 		ARG 1 result
@@ -71,6 +80,10 @@ CLASS com/mojang/realmsclient/RealmsMainScreen
 		ARG 2 screen
 	METHOD lambda$markNotificationsAsSeen$18 (Ljava/util/List;Lcom/mojang/realmsclient/client/RealmsClient;)Ljava/lang/Object;
 		ARG 1 client
+	METHOD lambda$updateLayout$10 (Lcom/mojang/realmsclient/RealmsMainScreen;Lnet/minecraft/client/gui/components/events/GuiEventListener;)V
+		ARG 1 listener
+	METHOD lambda$updateLayout$11 (Lcom/mojang/realmsclient/RealmsMainScreen;Lnet/minecraft/client/gui/components/events/GuiEventListener;)V
+		ARG 1 listener
 	METHOD leaveClicked (Lcom/mojang/realmsclient/dto/RealmsServer;)V
 		ARG 1 realmsServer
 	METHOD leaveServer (Lcom/mojang/realmsclient/dto/RealmsServer;)V
@@ -106,6 +119,8 @@ CLASS com/mojang/realmsclient/RealmsMainScreen
 	CLASS AvailableSnapshotEntry
 		METHOD <init> (Lcom/mojang/realmsclient/RealmsMainScreen;Lcom/mojang/realmsclient/dto/RealmsServer;)V
 			ARG 2 parent
+		METHOD lambda$addSnapshotRealm$0 (Lnet/minecraft/client/gui/components/PopupScreen;)V
+			ARG 1 screen
 	CLASS ButtonEntry
 		METHOD <init> (Lcom/mojang/realmsclient/RealmsMainScreen;Lnet/minecraft/client/gui/components/Button;)V
 			ARG 2 button
@@ -135,6 +150,12 @@ CLASS com/mojang/realmsclient/RealmsMainScreen
 			ARG 4 y
 			ARG 5 maxX
 			ARG 6 color
+		METHOD renderGameMode (Lcom/mojang/realmsclient/dto/RealmsServer;Lnet/minecraft/client/gui/GuiGraphics;III)I
+			ARG 1 server
+			ARG 2 guiGraphics
+			ARG 3 left
+			ARG 4 width
+			ARG 5 firstLineY
 		METHOD renderGameMode (Lcom/mojang/realmsclient/dto/RealmsServer;Lnet/minecraft/client/gui/GuiGraphics;III)V
 			ARG 1 server
 			ARG 2 guiGraphics
