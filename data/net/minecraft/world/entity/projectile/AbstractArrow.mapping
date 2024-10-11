@@ -69,6 +69,8 @@ CLASS net/minecraft/world/entity/projectile/AbstractArrow
 	METHOD setFlag (IZ)V
 		ARG 1 id
 		ARG 2 value
+	METHOD setInGround (Z)V
+		ARG 1 inGround
 	METHOD setNoPhysics (Z)V
 		COMMENT Sets if this arrow can noClip
 		ARG 1 noPhysics

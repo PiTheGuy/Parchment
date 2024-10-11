@@ -91,14 +91,45 @@ CLASS net/minecraft/server/level/ChunkMap
 		ARG 1 chunkPos
 	METHOD lambda$applyChunkTrackingView$36 (Lnet/minecraft/server/level/ServerPlayer;Lnet/minecraft/world/level/ChunkPos;)V
 		ARG 2 chunkPos
+	METHOD lambda$debugFuturesAndCreateReportedException$4 (Ljava/lang/StringBuilder;Lnet/minecraft/server/level/ChunkHolder;)V
+		ARG 1 chunk
+	METHOD lambda$dumpChunks$31 (Lnet/minecraft/world/level/chunk/ChunkAccess;)Ljava/util/Optional;
+		ARG 0 chunk
 	METHOD lambda$dumpChunks$32 (Lnet/minecraft/world/level/chunk/LevelChunk;)Ljava/lang/Integer;
 		ARG 0 chunk
 	METHOD lambda$dumpChunks$33 (Lnet/minecraft/world/level/chunk/LevelChunk;)Ljava/lang/Integer;
 		ARG 0 chunk
 	METHOD lambda$dumpChunks$34 (Lnet/minecraft/world/level/chunk/LevelChunk;)Ljava/lang/Integer;
 		ARG 0 chunk
+	METHOD lambda$getChunkRangeFuture$1 (Lnet/minecraft/server/level/ChunkResult;)Lnet/minecraft/server/level/ChunkResult;
+		ARG 0 chunkResult
+	METHOD lambda$prepareAccessibleChunk$29 (Lnet/minecraft/server/level/ChunkResult;)Lnet/minecraft/server/level/ChunkResult;
+		ARG 0 chunkResult
+	METHOD lambda$prepareEntityTickingChunk$7 (Lnet/minecraft/server/level/ChunkResult;)Lnet/minecraft/server/level/ChunkResult;
+		ARG 0 chunkResult
+	METHOD lambda$prepareTickingChunk$26 (Lnet/minecraft/server/level/ChunkHolder;Lnet/minecraft/server/level/ChunkResult;)Lnet/minecraft/server/level/ChunkResult;
+		ARG 2 chunk
+	METHOD lambda$prepareTickingChunk$27 (Lnet/minecraft/server/level/ChunkResult;Ljava/lang/Throwable;)Ljava/lang/Object;
+		ARG 1 chunk
+		ARG 2 exception
+	METHOD lambda$resendBiomesForChunks$38 (Lnet/minecraft/server/level/ServerPlayer;)Ljava/util/List;
+		ARG 0 player
 	METHOD lambda$resendBiomesForChunks$39 (Lnet/minecraft/server/level/ServerPlayer;Ljava/util/List;)V
 		ARG 0 player
+	METHOD lambda$save$30 (Lnet/minecraft/world/level/ChunkPos;Ljava/lang/Void;Ljava/lang/Throwable;)Ljava/lang/Object;
+		ARG 3 exception
+	METHOD lambda$saveAllChunks$10 (Lorg/apache/commons/lang3/mutable/MutableBoolean;Lnet/minecraft/world/level/chunk/ChunkAccess;)V
+		ARG 1 chunk
+	METHOD lambda$saveAllChunks$8 (Lnet/minecraft/server/level/ChunkHolder;)Lnet/minecraft/world/level/chunk/ChunkAccess;
+		ARG 1 chunk
+	METHOD lambda$saveAllChunks$9 (Lnet/minecraft/world/level/chunk/ChunkAccess;)Z
+		ARG 0 chunk
+	METHOD lambda$scheduleChunkLoad$14 (Lnet/minecraft/world/level/ChunkPos;Lnet/minecraft/nbt/CompoundTag;)Lnet/minecraft/world/level/chunk/storage/SerializableChunkData;
+		ARG 2 tag
+	METHOD lambda$scheduleChunkLoad$18 (Lnet/minecraft/world/level/ChunkPos;Ljava/lang/Throwable;)Lnet/minecraft/world/level/chunk/ChunkAccess;
+		ARG 2 throwable
+	METHOD lambda$scheduleUnload$13 (Lnet/minecraft/server/level/ChunkHolder;Ljava/lang/Void;Ljava/lang/Throwable;)V
+		ARG 2 error
 	METHOD markChunkPendingToSend (Lnet/minecraft/server/level/ServerPlayer;Lnet/minecraft/world/level/ChunkPos;)V
 		ARG 1 player
 		ARG 2 chunkPos
@@ -152,11 +183,15 @@ CLASS net/minecraft/server/level/ChunkMap
 	METHOD saveChunkIfNeeded (Lnet/minecraft/server/level/ChunkHolder;J)Z
 		ARG 1 chunk
 		ARG 2 gametime
+	METHOD saveChunksEagerly (Ljava/util/function/BooleanSupplier;)V
+		ARG 1 hasMoreTime
 	METHOD scheduleChunkLoad (Lnet/minecraft/world/level/ChunkPos;)Ljava/util/concurrent/CompletableFuture;
 		ARG 1 chunkPos
 	METHOD scheduleUnload (JLnet/minecraft/server/level/ChunkHolder;)V
 		ARG 1 chunkPos
 		ARG 3 chunkHolder
+	METHOD setChunkUnsaved (Lnet/minecraft/world/level/ChunkPos;)V
+		ARG 1 chunkPos
 	METHOD setServerViewDistance (I)V
 		ARG 1 viewDistance
 	METHOD skipPlayer (Lnet/minecraft/server/level/ServerPlayer;)Z
