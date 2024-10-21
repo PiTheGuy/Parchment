@@ -62,8 +62,14 @@ CLASS net/minecraft/server/level/ServerChunkCache
 		ARG 2 z
 	METHOD isPositionTicking (J)Z
 		ARG 1 chunkPos
+	METHOD lambda$collectTickingChunks$3 (Ljava/util/List;Lnet/minecraft/server/level/ChunkHolder;)V
+		ARG 2 chunk
+	METHOD lambda$getChunkFuture$2 (Ljava/util/concurrent/CompletableFuture;)Ljava/util/concurrent/CompletionStage;
+		ARG 0 future
 	METHOD move (Lnet/minecraft/server/level/ServerPlayer;)V
 		ARG 1 player
+	METHOD onChunkReadyToSend (Lnet/minecraft/server/level/ChunkHolder;)V
+		ARG 1 chunkHolder
 	METHOD onLightUpdate (Lnet/minecraft/world/level/LightLayer;Lnet/minecraft/core/SectionPos;)V
 		ARG 1 type
 		ARG 2 pos

@@ -130,6 +130,8 @@ CLASS net/minecraft/server/level/ChunkMap
 		ARG 2 throwable
 	METHOD lambda$scheduleUnload$13 (Lnet/minecraft/server/level/ChunkHolder;Ljava/lang/Void;Ljava/lang/Throwable;)V
 		ARG 2 error
+	METHOD lambda$waitForLightBeforeSending$40 (Lnet/minecraft/world/level/ChunkPos;)V
+		ARG 1 pos
 	METHOD markChunkPendingToSend (Lnet/minecraft/server/level/ServerPlayer;Lnet/minecraft/world/level/ChunkPos;)V
 		ARG 1 player
 		ARG 2 chunkPos
@@ -143,6 +145,9 @@ CLASS net/minecraft/server/level/ChunkMap
 		ARG 1 chunkPos
 	METHOD move (Lnet/minecraft/server/level/ServerPlayer;)V
 		ARG 1 player
+	METHOD onChunkReadyToSend (Lnet/minecraft/server/level/ChunkHolder;Lnet/minecraft/world/level/chunk/LevelChunk;)V
+		ARG 1 chunkHolder
+		ARG 2 chunk
 	METHOD onChunkReadyToSend (Lnet/minecraft/world/level/chunk/LevelChunk;)V
 		ARG 1 chunk
 	METHOD onFullChunkStatusChange (Lnet/minecraft/world/level/ChunkPos;Lnet/minecraft/server/level/FullChunkStatus;)V
