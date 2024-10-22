@@ -50,7 +50,6 @@ CLASS net/minecraft/client/renderer/entity/EntityRenderer
 	METHOD getSkyLightLevel (Lnet/minecraft/world/entity/Entity;Lnet/minecraft/core/BlockPos;)I
 		ARG 1 entity
 		ARG 2 pos
-	METHOD getTextureLocation (Lnet/minecraft/client/renderer/entity/state/EntityRenderState;)Lnet/minecraft/resources/ResourceLocation;
 	METHOD getTextureLocation (Lnet/minecraft/world/entity/Entity;)Lnet/minecraft/resources/ResourceLocation;
 		COMMENT Returns the location of an entity's texture.
 		ARG 1 entity

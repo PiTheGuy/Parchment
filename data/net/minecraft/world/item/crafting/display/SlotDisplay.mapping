@@ -29,19 +29,17 @@ CLASS net/minecraft/world/item/crafting/display/SlotDisplay
 			ARG 2 display
 		METHOD lambda$static$0 (Lcom/mojang/serialization/codecs/RecordCodecBuilder$Instance;)Lcom/mojang/datafixers/kinds/App;
 			ARG 0 instance
+	CLASS WithRemainder
+		METHOD lambda$static$0 (Lcom/mojang/serialization/codecs/RecordCodecBuilder$Instance;)Lcom/mojang/datafixers/kinds/App;
+			ARG 0 instance
+	CLASS TagSlotDisplay
+		METHOD lambda$static$0 (Lcom/mojang/serialization/codecs/RecordCodecBuilder$Instance;)Lcom/mojang/datafixers/kinds/App;
+			ARG 0 instance
 	CLASS ItemSlotDisplay
 		METHOD <init> (Lnet/minecraft/world/item/Item;)V
 			ARG 1 item
 		METHOD lambda$static$0 (Lcom/mojang/serialization/codecs/RecordCodecBuilder$Instance;)Lcom/mojang/datafixers/kinds/App;
 			ARG 0 instance
-	CLASS ItemStackSlotDisplay
-		METHOD equals (Ljava/lang/Object;)Z
-			ARG 1 other
-		METHOD lambda$static$0 (Lcom/mojang/serialization/codecs/RecordCodecBuilder$Instance;)Lcom/mojang/datafixers/kinds/App;
-			ARG 0 instance
-	CLASS ResolutionContext
-		METHOD forLevel (Lnet/minecraft/world/level/Level;)Lnet/minecraft/world/item/crafting/display/SlotDisplay$ResolutionContext;
-			ARG 0 level
 	CLASS ResolutionOutput
 		METHOD accept (Lnet/minecraft/core/Holder;)V
 			ARG 1 item
@@ -49,14 +47,16 @@ CLASS net/minecraft/world/item/crafting/display/SlotDisplay
 			ARG 1 item
 		METHOD accept (Lnet/minecraft/world/item/ItemStack;)V
 			ARG 1 stack
+	CLASS ResolutionContext
+		METHOD forLevel (Lnet/minecraft/world/level/Level;)Lnet/minecraft/world/item/crafting/display/SlotDisplay$ResolutionContext;
+			ARG 0 level
+	CLASS ItemStackSlotDisplay
+		METHOD equals (Ljava/lang/Object;)Z
+			ARG 1 other
+		METHOD lambda$static$0 (Lcom/mojang/serialization/codecs/RecordCodecBuilder$Instance;)Lcom/mojang/datafixers/kinds/App;
+			ARG 0 instance
 	CLASS SmithingTrimDemoSlotDisplay
 		METHOD lambda$resolve$2 (Lnet/minecraft/world/item/ItemStack;)Z
 			ARG 0 stack
-		METHOD lambda$static$0 (Lcom/mojang/serialization/codecs/RecordCodecBuilder$Instance;)Lcom/mojang/datafixers/kinds/App;
-			ARG 0 instance
-	CLASS TagSlotDisplay
-		METHOD lambda$static$0 (Lcom/mojang/serialization/codecs/RecordCodecBuilder$Instance;)Lcom/mojang/datafixers/kinds/App;
-			ARG 0 instance
-	CLASS WithRemainder
 		METHOD lambda$static$0 (Lcom/mojang/serialization/codecs/RecordCodecBuilder$Instance;)Lcom/mojang/datafixers/kinds/App;
 			ARG 0 instance
